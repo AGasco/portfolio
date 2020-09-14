@@ -1,0 +1,118 @@
+.project {
+    height: auto;
+    transform: scale(0.9);
+    width: 50vw;
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1.2rem;
+    border-radius: 1.2rem;
+    -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3), -1px -1px 10px rgba(117, 19, 93, 0.4);
+    -moz-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3), -1px -1px 10px rgba(117, 19, 93, 0.4);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3), -1px -1px 10px rgba(117, 19, 93, 0.4);
+    cursor: -webkit-grab;
+    transition: all 0.2s;
+}
+
+.project:hover {
+    -webkit-box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3), -2px -2px 20px rgba(218, 165, 32, 0.6);
+    -moz-box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3), -2px -2px 20px rgba(218, 165, 32, 0.6);
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3), -2px -2px 20px rgba(218, 165, 32, 0.6);
+}
+
+.project.dragging {
+    cursor: -webkit-grabbing;
+}
+
+.project>h4 {
+    font-size: 2.3rem;
+    padding: 10px 20px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.project>img {
+    width: 70%;
+    height: 50%;
+    object-fit: contain;
+}
+
+.project>.project__description {
+    height: 10%;
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.project>.project__buttonsContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project__buttonsContainer>div {
+    flex: 0.5;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 20px;
+}
+
+.project__gitButton>a {
+    width: 60%;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px 10px;
+    font-size: 1.2rem;
+    color: white;
+    /* border: 1px solid rgba(218, 165, 32, 1); */
+    background-color: rgba(218, 165, 32, 0.6);
+    border-radius: 20px;
+    transition: all 0.7s;
+}
+
+.project__linkButton>a {
+    width: 60%;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px 10px;
+    font-size: 1.2rem;
+    color: white;
+    /* border: 1px solid rgba(218, 165, 32, 1); */
+    background-color: rgba(218, 165, 32, 0.6);
+    border-radius: 20px;
+    transition: all 0.7s;
+}
+
+.project__gitButton>a:hover, .project__linkButton>a:hover {
+    transform: scale(1.1);
+}
+
+.project>.project__tech {
+    background-color: rgba(117, 19, 93, 0.5);
+    padding: 10px 0 0 5px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    height: auto;
+    width: 100%;
+    height: 100px;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.4), -2px -2px 20px rgba(117, 19, 93, 0.4);
+    color: white;
+}
+
+.project>.project__tech>h5 {
+    padding: 5px;
+    font-size: 1.05rem;
+}
+
+.project>.project__tech>p {
+    padding: 5px;
+    padding-bottom: 10px;
+    font-size: 1rem;
+}

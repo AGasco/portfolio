@@ -1,0 +1,79 @@
+.navbar {
+    width: 60vw;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transition: all 0.3s;
+    color: white;
+}
+
+.navbar.hidden {
+    opacity: 0;
+    cursor: default;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-around;
+    margin-right: 5vw;
+}
+
+.navbar ul li {
+    display: inline-block;
+    font-weight: 100;
+    padding-top: 50px;
+    font-size: 1.5rem;
+    font-family: "Lato";
+    font-weight: 100;
+    cursor: pointer;
+    transition: all 0.5s;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.0);
+    opacity: 0.6;
+}
+
+li>a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar ul li:hover {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    opacity: 1;
+}
+
+.navbar ul li.hidden {
+    cursor: default;
+    pointer-events: none;
+    transform: translateY(-100px)
+}
+
+.navbar ul li.instant {
+    transition: all 0s;
+}
+
+@media (max-width: 1300px) {
+    .navbar ul {
+        margin-right: 10vw;
+        margin-top: -20px;
+    }
+}
+
+@media (max-width: 1010px) {
+    .navbar {
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 502px) {
+    .navbar ul {
+        justify-content: space-between;
+        width: 100%;
+        padding: 0 20px;
+    }
+    .navbar ul li {
+        font-size: 1.2rem;
+        white-space: nowrap;
+    }
+}
