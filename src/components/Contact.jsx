@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import GoTopBtn from "./GoTopBtn";
 import emailjs from "emailjs-com";
 import "./../styles/Contact.css";
 
@@ -124,6 +125,7 @@ function Contact({ isMobile }) {
           </form>
         </div>
       </div>
+      <GoTopBtn />
     </div>
   );
 }

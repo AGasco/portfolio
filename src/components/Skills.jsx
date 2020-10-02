@@ -1,5 +1,6 @@
 import React from "react";
 import SkillCard from "./SkillCard";
+import GoTopBtn from "./GoTopBtn";
 import "./../styles/Skills.css";
 
 const logos = {
@@ -75,10 +76,7 @@ function Skills() {
           </div>
         </div>
       </div>
-      {/** SKILLS TITLE */}
-
-      {/** GRID OR FLEX SHOWING CARDS WITH SKILLS AND LOGOS */}
-      {/** SOME KIND OF FOOTER? */}
+      <GoTopBtn hidden />
     </div>
   );
 }

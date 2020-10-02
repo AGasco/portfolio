@@ -11,6 +11,7 @@ function SkillCard({ logo, name, link }) {
     >
       <div className="skillCard__logo">
         <img src={logo} alt={`${name}'s logo`} />
+        <div className="overlay"></div>
       </div>
       <div className="skillCard__text">{name}</div>
     </a>

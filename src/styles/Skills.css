@@ -1,28 +1,28 @@
 .skills {
+    background-color: goldenrod;
     height: 100vh;
-    margin-top: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .skills__container {
-    background-color: white;
+    background-color: #ddd;
     width: 60%;
     height: auto;
-    border-radius: 30px;
+    border-radius: 20px;
     padding-bottom: 50px;
-    -webkit-box-shadow: 3px 3px 25px #ffffff, -3px -3px 25px rgba(117, 19, 93, 0.73);
-    -moz-box-shadow: 3px 3px 25px #ffffff, -3px -3px 25px rgba(117, 19, 93, 0.73);
-    box-shadow: 3px 3px 25px #ffffff, -3px -3px 25px rgba(117, 19, 93, 0.73);
+    -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), -2px -2px 5px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), -2px -2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), -2px -2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .skills__container>h2 {
     font-size: 3rem;
     padding: 20px;
-    padding-bottom: 0;
     text-align: center;
-    color: rgba(117, 19, 93, 0.4);
+    color: #202020;
 }
 
 .skills__gridContainer {
@@ -39,15 +39,19 @@
     justify-content: space-around;
 }
 
-@media (max-width: 410px) {
+@media (max-width: 480px) {
     .skills__container>h2 {
         font-size: 2rem
+    }
+    .skills {
+        padding: 100px 0;
     }
 }
 
 @media (max-width: 1075px) {
     .skills {
         height: auto;
+        padding: 100px 0;
     }
     .skills__gridRow {
         flex-direction: column;

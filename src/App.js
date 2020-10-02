@@ -6,6 +6,7 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import GoTopBtn from "./components/GoTopBtn";
+import Footer from "./components/Footer";
 import "./App.css";
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
 
   //Checking if it's mobile or desktop to render different components
   useEffect(() => {
-    setIsMobile(screenWidth <= 480);
+    setIsMobile(screenWidth <= 600);
   }, [screenWidth]);
 
   useEffect(() => {
@@ -32,14 +33,11 @@ function App() {
         <Landing />
         <Navbar />
       </div>
-
       <AboutMe />
       <Skills />
       <Projects isMobile={isMobile} />
       <Contact isMobile={isMobile} />
-
-      <GoTopBtn />
-      {/** FOOTER */}
+      <Footer />
     </div>
   );
 }

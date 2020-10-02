@@ -1,11 +1,15 @@
 .navbar {
-    width: 60vw;
-    height: 70px;
+    width: 100vw;
     position: fixed;
     top: 0;
     right: 0;
     transition: all 0.3s;
-    color: white;
+    background-color: rgba(0, 0, 0, 0.25);
+    /* border-bottom: 1px solid #666; */
+}
+
+.navbar:hover {
+    background-color: #202020;
 }
 
 .navbar.hidden {
@@ -15,49 +19,46 @@
 
 .navbar ul {
     display: flex;
-    justify-content: space-around;
-    margin-right: 5vw;
+    justify-content: center;
+    padding: 10px;
 }
 
 .navbar ul li {
     display: inline-block;
-    font-weight: 100;
-    padding-top: 50px;
+    font-weight: 400 !important;
     font-size: 1.5rem;
     font-family: "Lato";
     font-weight: 100;
     cursor: pointer;
-    transition: all 0.5s;
-    padding-bottom: 10px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.0);
-    opacity: 0.6;
+    transition: all 0.3s;
+    margin: 0 30px;
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.0); */
 }
 
 li>a {
     text-decoration: none;
-    color: white;
+    color: goldenrod;
+    transition: all 0.3s;
 }
 
-.navbar ul li:hover {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-    opacity: 1;
+/* .navbar ul li>:hover {
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.5); */
+
+/* opacity: 1;
+} */
+
+.navbar ul li>a:hover {
+    color: white !important;
 }
 
 .navbar ul li.hidden {
     cursor: default;
     pointer-events: none;
-    transform: translateY(-100px)
+    /* transform: translateY(-100px) */
 }
 
 .navbar ul li.instant {
     transition: all 0s;
-}
-
-@media (max-width: 1300px) {
-    .navbar ul {
-        margin-right: 10vw;
-        margin-top: -20px;
-    }
 }
 
 @media (max-width: 1010px) {
@@ -66,14 +67,27 @@ li>a {
     }
 }
 
-@media (max-width: 502px) {
+@media (max-width: 700px) {
+    .navbar ul li {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 565px) {
     .navbar ul {
-        justify-content: space-between;
-        width: 100%;
-        padding: 0 20px;
+        /* justify-content: space-between; */
+        padding-left: 0;
+        width: 100vw;
     }
     .navbar ul li {
         font-size: 1.2rem;
+        margin: 0 5px;
         white-space: nowrap;
+    }
+}
+
+@media (max-width: 320px) {
+    .navbar ul li {
+        font-size: 1rem;
     }
 }

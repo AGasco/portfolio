@@ -1,44 +1,20 @@
-.goTopBtn {
-    position: fixed;
-    bottom: 1%;
-    width: 100vw;
-    font-size: 2rem;
-    font-size: 1.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 50px;
-    transition: all 0.5s;
-    opacity: 1;
-}
-
-.goTopBtn.hidden {
-    opacity: 0;
-}
-
-.goTopBtn, .goTopBtn * {
-    z-index: 0 !important;
-}
-
-.goTopBtn__button {
-    height: 100%;
-    border: 1px solid goldenrod;
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    border-radius: 30px;
-    transition: all 0.5s;
-}
-
-.goTopBtn__button:hover {
-    background-color: goldenrod;
-}
-
-.goTopBtn a {
-    text-decoration: none;
+.upIcon {
+    position: absolute;
+    bottom: 2vh;
+    font-size: 2.5rem;
     color: white;
-    font-weight: 300;
-    text-align: center;
-    width: 100% !important;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: all 0.5s;
+}
+
+.upIcon:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+@media (max-width: 480px) {
+    .upIcon.hidden {
+        display: none;
+    }
 }

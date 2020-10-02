@@ -10,12 +10,10 @@ function Project({
   link,
   gitLink,
   usedTech,
-  isDragging,
 }) {
+  console.log("isMobile inside Project.jsx", isMobile);
   return (
-    <div
-      className={`project${isMobile ? "Mobi" : ""} ${isDragging && "dragging"}`}
-    >
+    <div className={`project${isMobile ? "Mobi" : ""}`}>
       <h4>{name}</h4>
       <img
         src={picture}

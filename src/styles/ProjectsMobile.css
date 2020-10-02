@@ -1,10 +1,9 @@
 .projectsMobi {
     height: 100vh;
-    margin-top: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 50vh;
+    /* margin: 100px 0 100px 0; */
     /* transform: scale(0.9);  Cannot add this because it breaks z-index for GoTopBtn.jsx */
 }
 
@@ -18,16 +17,15 @@
     align-items: center;
     background-color: white;
     width: 90%;
-    height: auto;
-    border-radius: 30px;
-    -webkit-box-shadow: 3px 3px 25px #ffffff, -3px -3px 25px rgba(117, 19, 93, 0.73);
-    -moz-box-shadow: 3px 3px 25px #ffffff, -3px -3px 25px rgba(117, 19, 93, 0.73);
-    box-shadow: 3px 3px 25px #ffffff, -3px -3px 25px rgba(117, 19, 93, 0.73);
+    height: max-content;
+    border-radius: 10px;
+    padding-bottom: 30px;
 }
 
 .projectsMobi__title {
+    font-size: 3rem;
     padding: 15px;
-    color: rgba(117, 19, 93, 0.4);
+    color: #202020;
 }
 
 .projectsMobi__gridContainer {
@@ -36,6 +34,10 @@
     flex: 0.8;
     display: flex;
     transition: transform 1s;
+}
+
+.projectsMobi__gridRow {
+    width: 100%;
 }
 
 .projectsMobi__buttons {

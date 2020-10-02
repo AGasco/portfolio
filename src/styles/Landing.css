@@ -1,15 +1,19 @@
 .landing {
     height: 100vh;
-    background-image: linear-gradient(to top, rgba(245, 246, 252, 0.0), rgba(117, 19, 93, 0.73)), url("https://images.unsplash.com/photo-1489513691500-41ef4acdb665?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80");
+    background-image: url("https://images.unsplash.com/photo-1579518788238-fb03a5b6ca92?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
     background-size: cover;
-    background-position: center 100%;
+    background-position: center center;
     color: white;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
 }
 
 .landing__container {
-    max-width: 30vw;
-    padding: 4rem 0 0 2rem;
-    opacity: 0.8;
+    position: absolute;
+    top: 20vh;
+    right: 5vw;
+    width: max-content;
 }
 
 /** TEXT */
@@ -17,10 +21,11 @@
 .landing__text {
     width: 100%;
     white-space: nowrap;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
 }
 
 .landing__shortName, .landing__longName {
-    font-size: 5rem;
+    font-size: 7rem;
     overflow: visible;
 }
 
@@ -33,6 +38,7 @@
     font-size: 1.5rem;
     font-weight: 100;
     text-align: right;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
 }
 
 .landing__icons {
@@ -46,15 +52,20 @@
     padding-top: 5px;
 }
 
-.landing__icons .MuiSvgIcon-root {
+.landing__icons>a {
+    width: auto;
+}
+
+.landing__icons .svg-inline--fa {
     margin-left: 2vw;
     font-size: 2rem;
     color: white;
     cursor: pointer;
     transition: color 0.15s;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
 }
 
-.landing__icons .MuiSvgIcon-root:hover {
+.landing__icons .svg-inline--fa:hover {
     color: goldenrod;
 }
 
@@ -62,10 +73,19 @@
 
 @media (min-width: 1920px) {
     .landing__longName, .landing__shortName {
-        font-size: 7rem;
+        font-size: 9rem;
     }
     .landing__icons {
         padding-left: 200px;
+    }
+}
+
+@media (max-width: 950px) {
+    .landing__longName, .landing__shortName {
+        font-size: 5rem;
+    }
+    .landing {
+        background-position: 100% center;
     }
 }
 
@@ -75,6 +95,32 @@
     }
     .landing__shortName {
         display: inline-block;
+    }
+    .landing__developer {
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+        font-size: 1.3rem !important;
+    }
+    .landing__container {
+        margin: 0 0 25rem 2rem;
+        width: max-content;
+    }
+}
+
+@media (max-width: 480px) {
+    .landing__icons .MuiSvgIcon-root {
+        font-size: 1.5rem;
+    }
+    .landing__longName, .landing__shortName {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .landing__shortName {
+        font-size: 3rem;
+    }
+    .landing__developer {
+        font-size: 2rem;
     }
 }
 

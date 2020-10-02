@@ -1,26 +1,42 @@
 import React, { useState, useEffect } from "react";
-import Draggable from "react-draggable";
+// import Draggable from "react-draggable";
 import Project from "./Project";
 import ArrowBack from "@material-ui/icons/ArrowBackIos";
 import ArrowForward from "@material-ui/icons/ArrowForwardIos";
 import NetflixThumbnail from "./../imgs/netflix-thumbnail.png";
 import CovidTrackerThumbnail from "./../imgs/covid-tracker-thumbnail.png";
 import WhatsappThumbnail from "./../imgs/whatsapp-thumbnail.png";
+import WeatherThumbnail from "./../imgs/weather-thumbnail.png";
+import WikipediaThumbnail from "./../imgs/wikipedia-thumbnail.png";
+import HackReactorThumbnail from "./../imgs/hackreactor-thumbnail.PNG";
+import Carousel from "react-material-ui-carousel";
 import "./../styles/Projects.css";
 import "./../styles/ProjectsMobile.css";
+import GoTopBtn from "./GoTopBtn";
 
 const projectsData = [
   //Steam Game
+  // {
+  //   name: "NARCOS PLEASE",
+  //   picture: "https://source.unsplash.com/1600x900",
+  //   description: `I spent the last 3 years of my life designing and building this game. It's a 'Papers Please'-like where you follow the story of a very infamous drug lord from Colombia back in the eighties.
+
+  //     With 30 levels and 15 different endings, this is a fully fledged product. This was the project that made me a programmer.`,
+  //   link: "https://www.youtube.com/watch?v=kxvOABmXsoM", //Trailer link
+  //   gitLink: "", //Steam Page Link
+  //   usedTech:
+  //     "C#, Unity, JSON, Data Structures, Design Patterns, Art (even though it's not tech, I spent countless hours doing art)",
+  // },
+
+  //HACKREACTOR Clone
   {
-    name: "NARCOS PLEASE",
-    picture: "https://source.unsplash.com/1600x900",
-    description: `I spent the last 3 years of my life designing and building this game. It's a 'Papers Please'-like where you follow the story of a very infamous drug lord from Colombia back in the eighties.
-      
-      With 30 levels and 15 different endings, this is a fully fledged product. This was the project that made me a programmer.`,
-    link: "https://www.youtube.com/watch?v=kxvOABmXsoM", //Trailer link
-    gitLink: "", //Steam Page Link
-    usedTech:
-      "C#, Unity, JSON, Data Structures, Design Patterns, Art (even though it's not tech, I spent countless hours doing art)",
+    name: "HACKREACTOR CLONE",
+    picture: HackReactorThumbnail,
+    description:
+      "Clone of the HackReactor website. I built this project to train my front-end skills. I wanted to see if I could build a professional looking website. Simple one page app. Just 1 html file and 1 css file",
+    link: "https://hackreactor-clone.netlify.app/",
+    gitLink: "https://github.com/AGasco/hackreactor-clone",
+    usedTech: "HTML, CSS, Javascript, Netlify",
   },
 
   //COVID-19 Tracker
@@ -28,7 +44,7 @@ const projectsData = [
     name: "COVID-19 TRACKER",
     picture: CovidTrackerThumbnail,
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur nulla est omnis amet, nam beatae saepe? Eos, ipsum! Aperiam minus minima provident perspiciatis possimus unde, ipsa temporibus nihil quasi quam?",
+      "Keep daily track of COVID-19 incidence all over the world. The data displayed in this app can be sorted worldwide or by country. Furthermore, data can be filtered by Cases, Recovered or Deaths",
     link: "https://covid-19-tracker-1b15c.web.app/",
     gitLink: "https://github.com/AGasco/covid-19-tracker",
     usedTech:
@@ -40,118 +56,67 @@ const projectsData = [
     name: "Netflix Clone",
     picture: NetflixThumbnail,
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci dolore mollitia sed suscipit iste. Deleniti harum nobis assumenda excepturi, est incidunt praesentium explicabo voluptatibus optio veniam sit earum voluptatem inventore?",
+      "Clone of the popular streaming platform, Netflix. It uses Netflix API to obtain movies' data sorted by genres, or to show which movies are trending right now. Each movie can be clicked to watch a Youtube embed showing the trailer of that movie",
     link: "https://netflix-clone-adb5c.web.app/",
     gitLink: "https://github.com/AGasco/netflix-clone",
     usedTech: "HTML, CSS, Javascript, React, Google Firebase, JSON, APIs",
   },
 
-  //Whatsapp Clone
+  //Wikipedia Viewer
   {
-    name: "WhatsApp Clone",
-    picture: WhatsappThumbnail,
+    name: "Wikipedia Viewer",
+    picture: WikipediaThumbnail,
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae beatae doloremque quo officiis, placeat dolor voluptas molestias saepe at veritatis eum porro iure et soluta iusto earum consequuntur. Sequi, veniam?",
-    link: "https://whatsapp-clone-28266.web.app/",
-    gitLink: "https://github.com/AGasco/whatsapp-clone",
+      "App that uses Wikipedia API to display a list of clickable articles based on what's inputted in the search bar by the user. As in Wikipedia itself, there is a button to just search for a random article",
+    link: "https://wikipedia-viewer-4cff5.web.app/",
+    gitLink: "https://github.com/AGasco/wikipedia-viewer",
+    usedTech: "HTML, CSS, Javascript, React, Google Firebase, JSON, CORS, APIs",
+  },
+
+  //Weather App
+  {
+    name: "Weather App",
+    picture: WeatherThumbnail,
+    description:
+      "The Weather App shows the user the weather on their location, in text and icon formats, as well as the current local temperature (in Celsius or Farenheit). It first asks for permission to know the user's location using navigator.geolocation()",
+    link: "https://weather-app-d6d37.web.app/",
+    gitLink: "https://github.com/AGasco/weather-app",
     usedTech:
-      "HTML, CSS, Javascript, React, Google Authentification, Google Firebase, JSON, APis",
+      "HTML, CSS, Javascript, React, Geolocation, Google Firebase, JSON, APIs",
   },
 ];
 
-const scrollMultiplier = window.innerWidth * 2.2;
-
 function Projects({ isMobile }) {
-  const [isDragging, setIsDragging] = useState(false);
-  const [scrollX, setScrollX] = useState(0);
-
-  //Adding event listeners
-  useEffect(() => {
-    const gridRow = document.getElementsByClassName("projects__gridRow")[0];
-    if (gridRow) {
-      gridRow.addEventListener("mousedown", () => {
-        setIsDragging(true);
-      });
-
-      gridRow.addEventListener("mouseup", () => {
-        setIsDragging(false);
-      });
-    }
-  }, []);
-
-  const previousProject = () => {
-    if (scrollX >= scrollMultiplier) {
-      setScrollX(scrollX - scrollMultiplier);
-      console.log("new project scrollX is", scrollX);
-    }
-  };
-
-  const nextProject = () => {
-    if (scrollX < (projectsData.length - 1) * scrollMultiplier) {
-      setScrollX(scrollX + scrollMultiplier);
-      console.log("next project scrollX is", scrollX);
-    }
-  };
-
-  /** TODO -> POPULATE PROJECTS DATA */
-
   return (
     <div className={isMobile ? "projectsMobi" : "projects"} id="Projects">
-      {!isMobile ? (
-        <div className="projects__container">
-          <h2 className="projects__title">Projects</h2>
-          <em className="projects__subtitle">(Click & Drag)</em>
-          <div className="projects__gridContainer">
-            <Draggable
-              defaultPosition={{ x: 0, y: 0 }}
-              axis="x"
-              bounds={{ left: -1500, top: 0, bottom: 0, right: 1500 }}
+      <div className={`projects${isMobile ? "Mobi" : ""}__container`}>
+        <h2 className={`projects${isMobile ? "Mobi" : ""}__title`}>Projects</h2>
+        <em className={`projects${isMobile ? "Mobi" : ""}__subtitle`}></em>
+        <div className={`projects${isMobile ? "Mobi" : ""}__gridContainer`}>
+          <div className={`projects${isMobile ? "Mobi" : ""}__gridRow`}>
+            <Carousel
+              className="projectsMobi__carousel"
+              autoPlay={false}
+              navButtonsAlwaysVisible={isMobile ? false : true}
+              navButtonsAlwaysInvisible={isMobile ? true : false}
+              indicators={isMobile ? true : false}
             >
-              <div className={`projects__gridRow ${isDragging && "dragging"}`}>
-                {projectsData.map((project) => (
-                  <Project
-                    name={project.name}
-                    picture={project.picture}
-                    link={project.link}
-                    gitLink={project.gitLink}
-                    description={project.description}
-                    usedTech={project.usedTech}
-                    isDragging={isDragging}
-                  />
-                ))}
-              </div>
-            </Draggable>
+              {projectsData.map((project) => (
+                <Project
+                  isMobile={isMobile}
+                  name={project.name}
+                  picture={project.picture}
+                  link={project.link}
+                  gitLink={project.gitLink}
+                  description={project.description}
+                  usedTech={project.usedTech}
+                />
+              ))}
+            </Carousel>
           </div>
         </div>
-      ) : (
-        <div className="projectsMobi__container">
-          <h2 className="projectsMobi__title">Projects</h2>
-          <div
-            className="projectsMobi__gridContainer"
-            style={{ transform: `translate(${-scrollX}px)` }}
-          >
-            {projectsData.map((project) => (
-              <Project
-                isMobile={true}
-                name={project.name}
-                picture={project.picture}
-                link={project.link}
-                gitLink={project.gitLink}
-                description={project.description}
-                usedTech={project.usedTech}
-              />
-            ))}
-          </div>
-          <div className="projectsMobi__buttons">
-            <div className="projectsMobi__leftBtn">
-              <ArrowBack onClick={previousProject} />
-            </div>
-            <div className="projectsMobi__rightBtn">
-              <ArrowForward onClick={nextProject} />
-            </div>
-          </div>
-        </div>
-      )}
+      </div>
+      <GoTopBtn hidden />
     </div>
   );
 }

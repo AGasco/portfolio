@@ -2,7 +2,7 @@
     height: 100% !important;
     min-width: 100%;
     text-decoration: none;
-    background-color: white;
+    background-color: #f0f0f0;
     color: black;
     display: flex;
     flex-direction: column;
@@ -10,11 +10,11 @@
     align-items: center;
     border-radius: 1.2rem;
     border-radius: 1.2rem;
-    -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3), -1px -1px 10px rgba(218, 165, 32, 0.6);
+    /* -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3), -1px -1px 10px rgba(218, 165, 32, 0.6);
     -moz-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3), -1px -1px 10px rgba(218, 165, 32, 0.6);
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3), -1px -1px 10px rgba(218, 165, 32, 0.6);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3), -1px -1px 10px rgba(218, 165, 32, 0.6); */
     flex-basis: content;
-    margin-right: 500px;
+    /* margin-right: 500px; */
     transition: all 1s;
 }
 

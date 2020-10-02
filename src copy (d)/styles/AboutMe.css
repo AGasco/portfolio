@@ -1,0 +1,191 @@
+.aboutMe {
+    height: 70vh;
+    width: 100%;
+    margin-top: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutMe__filler {
+    min-height: 200px !important;
+    width: 100%;
+}
+
+.aboutMe__container {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 80%;
+    height: auto;
+    border-radius: 30px;
+    padding-bottom: 50px;
+    -webkit-box-shadow: 3px 3px 25px #ffffff, -3px -3px 25px rgba(117, 19, 93, 0.73);
+    -moz-box-shadow: 3px 3px 25px #ffffff, -3px -3px 25px rgba(117, 19, 93, 0.73);
+    box-shadow: 3px 3px 25px #ffffff, -3px -3px 25px rgba(117, 19, 93, 0.73);
+}
+
+.aboutMe__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    max-width: 100%;
+    padding: 30px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.aboutMe__left {
+    height: 100%;
+    flex: 0.4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #f0f0f0;
+    padding: 20px;
+}
+
+.aboutMe__right {
+    flex: 0.6;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 60%;
+}
+
+.aboutMe__title {
+    font-size: 3rem;
+    padding: 20px;
+    padding-bottom: 0;
+    text-align: center;
+    color: rgba(117, 19, 93, 0.4);
+    padding-bottom: 30px;
+}
+
+.aboutMe__picture {
+    background-image: url("https://scontent-mad1-1.xx.fbcdn.net/v/t1.0-9/374542_669395286451295_1919510956_n.jpg?_nc_cat=103&_nc_sid=ba80b0&_nc_ohc=eMWJ2dJkcykAX-uA60S&_nc_ht=scontent-mad1-1.xx&oh=1c05ae6a4ebb06f2e859e0576730b28d&oe=5F7EDBD9");
+    background-size: cover;
+    background-position: 100% 0;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    object-fit: contain;
+    transition: all 1s;
+    -webkit-box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.3), -1px -1px 30px rgba(218, 165, 32, 0.6);
+    -moz-box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.3), -1px -1px 30px rgba(218, 165, 32, 0.6);
+    box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.3), -1px -1px 30px rgba(218, 165, 32, 0.6);
+}
+
+.aboutMe__picture:hover {
+    -webkit-box-shadow: 3px 3px 25px #ffffff, -3px -3px 25px rgba(117, 19, 93, 0.73);
+    -moz-box-shadow: 3px 3px 25px #ffffff, -3px -3px 25px rgba(117, 19, 93, 0.73);
+    box-shadow: 3px 3px 30px #ffffff, -3px -3px 30px rgba(117, 19, 93, 1);
+}
+
+.aboutMe__description {
+    color: gray;
+    width: 70%;
+    object-fit: contain;
+}
+
+.aboutMe__tags {
+    display: flex;
+    max-width: 100%;
+}
+
+.aboutMe__tags ul {
+    width: auto;
+    height: auto;
+    display: flex;
+    padding-left: 0;
+    margin-top: 50px;
+    margin-left: -20px;
+}
+
+.aboutMe__tags .aboutMe__tag {
+    list-style-type: none;
+    padding: 10px;
+    background-color: rgba(218, 165, 32, 0.6);
+    margin-right: 10px;
+    border-radius: 30px;
+    color: white;
+    transition: all 0.7s;
+}
+
+.aboutMe__tags .aboutMe__tag:hover {
+    color: goldenrod;
+    background-color: rgba(137, 39, 123, 1);
+    -webkit-box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.3), -1px -1px 30px rgba(218, 165, 32, 0.6);
+    -moz-box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.3), -1px -1px 30px rgba(218, 165, 32, 0.6);
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3), -2px -2px 20px rgba(218, 165, 32, 0.6);
+}
+
+@media (max-width: 1311px) {
+    .aboutMe__tags ul {
+        transform: scale(0.8);
+    }
+}
+
+@media (max-width: 1220px) {
+    .aboutMe__content {
+        flex-direction: column;
+    }
+    .aboutMe__left {
+        flex: 1;
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #f0f0f0;
+    }
+    .aboutMe__right {
+        flex: 1;
+        max-width: 100% !important;
+    }
+    .aboutMe__tags ul {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 1010px) {
+    .aboutMe__picture {
+        height: 200px;
+        width: 200px;
+    }
+    .aboutMe__description {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 971px) {
+    .aboutMe__container {
+        padding: 0;
+    }
+    .aboutMe__content {
+        padding: 0;
+    }
+    .aboutMe__right {
+        padding: 0;
+    }
+    .aboutMe__tags ul {
+        display: grid;
+        grid-template-rows: 2;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .aboutMe__tags .aboutMe__tag {
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 740px) {
+    .aboutMe__tags ul {
+        transform: scale(0.7);
+    }
+    .aboutMe__description {
+        padding-top: 20px;
+    }
+}

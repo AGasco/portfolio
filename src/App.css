@@ -4,16 +4,13 @@
 }
 
 body {
-  background: black;
+  background: #202020;
 }
 
-@media (max-width: 500px) {
-  .app {
+/* @media (max-width: 500px) {
+   .app {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
-  .app>*:not(:first-child) {
-    margin-top: 100vh;
-  }
-}
+}*/
