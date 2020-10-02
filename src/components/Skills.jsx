@@ -66,13 +66,13 @@ function Skills() {
             />
           </div>
           <div className="skills__gridRow">
+            <SkillCard name="C#" logo={logos.csharp} link={links.csharp} />
+            <SkillCard name="Unity" logo={logos.unity} link={links.unity} />
             <SkillCard
               name="Adobe Photoshop"
               logo={logos.photoshop}
               link={links.photoshop}
             />
-            <SkillCard name="Unity" logo={logos.unity} link={links.unity} />
-            <SkillCard name="C#" logo={logos.csharp} link={links.csharp} />
           </div>
         </div>
       </div>
