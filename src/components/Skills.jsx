@@ -12,8 +12,7 @@ const logos = {
     "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1024px-Unofficial_JavaScript_logo_2.svg.png",
   react:
     "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/React.svg/1200px-React.svg.png",
-  firebase:
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Firebase_Logo.svg/1280px-Firebase_Logo.svg.png",
+  redux: "https://assets.stickpng.com/thumbs/5848309bcef1014c0b5e4a9a.png",
   bootstrap:
     "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1200px-Bootstrap_logo.svg.png",
   photoshop:
@@ -29,7 +28,7 @@ const links = {
   css: "https://developer.mozilla.org/es/docs/Web/CSS",
   javascript: "https://developer.mozilla.org/es/docs/Web/JavaScript",
   react: "https://reactjs.org/",
-  firebase: "https://firebase.google.com/",
+  redux: "https://redux.js.org/",
   bootstrap: "https://getbootstrap.com/",
   photoshop: "https://www.adobe.com/es/products/photoshop.html",
   unity: "https://unity.com/",
@@ -54,15 +53,11 @@ function Skills() {
           </div>
           <div className="skills__gridRow">
             <SkillCard name="React" logo={logos.react} link={links.react} />
+            <SkillCard name="Redux" logo={logos.redux} link={links.redux} />
             <SkillCard
               name="Bootstrap 4"
               logo={logos.bootstrap}
               link={links.bootstrap}
-            />
-            <SkillCard
-              name="Google Firebase"
-              logo={logos.firebase}
-              link={links.firebase}
             />
           </div>
           <div className="skills__gridRow">

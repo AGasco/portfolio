@@ -9,6 +9,7 @@ import WhatsappThumbnail from "./../imgs/whatsapp-thumbnail.png";
 import WeatherThumbnail from "./../imgs/weather-thumbnail.png";
 import WikipediaThumbnail from "./../imgs/wikipedia-thumbnail.png";
 import HackReactorThumbnail from "./../imgs/hackreactor-thumbnail.PNG";
+import ShoppingCartThumbnail from "./../imgs/shopping-cart-thumbnail.PNG";
 import Carousel from "react-material-ui-carousel";
 import "./../styles/Projects.css";
 import "./../styles/ProjectsMobile.css";
@@ -28,6 +29,18 @@ const projectsData = [
   //     "C#, Unity, JSON, Data Structures, Design Patterns, Art (even though it's not tech, I spent countless hours doing art)",
   // },
 
+  //COVID-19 Tracker
+  {
+    name: "REDUX COVID-19 TRACKER",
+    picture: CovidTrackerThumbnail,
+    description:
+      "Keep daily track of COVID-19 incidence all over the world. The data displayed in this app can be sorted worldwide or by country. Furthermore, data can be filtered by Cases, Recovered or Deaths",
+    link: "https://covid-19-tracker-1b15c.web.app/",
+    gitLink: "https://github.com/AGasco/covid-19-tracker",
+    usedTech:
+      "HTML, CSS, Javascript, React, JSON, Google Firebase, APIs, Leaflet Maps",
+  },
+
   //HACKREACTOR Clone
   {
     name: "HACKREACTOR CLONE",
@@ -39,16 +52,16 @@ const projectsData = [
     usedTech: "HTML, CSS, Javascript, Netlify",
   },
 
-  //COVID-19 Tracker
+  //REDUX SHOPPING CART
   {
-    name: "COVID-19 TRACKER",
-    picture: CovidTrackerThumbnail,
+    name: "REDUX SHOPPING CART",
+    picture: ShoppingCartThumbnail,
     description:
-      "Keep daily track of COVID-19 incidence all over the world. The data displayed in this app can be sorted worldwide or by country. Furthermore, data can be filtered by Cases, Recovered or Deaths",
-    link: "https://covid-19-tracker-1b15c.web.app/",
-    gitLink: "https://github.com/AGasco/covid-19-tracker",
+      "Fully functional shopping cart app built from scratch, using create-react-app. State handling was done using redux and react-redux packages",
+    link: "https://redux-shopping-cart-fa4e7.web.app/",
+    gitLink: "https://github.com/AGasco/full-shopping-cart",
     usedTech:
-      "HTML, CSS, Javascript, React, JSON, Google Firebase, APIs, Leaflet Maps",
+      "HTML, CSS, Javascript, React, Redux, React-Redux, Google Firebase, JSON",
   },
 
   //Netflix Clone

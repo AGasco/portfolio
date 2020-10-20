@@ -12,14 +12,11 @@ function AboutMe() {
           <div className="aboutMe__right">
             <h2 className="aboutMe__title">About Me</h2>
             <p className="aboutMe__description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
-              voluptatem debitis veniam ab repellendus autem. Quod non suscipit
-              hic eius quisquam odio dolor provident iusto earum doloribus,
-              omnis dolore voluptate? Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Quibusdam libero error voluptas rem molestiae
-              eligendi corrupti reiciendis praesentium. Illo nihil magnam
-              doloremque sapiente ducimus blanditiis adipisci vero accusantium
-              repellendus sequi.
+              I've always been passioned about technology. Computers and games
+              are my world. But until 2015, I always lied to myself saying that
+              I didn't have the capabilities to become a software developer.
+              After 2015 though, my whole life has revolved around technology
+              and software development. I didn't imagine coding could be so FUN.
             </p>
             <div className="aboutMe__tags">
               <ul>
