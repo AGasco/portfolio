@@ -57,7 +57,7 @@ const projectsData = [
     name: "REDUX SHOPPING CART",
     picture: ShoppingCartThumbnail,
     description:
-      "Fully functional shopping cart app built from scratch, using create-react-app. State handling was done using redux and react-redux packages",
+      "Fully functional shopping cart app built from scratch. State handling was done using redux and react-redux packages",
     link: "https://redux-shopping-cart-fa4e7.web.app/",
     gitLink: "https://github.com/AGasco/full-shopping-cart",
     usedTech:
