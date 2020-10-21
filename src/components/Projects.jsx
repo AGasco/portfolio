@@ -100,6 +100,12 @@ const projectsData = [
 ];
 
 function Projects({ isMobile }) {
+  useEffect(() => {
+    loadImages();
+  }, []);
+
+  const loadImages = () => {};
+
   return (
     <div className={isMobile ? "projectsMobi" : "projects"} id="Projects">
       <div className={`projects${isMobile ? "Mobi" : ""}__container`}>
