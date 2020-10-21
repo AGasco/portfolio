@@ -38,7 +38,7 @@ const projectsData = [
     link: "https://covid-19-tracker-1b15c.web.app/",
     gitLink: "https://github.com/AGasco/covid-19-tracker",
     usedTech:
-      "HTML, CSS, Javascript, React, JSON, Google Firebase, APIs, Leaflet Maps",
+      "HTML, CSS, Javascript, React, Redux, JSON, Google Firebase, APIs, Leaflet Maps",
   },
 
   //HACKREACTOR Clone
@@ -60,8 +60,7 @@ const projectsData = [
       "Fully functional shopping cart app built from scratch. State handling was done using redux and react-redux packages",
     link: "https://redux-shopping-cart-fa4e7.web.app/",
     gitLink: "https://github.com/AGasco/full-shopping-cart",
-    usedTech:
-      "HTML, CSS, Javascript, React, Redux, React-Redux, Google Firebase, JSON",
+    usedTech: "HTML, CSS, Javascript, React, Redux, Google Firebase, JSON",
   },
 
   //Netflix Clone
