@@ -1,6 +1,7 @@
 .skills {
     background-color: goldenrod;
-    height: 100vh;
+    padding: 100px 0;
+    height: max-content;
     display: flex;
     justify-content: center;
     align-items: center;

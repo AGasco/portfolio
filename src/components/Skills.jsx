@@ -13,8 +13,13 @@ const logos = {
   react:
     "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/React.svg/1200px-React.svg.png",
   redux: "https://assets.stickpng.com/thumbs/5848309bcef1014c0b5e4a9a.png",
+  typescript:
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png",
   bootstrap:
     "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1200px-Bootstrap_logo.svg.png",
+  npm: "https://upload.wikimedia.org/wikipedia/commons/d/db/Npm-logo.svg",
+  git:
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/1024px-Git-logo.svg.png",
   photoshop:
     "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/1051px-Adobe_Photoshop_CC_icon.svg.png",
   unity:
@@ -29,7 +34,10 @@ const links = {
   javascript: "https://developer.mozilla.org/es/docs/Web/JavaScript",
   react: "https://reactjs.org/",
   redux: "https://redux.js.org/",
+  typescript: "https://www.typescriptlang.org/",
   bootstrap: "https://getbootstrap.com/",
+  npm: "https://www.npmjs.com/",
+  git: "https://git-scm.com/",
   photoshop: "https://www.adobe.com/es/products/photoshop.html",
   unity: "https://unity.com/",
   csharp: "https://docs.microsoft.com/en-us/dotnet/csharp/",
@@ -54,6 +62,15 @@ function Skills() {
           <div className="skills__gridRow">
             <SkillCard name="React" logo={logos.react} link={links.react} />
             <SkillCard name="Redux" logo={logos.redux} link={links.redux} />
+            <SkillCard
+              name="TypeScript"
+              logo={logos.typescript}
+              link={links.typescript}
+            />
+          </div>
+          <div className="skills__gridRow">
+            <SkillCard name="npm" logo={logos.npm} link={links.npm} />
+            <SkillCard name="git" logo={logos.git} link={links.git} />
             <SkillCard
               name="Bootstrap 4"
               logo={logos.bootstrap}
