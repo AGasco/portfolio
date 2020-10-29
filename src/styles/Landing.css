@@ -69,6 +69,27 @@
     color: goldenrod;
 }
 
+.landing__roque {
+    font-size: 0.9rem;
+    position: absolute;
+    bottom: 7%;
+    right: 15%;
+    padding-left: 30px;
+    opacity: 0.3;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.landing__roqueLast {
+    text-align: center;
+}
+
+.landing__roque:hover {
+    opacity: 1;
+    color: goldenrod;
+}
+
 /** ICONS */
 
 @media (min-width: 1920px) {

@@ -30,6 +30,17 @@ const Landing = () => {
           </a>
         </div>
       </div>
+      <a
+        className="landing__roque"
+        href="https://en.wikipedia.org/wiki/Roque_de_los_Muchachos_Observatory"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <p className="landing__roqueFirst">
+          Roque de Los Muchachos Observatory
+        </p>
+        <p className="landing__roqueLast">La Palma - Canary Islands - Spain</p>
+      </a>
     </div>
   );
 };
