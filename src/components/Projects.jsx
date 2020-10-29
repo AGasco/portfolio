@@ -54,17 +54,6 @@ const projectsData = [
       "HTML, CSS, Javascript, React, Redux, JSON, Google Firebase, APIs, Leaflet Maps",
   },
 
-  //HACKREACTOR Clone
-  {
-    name: "HACKREACTOR CLONE",
-    picture: HackReactorThumbnail,
-    description:
-      "Clone of the HackReactor website. I built this project to train my front-end skills. I wanted to see if I could build a professional looking website. Simple one page app. Just 1 html file and 1 css file",
-    link: "https://hackreactor-clone.netlify.app/",
-    gitLink: "https://github.com/AGasco/hackreactor-clone",
-    usedTech: "HTML, CSS, Javascript, Netlify",
-  },
-
   //REDUX SHOPPING CART
   {
     name: "REDUX SHOPPING CART",
@@ -74,6 +63,17 @@ const projectsData = [
     link: "https://redux-shopping-cart-fa4e7.web.app/",
     gitLink: "https://github.com/AGasco/full-shopping-cart",
     usedTech: "HTML, CSS, Javascript, React, Redux, Google Firebase, JSON",
+  },
+
+  //HACKREACTOR Clone
+  {
+    name: "HACKREACTOR CLONE",
+    picture: HackReactorThumbnail,
+    description:
+      "Clone of the HackReactor website. I built this project to train my front-end skills. I wanted to see if I could build a professional looking website. Simple one page app. Just 1 html file and 1 css file",
+    link: "https://hackreactor-clone.netlify.app/",
+    gitLink: "https://github.com/AGasco/hackreactor-clone",
+    usedTech: "HTML, CSS, Javascript, Netlify",
   },
 
   //Netflix Clone
