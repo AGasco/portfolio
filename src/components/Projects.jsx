@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Project from "./Project";
 import ArrowBack from "@material-ui/icons/ArrowBackIos";
 import ArrowForward from "@material-ui/icons/ArrowForwardIos";
+import UserSettingsFormThumbnail from "./../imgs/user-settings-form-thumbnail2.PNG";
 import NetflixThumbnail from "./../imgs/netflix-thumbnail.png";
 import CovidTrackerThumbnail from "./../imgs/covid-tracker-thumbnail.png";
 import WhatsappThumbnail from "./../imgs/whatsapp-thumbnail.png";
@@ -28,6 +29,18 @@ const projectsData = [
   //   usedTech:
   //     "C#, Unity, JSON, Data Structures, Design Patterns, Art (even though it's not tech, I spent countless hours doing art)",
   // },
+
+  //COMPLETE USER SETTINGS FORM
+  {
+    name: "REDUX USER SETTINGS FORM WITH THEME PICKER",
+    picture: UserSettingsFormThumbnail,
+    description:
+      "A fully fledged user settings form, with different sectors. Each sector may have 2 tabs to differentiate between groups of settings. All state management is done using REDUX",
+    link: "https://innoloft-agasco-app.web.app/",
+    gitLink: "https://github.com/AGasco/user-settings-form",
+    usedTech:
+      "HTML, CSS, Javascript, React, Redux, Material-UI, JSON, Google Firebase",
+  },
 
   //COVID-19 Tracker
   {
