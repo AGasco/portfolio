@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Project from "./Project";
 import ArrowBack from "@material-ui/icons/ArrowBackIos";
 import ArrowForward from "@material-ui/icons/ArrowForwardIos";
-import UserSettingsFormThumbnail from "./../imgs/user-settings-form-thumbnail2.PNG";
+import UserSettingsFormThumbnail from "./../imgs/user-settings-form-thumbnail2.png";
 import NetflixThumbnail from "./../imgs/netflix-thumbnail.png";
 import CovidTrackerThumbnail from "./../imgs/covid-tracker-thumbnail.png";
 import WhatsappThumbnail from "./../imgs/whatsapp-thumbnail.png";
