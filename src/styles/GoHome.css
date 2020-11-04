@@ -1,0 +1,21 @@
+.goHome {
+    position: fixed;
+    top: 2%;
+    left: 2%;
+}
+
+.goHome a>.MuiSvgIcon-root {
+    color: white;
+    opacity: 0.7;
+    font-size: 2rem;
+    transition: all 0.15s ease-in-out;
+    text-align: center;
+}
+
+.goHome a>.MuiSvgIcon-root:hover {
+    opacity: 1;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 1px solid white;
+    padding: 5px;
+}

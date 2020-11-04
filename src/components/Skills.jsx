@@ -1,6 +1,5 @@
 import React from "react";
 import SkillCard from "./SkillCard";
-import GoTopBtn from "./GoTopBtn";
 import "./../styles/Skills.css";
 import HTMLLogo from "./../imgs/logos/html-logo.png";
 import CSSLogo from "./../imgs/logos/css-logo.png";
@@ -14,6 +13,7 @@ import GitLogo from "./../imgs/logos/git-logo.png";
 import PhotoshopLogo from "./../imgs/logos/photoshop-logo.png";
 import UnityLogo from "./../imgs/logos/unity-logo.png";
 import CSharpLogo from "./../imgs/logos/csharp-logo.svg";
+import GoHome from "./GoHome";
 
 const logos = {
   html: HTMLLogo,
@@ -48,6 +48,7 @@ const links = {
 function Skills() {
   return (
     <div className="skills" id="Skills">
+      <GoHome />
       <div className="skills__container">
         <h2>My Skills</h2>
 
@@ -90,7 +91,6 @@ function Skills() {
           </div>
         </div>
       </div>
-      <GoTopBtn hidden />
     </div>
   );
 }

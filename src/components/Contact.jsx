@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import GoTopBtn from "./GoTopBtn";
 import emailjs from "emailjs-com";
 import "./../styles/Contact.css";
+import GoHome from "./GoHome";
 
 function Contact({ isMobile }) {
   //JSON object containing all the info taken from the form
@@ -36,13 +36,14 @@ function Contact({ isMobile }) {
 
   return (
     <div className="contact" id="Contact">
+      <GoHome />
       <div className="contact__container">
         <h2>Contact</h2>
         <div className="contact__formContainer">
           <form
             action="mailto:antoniofgasco@gmail.com"
             method="POST"
-            enctype="multipart/form-data"
+            encType="multipart/form-data"
             onSubmit={(e) => onSubmit(e)}
           >
             <div className="contact__formName">
@@ -125,7 +126,6 @@ function Contact({ isMobile }) {
           </form>
         </div>
       </div>
-      <GoTopBtn />
     </div>
   );
 }

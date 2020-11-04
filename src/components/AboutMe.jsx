@@ -1,9 +1,11 @@
 import React from "react";
+import GoHome from "./GoHome";
 import "./../styles/AboutMe.css";
 
 function AboutMe() {
   return (
     <div className="aboutMe" id="About Me">
+      <GoHome />
       <div className="aboutMe__container">
         <div className="aboutMe__content">
           <div className="aboutMe__left">
