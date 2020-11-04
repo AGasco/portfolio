@@ -10,7 +10,7 @@ import WhatsappThumbnail from "./../imgs/whatsapp-thumbnail.png";
 import WeatherThumbnail from "./../imgs/weather-thumbnail.png";
 import WikipediaThumbnail from "./../imgs/wikipedia-thumbnail.png";
 import HackReactorThumbnail from "./../imgs/hackreactor-thumbnail.PNG";
-import ShoppingCartThumbnail from "./../imgs/shopping-cart-thumbnail.PNG";
+import ShoppingCartThumbnail from "./../imgs/shopping-cart-thumbnail.png";
 import Carousel from "react-material-ui-carousel";
 import "./../styles/Projects.css";
 import "./../styles/ProjectsMobile.css";
@@ -70,7 +70,7 @@ const projectsData = [
     name: "HACKREACTOR CLONE",
     picture: HackReactorThumbnail,
     description:
-      "Clone of the HackReactor website. I built this project to train my front-end skills. I wanted to see if I could build a professional looking website. Simple one page app. Just 1 html file and 1 css file",
+      "Clone of the HackReactor website. I built this project to train my front-end skills. I wanted to see if I could build a professional looking website. Just 1 html file and 1 css file",
     link: "https://hackreactor-clone.netlify.app/",
     gitLink: "https://github.com/AGasco/hackreactor-clone",
     usedTech: "HTML, CSS, Javascript, Netlify",
