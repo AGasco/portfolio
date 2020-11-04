@@ -10,7 +10,7 @@ import WhatsappThumbnail from "./../imgs/whatsapp-thumbnail.png";
 import WeatherThumbnail from "./../imgs/weather-thumbnail.png";
 import WikipediaThumbnail from "./../imgs/wikipedia-thumbnail.png";
 import HackReactorThumbnail from "./../imgs/hackreactor-thumbnail.PNG";
-import ShoppingCartThumbnail from "./../imgs/shopping-cart-thumbnail.PNG";
+import ShoppingCartThumbnail from "./../imgs/shopping-cart-thumbnail.png";
 import Carousel from "react-material-ui-carousel";
 import "./../styles/Projects.css";
 import "./../styles/ProjectsMobile.css";
