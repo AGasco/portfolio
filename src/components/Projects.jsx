@@ -1,12 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 // import Draggable from "react-draggable";
 import Project from "./Project";
-import ArrowBack from "@material-ui/icons/ArrowBackIos";
-import ArrowForward from "@material-ui/icons/ArrowForwardIos";
 import UserSettingsFormThumbnail from "./../imgs/thumbnails/user-settings-form-thumbnail2.png";
 import NetflixThumbnail from "./../imgs/thumbnails/netflix-thumbnail.png";
 import CovidTrackerThumbnail from "./../imgs/thumbnails/covid-tracker-thumbnail.png";
-import WhatsappThumbnail from "./../imgs/thumbnails/whatsapp-thumbnail.png";
 import WeatherThumbnail from "./../imgs/thumbnails/weather-thumbnail.png";
 import WikipediaThumbnail from "./../imgs/thumbnails/wikipedia-thumbnail.png";
 import HackReactorThumbnail from "./../imgs/thumbnails/hackreactor-thumbnail.PNG";
@@ -14,7 +11,7 @@ import ShoppingCartThumbnail from "./../imgs/thumbnails/shopping-cart-thumbnail.
 import Carousel from "react-material-ui-carousel";
 import "./../styles/Projects.css";
 import "./../styles/ProjectsMobile.css";
-import GoTopBtn from "./GoTopBtn";
+import GoHome from "./GoHome";
 
 const projectsData = [
   //Steam Game
@@ -120,6 +117,7 @@ function Projects({ isMobile }) {
 
   return (
     <div className={isMobile ? "projectsMobi" : "projects"} id="Projects">
+      <GoHome />
       <div className={`projects${isMobile ? "Mobi" : ""}__container`}>
         <h2 className={`projects${isMobile ? "Mobi" : ""}__title`}>Projects</h2>
         <em className={`projects${isMobile ? "Mobi" : ""}__subtitle`}></em>
@@ -147,7 +145,6 @@ function Projects({ isMobile }) {
           </div>
         </div>
       </div>
-      <GoTopBtn hidden />
     </div>
   );
 }

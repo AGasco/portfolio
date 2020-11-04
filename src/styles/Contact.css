@@ -158,6 +158,9 @@ input:focus, textarea:focus {
 }
 
 @media (max-width: 480px) {
+    .contact__container {
+        margin: 0 5px;
+    }
     .contact__container>h2 {
         padding: 10px;
     }
