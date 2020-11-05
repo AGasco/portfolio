@@ -4,6 +4,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  background-color: #202020;
   /* transform: scale(0.9);  Cannot add this because it breaks z-index for GoTopBtn.jsx */
 }
 

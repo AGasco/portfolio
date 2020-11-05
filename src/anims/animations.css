@@ -25,7 +25,7 @@
 }
 
 .forward-enter {
-    transform: translateX(100%);
+    transform: translateX(0%);
 }
 
 .forward-enter.forward-enter-active {
@@ -51,7 +51,7 @@
 }
 
 .backward-enter {
-    transform: translateX(-100%);
+    transform: translateX(0%);
 }
 
 .backward-enter.backward-enter-active {
