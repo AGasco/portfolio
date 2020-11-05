@@ -35,7 +35,7 @@
     /* border-bottom: 1px solid rgba(255, 255, 255, 0.0); */
 }
 
-li>a {
+li>a, .navbar__link {
     text-decoration: none;
     color: goldenrod;
     transition: all 0.3s;
