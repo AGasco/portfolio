@@ -15,12 +15,6 @@ function App() {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   const [isMobile, setIsMobile] = useState(false);
 
-  //Router and animation state
-  const [prevChild, setPrevChild] = useState(null);
-  const [curChild, setCurChild] = useState(null);
-  const [childPos, setChildPos] = useState(null);
-  const [animationCallback, setAnimationCallback] = useState(() => {});
-
   //Checking if it's mobile or desktop to render different components
   useEffect(() => {
     setIsMobile(screenWidth <= 600);
@@ -36,46 +30,43 @@ function App() {
   };
 
   return (
-    <div className="app">
-      <Route
-        render={({ location }) => (
-          <TransitionGroup>
-            <CSSTransition
-              key={location.pathname}
-              classNames="fade"
-              timeout={600}
-            >
-              <Switch location={location}>
-                <Route path="/About Me">
-                  <AboutMe />
-                </Route>
-                {/* <Route path="/About Me" render={() => <AboutMe />} /> */}
-                <Route path="/skills">
-                  <Skills />
-                </Route>
-                {/* <Route path="/skills" render={() => <Skills />} /> */}
-                <Route path="/projects">
-                  <Projects isMobile={isMobile} />
-                </Route>
-                {/* <Route path="/projects" render={() => <Projects isMobile={isMobile} />} /> */}
-                <Route path="/contact">
-                  <Contact isMobile={isMobile} />
-                </Route>
-                {/* <Route path="/contact" render={() => <Contact isMobile={isMobile} />} /> */}
-                <Route path="/">
-                  <div className="app__landing">
-                    <Landing />
-                    <Navbar />
-                  </div>
-                </Route>
-                {/* <Route path="/" render={() => ( <div className="app__landing"> <Landing /> <Navbar /> </div>)}/> */}
-              </Switch>
-            </CSSTransition>
-          </TransitionGroup>
-        )}
-      />
-      <Footer />
-    </div>
+    <React.Fragment>
+      <div className="app">
+        <Route
+          render={({ location }) => (
+            <TransitionGroup>
+              <CSSTransition
+                key={location.pathname}
+                classNames="fade"
+                timeout={300}
+              >
+                <Switch location={location}>
+                  <Route path="/About Me">
+                    <AboutMe />
+                  </Route>
+                  <Route path="/skills">
+                    <Skills />
+                  </Route>
+                  <Route path="/projects">
+                    <Projects isMobile={isMobile} />
+                  </Route>
+                  <Route path="/contact">
+                    <Contact isMobile={isMobile} />
+                  </Route>
+                  <Route path="/">
+                    <div className="app__landing">
+                      <Landing />
+                      <Navbar />
+                    </div>
+                  </Route>
+                </Switch>
+              </CSSTransition>
+            </TransitionGroup>
+          )}
+        />
+        <Footer />
+      </div>
+    </React.Fragment>
   );
 }
 
