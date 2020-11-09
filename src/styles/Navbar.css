@@ -1,12 +1,32 @@
 .navbar {
     width: 100vw;
+    height: 50px;
     position: fixed;
     top: 0;
     right: 0;
     transition: all 0.3s;
-    opacity: 0.3;
-    background-color: #202020;
+    opacity: 1;
+    z-index: 100;
     /* border-bottom: 1px solid #666; */
+}
+
+.navbar__expand {
+    margin: -15px 50%;
+    padding: 0;
+    cursor: pointer;
+    z-index: 101;
+    height: max-content;
+    text-shadow: 5px 5px 5px black;
+}
+
+.navbar__expand>.MuiSvgIcon-root {
+    font-size: 4rem;
+    color: #202020 !important;
+    transition: all 0.2s;
+}
+
+.navbar__expand>.MuiSvgIcon-root:hover {
+    color: goldenrod !important;
 }
 
 .navbar:hover {
@@ -14,14 +34,19 @@
 }
 
 .navbar.hidden {
-    opacity: 0;
+    transform: translateY(-50px);
     cursor: default;
+}
+
+.navbar.hidden .navbar__expand>.MuiSvgIcon-root {
+    color: white;
 }
 
 .navbar ul {
     display: flex;
     justify-content: center;
     padding: 10px;
+    background-color: #202020;
 }
 
 .navbar ul li {
@@ -42,6 +67,10 @@ li>a, .navbar__link {
     transition: all 0.3s;
 }
 
+.navbar__expand>.MuiSvgIcon-root {
+    color: white;
+}
+
 /* .navbar ul li>:hover {
     /* border-bottom: 1px solid rgba(255, 255, 255, 0.5); */
 
@@ -56,10 +85,6 @@ li>a, .navbar__link {
     cursor: default;
     pointer-events: none;
     /* transform: translateY(-100px) */
-}
-
-.navbar ul li.instant {
-    transition: all 0s;
 }
 
 @media (max-width: 1010px) {

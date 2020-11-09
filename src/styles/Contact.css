@@ -151,6 +151,11 @@ input:focus, textarea:focus {
     padding-top: 10px;
 }
 
+.contact__confirmation {
+    text-align: center;
+    font-size: 2rem;
+}
+
 @media (max-width: 780px) {
     .contact__formContainer>form input, .contact__formContainer>form textarea {
         font-size: 1rem !important;

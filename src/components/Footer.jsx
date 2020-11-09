@@ -5,8 +5,8 @@ function Footer() {
   return (
     <div className="footer">
       Built and designed by
-      <span className="footer__name">Antonio F. Gasco</span> with {`<3`} (and
-      ReactJS of course)
+      <span className="footer__name">Antonio F. Gasco</span> with{" "}
+      <span className="footer__heart">{`<3`}</span> (and ReactJS of course)
     </div>
   );
 }

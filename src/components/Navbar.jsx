@@ -1,21 +1,27 @@
 import React, { useState } from "react";
 import { Link, withRouter } from "react-router-dom";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import ExpandLessIcon from "@material-ui/icons/ExpandLess";
 import "./../styles/Navbar.css";
 
 const Navbar = withRouter(({ history, location, elements }) => {
   const curScreen = elements.indexOf(location.pathname);
 
   const [hidden, setHidden] = useState(false);
-  const [instant, setInstant] = useState(false);
 
-  window.onscroll = () => {
-    const scrollY = window.scrollY;
-    if (scrollY >= 1) {
-      setHidden(true);
-      if (scrollY >= 800) {
-        setInstant(true);
-      } else setInstant(false);
-    } else setHidden(false);
+  // window.onscroll = () => {
+  //   const scrollY = window.scrollY;
+  //   if (scrollY >= 1) {
+  //     setHidden(true);
+  //     if (scrollY >= 800) {
+  //       setInstant(true);
+  //     } else setInstant(false);
+  //   } else setHidden(false);
+  // };
+
+  const handleToggle = () => {
+    if (hidden) setHidden(false);
+    else setHidden(true);
   };
 
   return (
@@ -24,12 +30,7 @@ const Navbar = withRouter(({ history, location, elements }) => {
         {elements.map((elem, i) => {
           if (i >= 1) {
             return (
-              <li
-                key={elem}
-                className={`${hidden ? "hidden" : ""} ${
-                  instant ? "instant" : ""
-                }`}
-              >
+              <li key={elem} className={`${hidden ? "hidden" : ""}`}>
                 <div
                   className="navbar__link"
                   onClick={(e) =>
@@ -47,6 +48,9 @@ const Navbar = withRouter(({ history, location, elements }) => {
           }
         })}
       </ul>
+      <div className="navbar__expand" onClick={handleToggle}>
+        {hidden ? <ExpandMoreIcon /> : <ExpandLessIcon />}
+      </div>
     </div>
   );
 });
