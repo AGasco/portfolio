@@ -5,7 +5,9 @@ import AboutMe from "./../components/AboutMe";
 import Skills from "./../components/Skills";
 import Projects from "./../components/Projects";
 import Contact from "./../components/Contact";
+import Sidebar from "./../components/Sidebar";
 import Footer from "./../components/Footer";
+import GoHome from "./../components/GoHome";
 import "./animations.css";
 import { withRouter, Switch, Route } from "react-router-dom";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
@@ -15,6 +17,7 @@ const AnimatedSwitch = withRouter(({ location, isMobile, elements }) => {
   const { state } = location;
   const prevScreen = state ? state.prevScreen : 0;
   const animClassNames = curScreen > prevScreen ? "forward" : "backward";
+  console.log("animClassNames", animClassNames);
   return (
     <TransitionGroup
       childFactory={(child) =>
@@ -30,17 +33,17 @@ const AnimatedSwitch = withRouter(({ location, isMobile, elements }) => {
       >
         <Switch location={location}>
           <Route path="/About Me">
-            <AboutMe />
+            <AboutMe elements={elements} />
           </Route>
           <Route path="/skills">
-            <Skills />
+            <Skills elements={elements} />
           </Route>
           <Route path="/projects">
-            <Projects isMobile={isMobile} />
+            <Projects isMobile={isMobile} elements={elements} />
             {/* <Projects isMobile={isMobile} /> */}
           </Route>
           <Route path="/contact">
-            <Contact isMobile={isMobile} />
+            <Contact isMobile={isMobile} elements={elements} />
             {/* <Contact isMobile={isMobile} /> */}
           </Route>
           <Route path="/">

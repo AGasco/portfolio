@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 // import Draggable from "react-draggable";
 import Project from "./Project";
 import UserSettingsFormThumbnail from "./../imgs/thumbnails/user-settings-form-thumbnail2.png";
@@ -12,6 +12,7 @@ import Carousel from "react-material-ui-carousel";
 import "./../styles/Projects.css";
 import "./../styles/ProjectsMobile.css";
 import GoHome from "./GoHome";
+import Sidebar from "./Sidebar";
 
 const projectsData = [
   //Steam Game
@@ -108,16 +109,11 @@ const projectsData = [
   },
 ];
 
-function Projects({ isMobile }) {
-  useEffect(() => {
-    loadImages();
-  }, []);
-
-  const loadImages = () => {};
-
+function Projects({ isMobile, elements }) {
   return (
     <div className={isMobile ? "projectsMobi" : "projects"} id="Projects">
       <GoHome />
+      <Sidebar elements={elements} />
       <div className={`projects${isMobile ? "Mobi" : ""}__container`}>
         <h2 className={`projects${isMobile ? "Mobi" : ""}__title`}>Projects</h2>
         <em className={`projects${isMobile ? "Mobi" : ""}__subtitle`}></em>

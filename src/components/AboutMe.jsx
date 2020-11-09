@@ -1,11 +1,13 @@
 import React from "react";
 import GoHome from "./GoHome";
+import Sidebar from "./Sidebar";
 import "./../styles/AboutMe.css";
 
-function AboutMe() {
+function AboutMe({ elements }) {
   return (
     <div className="aboutMe" id="About Me">
       <GoHome />
+      <Sidebar elements={elements} />
       <div className="aboutMe__container">
         <div className="aboutMe__content">
           <div className="aboutMe__left">

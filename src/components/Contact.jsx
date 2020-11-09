@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import "./../styles/Contact.css";
 import GoHome from "./GoHome";
+import Sidebar from "./Sidebar";
 
-function Contact({ isMobile }) {
+function Contact({ isMobile, elements }) {
   const [hasSubmitted, setHasSubmitted] = useState(false);
 
   //JSON object containing all the info taken from the form
@@ -40,6 +41,7 @@ function Contact({ isMobile }) {
   return (
     <div className="contact" id="Contact">
       <GoHome />
+      <Sidebar elements={elements} />
       {!hasSubmitted ? (
         <div className="contact__container">
           <h2>Contact</h2>
