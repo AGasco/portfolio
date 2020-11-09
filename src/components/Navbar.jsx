@@ -7,17 +7,7 @@ import "./../styles/Navbar.css";
 const Navbar = withRouter(({ history, location, elements }) => {
   const curScreen = elements.indexOf(location.pathname);
 
-  const [hidden, setHidden] = useState(false);
-
-  // window.onscroll = () => {
-  //   const scrollY = window.scrollY;
-  //   if (scrollY >= 1) {
-  //     setHidden(true);
-  //     if (scrollY >= 800) {
-  //       setInstant(true);
-  //     } else setInstant(false);
-  //   } else setHidden(false);
-  // };
+  const [hidden, setHidden] = useState(true);
 
   const handleToggle = () => {
     if (hidden) setHidden(false);
