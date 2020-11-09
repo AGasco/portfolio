@@ -17,7 +17,6 @@ const AnimatedSwitch = withRouter(({ location, isMobile, elements }) => {
   const { state } = location;
   const prevScreen = state ? state.prevScreen : 0;
   const animClassNames = curScreen > prevScreen ? "forward" : "backward";
-  console.log("animClassNames", animClassNames);
   return (
     <TransitionGroup
       childFactory={(child) =>

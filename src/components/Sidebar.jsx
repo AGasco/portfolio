@@ -1,15 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { withRouter } from "react-router-dom";
 import "./../styles/Sidebar.css";
 
 const Sidebar = withRouter(({ history, location, elements }) => {
   const curScreen = elements.indexOf(location.pathname);
-
-  useEffect(() => {
-    console.log("curScreen", curScreen);
-    console.log("history", history);
-    console.log("location", location);
-  }, []);
 
   return (
     <div className="sidebar">
@@ -45,6 +39,7 @@ const Sidebar = withRouter(({ history, location, elements }) => {
               </li>
             );
           }
+          return null;
         })}
       </ul>
     </div>

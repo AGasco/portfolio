@@ -4,7 +4,7 @@
     position: fixed;
     top: 0;
     right: 0;
-    transition: all 0.3s;
+    transition: all 0.7s;
     opacity: 1;
     z-index: 100;
     /* border-bottom: 1px solid #666; */

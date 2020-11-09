@@ -1,5 +1,5 @@
 .goHome {
-    position: absolute;
+    position: fixed;
     top: 2%;
     left: 2%;
     opacity: 0;

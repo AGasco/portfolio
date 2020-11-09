@@ -76,7 +76,7 @@ const projectsData = [
 
   //Netflix Clone
   {
-    name: "Netflix Clone",
+    name: "NETFLIX CLONE",
     picture: NetflixThumbnail,
     description:
       "Clone of the popular streaming platform, Netflix. It uses Netflix API to obtain movies' data sorted by genres, or to show which movies are trending right now. Each movie can be clicked to watch a Youtube embed showing the trailer of that movie",
@@ -87,7 +87,7 @@ const projectsData = [
 
   //Wikipedia Viewer
   {
-    name: "Wikipedia Viewer",
+    name: "WIKIPEDIA VIEWER",
     picture: WikipediaThumbnail,
     description:
       "App that uses Wikipedia API to display a list of clickable articles based on what's inputted in the search bar by the user. As in Wikipedia itself, there is a button to just search for a random article",
@@ -98,7 +98,7 @@ const projectsData = [
 
   //Weather App
   {
-    name: "Weather App",
+    name: "WEATHER APP",
     picture: WeatherThumbnail,
     description:
       "The Weather App shows the user the weather on their location, in text and icon formats, as well as the current local temperature (in Celsius or Farenheit). It first asks for permission to know the user's location using navigator.geolocation()",

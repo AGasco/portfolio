@@ -106,11 +106,14 @@
         font-size: 5rem;
     }
     .landing {
-        background-position: 100% center;
+        background-position: 75% center;
     }
 }
 
 @media (max-width: 650px) {
+    .landing {
+        background-position: 75%;
+    }
     .landing__longName {
         display: none;
     }
@@ -172,84 +175,3 @@
     opacity: 0;
     animation: showUp 1.5s 3.8s forwards;
 }
-
-/* .landing {
-    display: flex;
-    height: 100vh;
-}
-
-.landing__left, .landing__right {
-    height: 100vh;
-    flex: 1;
-}
-
-.landing__left {
-    background-color: var(--yellow-color);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.landing__leftBlock {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    width: 100%;
-    border-bottom: 5px solid var(--red-color);
-    transition: all 0.3s;
-}
-
-.landing__leftBlock:hover {
-    background-color: var(--green-color);
-}
-
-.landing__leftBlock:hover>p {
-    color: var(--yellow-color);
-}
-
-.landing__leftBlock:last-of-type {
-    border: none;
-}
-
-.landing__leftBlock>p {
-    font-size: 10rem;
-    color: white;
-}
-
-.landing__right {
-    background-color: var(--green-color);
-}
-
-.landing__text {
-    position: absolute;
-    top: 35vh;
-    left: 50vw;
-}
-
-.landing__text>p {
-    color: var(--white-color);
-    font-size: 50px;
-    font-family: 'Open Sans', sans-serif;
-    object-fit: contain;
-}
-
-.landing__greeting {
-    font-size: 200px !important;
-    padding-left: 3vw;
-}
-
-.landing__name>#myName {
-    font-weight: 800;
-    color: var(--yellow-color);
-}
-
-.landing__developer {
-    margin-top: -10px;
-    margin-left: 70px;
-    font-size: 20px !important;
-    font-weight: 300;
-    text-align: center;
-} */
