@@ -1,8 +1,7 @@
 .skills {
-    height: 100vh !important;
     background-color: goldenrod;
     padding: 100px 0;
-    height: max-content;
+    height: max-content !important;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,8 +11,8 @@
 .skills__container {
     background-color: #ddd;
     width: 60%;
-    height: auto;
-    max-height: 90vh;
+    height: max-content !important;
+    /* max-height: 90vh; */
     border-radius: 20px;
     padding-bottom: 50px;
     -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), -2px -2px 5px rgba(0, 0, 0, 0.2);
@@ -53,8 +52,11 @@
 
 @media (max-width: 1075px) {
     .skills {
-        height: auto;
+        height: max-content !important;
         padding: 100px 0;
+    }
+    .skills__container {
+        height: max-content !important;
     }
     .skills__gridRow {
         flex-direction: column;
