@@ -2,8 +2,8 @@
     position: fixed;
     top: 2%;
     left: 2%;
-    animation: showUp 0.6s 1.2s forwards;
     opacity: 0;
+    animation: showUp 0.6s 1.2s forwards;
 }
 
 @keyframes showUp {

@@ -145,6 +145,34 @@
     }
 }
 
+/* Animations */
+
+@keyframes showUp {
+    to {
+        opacity: 1;
+    }
+}
+
+.landing__longName.anim, .landing__shortName.anim {
+    opacity: 0;
+    animation: showUp 4s 1.2s forwards;
+}
+
+.landing__developer.anim {
+    opacity: 0;
+    animation: showUp 3s 2s forwards;
+}
+
+.landing__linkedin.anim {
+    opacity: 0;
+    animation: showUp 1.5s 3.4s forwards;
+}
+
+.landing__github.anim {
+    opacity: 0;
+    animation: showUp 1.5s 3.8s forwards;
+}
+
 /* .landing {
     display: flex;
     height: 100vh;

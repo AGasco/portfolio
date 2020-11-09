@@ -4,12 +4,13 @@
     top: 0;
     right: 0;
     transition: all 0.3s;
-    background-color: rgba(0, 0, 0, 0.25);
+    opacity: 0.3;
+    background-color: #202020;
     /* border-bottom: 1px solid #666; */
 }
 
 .navbar:hover {
-    background-color: #202020;
+    opacity: 1;
 }
 
 .navbar.hidden {
