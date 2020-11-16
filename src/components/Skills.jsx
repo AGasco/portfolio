@@ -15,6 +15,7 @@ import UnityLogo from "./../imgs/logos/unity-logo.png";
 import CSharpLogo from "./../imgs/logos/csharp-logo.svg";
 import GoHome from "./GoHome";
 import Sidebar from "./Sidebar";
+import Hamburger from "./Hamburger";
 
 const logos = {
   html: HTMLLogo,
@@ -46,11 +47,17 @@ const links = {
   csharp: "https://docs.microsoft.com/en-us/dotnet/csharp/",
 };
 
-function Skills({ elements }) {
+function Skills({ elements, isMobile }) {
   return (
     <div className="skills" id="Skills">
-      <GoHome />
-      <Sidebar elements={elements} />
+      {!isMobile ? (
+        <div>
+          <GoHome />
+          <Sidebar elements={elements} />
+        </div>
+      ) : (
+        <Hamburger elements={elements} color={"black"} />
+      )}
       <div className="skills__container">
         <h2>My Skills</h2>
 

@@ -7,10 +7,10 @@ import "./../styles/GoHome.css";
 //than having to prop-drill every single component for GoHome to have access to the elements array
 const elements = ["/", "/About Me", "/Skills", "/Projects", "/Contact"];
 
-const GoHome = withRouter(({ location, history }) => {
+const GoHome = withRouter(({ location, history, isMobile }) => {
   const curScreen = elements.indexOf(location.pathname);
   return (
-    <div className="goHome">
+    <div className={`goHome${isMobile ? "Mobi" : ""}`}>
       <div
         className="goHome__link"
         onClick={() =>

@@ -1,8 +1,8 @@
 .skills {
     background-color: goldenrod;
     padding: 100px 0;
-    height: max-content !important;
-    min-height: 100vh;
+    /* height: max-content !important;
+    min-height: 100vh; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,15 +10,14 @@
 }
 
 .skills__container {
-    background-color: #ddd;
+    /* background-color: #ddd;
     width: 60%;
     height: max-content !important;
-    /* max-height: 90vh; */
     border-radius: 20px;
     padding-bottom: 50px;
     -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), -2px -2px 5px rgba(0, 0, 0, 0.2);
     -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), -2px -2px 5px rgba(0, 0, 0, 0.2);
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), -2px -2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), -2px -2px 5px rgba(0, 0, 0, 0.2); */
 }
 
 .skills__container>h2 {
@@ -47,13 +46,13 @@
         font-size: 2rem
     }
     .skills {
-        padding: 100px 0;
+        padding: 0 !important;
     }
 }
 
 @media (max-width: 1075px) {
     .skills {
-        height: max-content !important;
+        /* height: max-content !important; */
         padding: 100px 0;
     }
     .skills__container {

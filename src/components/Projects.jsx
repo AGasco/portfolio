@@ -13,6 +13,7 @@ import "./../styles/Projects.css";
 import "./../styles/ProjectsMobile.css";
 import GoHome from "./GoHome";
 import Sidebar from "./Sidebar";
+import Hamburger from "./Hamburger";
 
 const projectsData = [
   //Steam Game
@@ -112,8 +113,14 @@ const projectsData = [
 function Projects({ isMobile, elements }) {
   return (
     <div className={isMobile ? "projectsMobi" : "projects"} id="Projects">
-      <GoHome />
-      <Sidebar elements={elements} />
+      {!isMobile ? (
+        <div>
+          <GoHome />
+          <Sidebar elements={elements} />
+        </div>
+      ) : (
+        <Hamburger elements={elements} color={"golden"} />
+      )}
       <div className={`projects${isMobile ? "Mobi" : ""}__container`}>
         <h2 className={`projects${isMobile ? "Mobi" : ""}__title`}>Projects</h2>
         <em className={`projects${isMobile ? "Mobi" : ""}__subtitle`}></em>

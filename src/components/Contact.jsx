@@ -3,6 +3,7 @@ import emailjs from "emailjs-com";
 import "./../styles/Contact.css";
 import GoHome from "./GoHome";
 import Sidebar from "./Sidebar";
+import Hamburger from "./Hamburger";
 
 function Contact({ isMobile, elements }) {
   const [hasSubmitted, setHasSubmitted] = useState(false);
@@ -40,8 +41,14 @@ function Contact({ isMobile, elements }) {
 
   return (
     <div className="contact" id="Contact">
-      <GoHome />
-      <Sidebar elements={elements} />
+      {!isMobile ? (
+        <div>
+          <GoHome />
+          <Sidebar elements={elements} />
+        </div>
+      ) : (
+        <Hamburger elements={elements} color={"black"} />
+      )}
       {!hasSubmitted ? (
         <div className="contact__container">
           <h2>Contact</h2>
