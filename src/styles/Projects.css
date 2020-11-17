@@ -1,18 +1,24 @@
 .projects {
-  height: 100vh;
+  height: max-content;
+  min-height: 100vh;
   display: flex;
+  padding-top: 70px;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   position: relative;
   background-color: #202020;
   /* transform: scale(0.9);  Cannot add this because it breaks z-index for GoTopBtn.jsx */
+}
+
+.projects__container {
+  margin-left: 200px;
 }
 
 .projects__title {
   font-size: 3rem;
   flex: 0.2;
   padding: 20px;
-  padding-bottom: 0;
+  padding-bottom: 100px;
   text-align: center;
   color: white
 }
@@ -20,4 +26,41 @@
 .projects__subtitle {
   color: rgba(117, 19, 93, 0.4);
   font-weight: 300;
+}
+
+.projects__gridContainer {
+  width: 80vw;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.projects__grid {
+  /* display: flex; */
+}
+
+@media (max-width: 575px) {
+  .projects {
+    padding-top: 30px;
+    height: 100vh;
+  }
+  .projects__title {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 20px;
+  }
+  .projects__container {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .projects__grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .projects__gridContainer {
+    flex-direction: column;
+    align-items: center;
+  }
 }

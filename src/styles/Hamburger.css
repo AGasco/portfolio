@@ -72,5 +72,5 @@
 }
 
 .hamburger__content.hamburger__active {
-    transform: translate(7px, -15px)/* -45px on Skills */
+    transform: translate(7px, -16px)/* -45px on Skills */
 }
