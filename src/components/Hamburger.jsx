@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import MenuIcon from "@material-ui/icons/Menu";
-import CloseIcon from "@material-ui/icons/Close";
 import Sidebar from "./Sidebar";
-import FadeProps from "fade-props";
-import ReactCSSTransitionReplace from "react-css-transition-replace";
 import "./../styles/Hamburger.css";
 
 const Hamburger = ({ elements, color }) => {

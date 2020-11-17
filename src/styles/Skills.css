@@ -1,8 +1,8 @@
 .skills {
     background-color: goldenrod;
     padding: 100px 0;
-    /* height: max-content !important;
-    min-height: 100vh; */
+    height: max-content !important;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,14 +52,15 @@
 
 @media (max-width: 1075px) {
     .skills {
-        /* height: max-content !important; */
         padding: 100px 0;
     }
     .skills__container {
         height: max-content !important;
+        margin-bottom: 25px;
+        max-width: 90%;
     }
     .skills__gridRow {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
     }
     .skills__gridRow>.skillCard {

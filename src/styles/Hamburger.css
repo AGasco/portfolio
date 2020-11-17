@@ -48,7 +48,11 @@
 }
 
 .hamburger__content {
+    position: sticky;
+    top: 0;
+    left: 0;
     transform: translate(7px, -75px);
+    /* -125px on Skills */
     transition: all 1s;
     width: 100vw;
     min-height: 50px;
@@ -68,5 +72,5 @@
 }
 
 .hamburger__content.hamburger__active {
-    transform: translate(7px, -15px)
+    transform: translate(7px, -15px)/* -45px on Skills */
 }
