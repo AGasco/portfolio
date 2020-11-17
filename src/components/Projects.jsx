@@ -8,9 +8,7 @@ import WeatherThumbnail from "./../imgs/thumbnails/weather-thumbnail.png";
 import WikipediaThumbnail from "./../imgs/thumbnails/wikipedia-thumbnail.png";
 import HackReactorThumbnail from "./../imgs/thumbnails/hackreactor-thumbnail.PNG";
 import ShoppingCartThumbnail from "./../imgs/thumbnails/shopping-cart-thumbnail.png";
-import Carousel from "react-material-ui-carousel";
 import "./../styles/Projects.css";
-import "./../styles/ProjectsMobile.css";
 import GoHome from "./GoHome";
 import Sidebar from "./Sidebar";
 import Hamburger from "./Hamburger";
@@ -86,33 +84,33 @@ const projectsData = [
     usedTech: "HTML, CSS, Javascript, React, Google Firebase, JSON, APIs",
   },
 
-  //Wikipedia Viewer
-  {
-    name: "WIKIPEDIA VIEWER",
-    picture: WikipediaThumbnail,
-    description:
-      "App that uses Wikipedia API to display a list of clickable articles based on what's inputted in the search bar by the user. As in Wikipedia itself, there is a button to just search for a random article",
-    link: "https://wikipedia-viewer-4cff5.web.app/",
-    gitLink: "https://github.com/AGasco/wikipedia-viewer",
-    usedTech: "HTML, CSS, Javascript, React, Google Firebase, JSON, CORS, APIs",
-  },
+  // //Wikipedia Viewer
+  // {
+  //   name: "WIKIPEDIA VIEWER",
+  //   picture: WikipediaThumbnail,
+  //   description:
+  //     "App that uses Wikipedia API to display a list of clickable articles based on what's inputted in the search bar by the user. As in Wikipedia itself, there is a button to just search for a random article",
+  //   link: "https://wikipedia-viewer-4cff5.web.app/",
+  //   gitLink: "https://github.com/AGasco/wikipedia-viewer",
+  //   usedTech: "HTML, CSS, Javascript, React, Google Firebase, JSON, CORS, APIs",
+  // },
 
-  //Weather App
-  {
-    name: "WEATHER APP",
-    picture: WeatherThumbnail,
-    description:
-      "The Weather App shows the user the weather on their location, in text and icon formats, as well as the current local temperature (in Celsius or Farenheit). It first asks for permission to know the user's location using navigator.geolocation()",
-    link: "https://weather-app-d6d37.web.app/",
-    gitLink: "https://github.com/AGasco/weather-app",
-    usedTech:
-      "HTML, CSS, Javascript, React, Geolocation, Google Firebase, JSON, APIs",
-  },
+  // //Weather App
+  // {
+  //   name: "WEATHER APP",
+  //   picture: WeatherThumbnail,
+  //   description:
+  //     "The Weather App shows the user the weather on their location, in text and icon formats, as well as the current local temperature (in Celsius or Farenheit). It first asks for permission to know the user's location using navigator.geolocation()",
+  //   link: "https://weather-app-d6d37.web.app/",
+  //   gitLink: "https://github.com/AGasco/weather-app",
+  //   usedTech:
+  //     "HTML, CSS, Javascript, React, Geolocation, Google Firebase, JSON, APIs",
+  // },
 ];
 
 function Projects({ isMobile, elements }) {
   return (
-    <div className={isMobile ? "projectsMobi" : "projects"} id="Projects">
+    <div className="projects" id="Projects">
       {!isMobile ? (
         <div>
           <GoHome />
@@ -121,30 +119,21 @@ function Projects({ isMobile, elements }) {
       ) : (
         <Hamburger elements={elements} color={"golden"} />
       )}
-      <div className={`projects${isMobile ? "Mobi" : ""}__container`}>
-        <h2 className={`projects${isMobile ? "Mobi" : ""}__title`}>Projects</h2>
-        <em className={`projects${isMobile ? "Mobi" : ""}__subtitle`}></em>
-        <div className={`projects${isMobile ? "Mobi" : ""}__gridContainer`}>
-          <div className={`projects${isMobile ? "Mobi" : ""}__gridRow`}>
-            <Carousel
-              className="projectsMobi__carousel"
-              autoPlay={false}
-              navButtonsAlwaysVisible={isMobile ? false : true}
-              navButtonsAlwaysInvisible={isMobile ? true : false}
-              indicators={isMobile ? true : false}
-            >
-              {projectsData.map((project) => (
-                <Project
-                  isMobile={isMobile}
-                  name={project.name}
-                  picture={project.picture}
-                  link={project.link}
-                  gitLink={project.gitLink}
-                  description={project.description}
-                  usedTech={project.usedTech}
-                />
-              ))}
-            </Carousel>
+      <div className="projects__container">
+        <h2 className="projects__title">Projects</h2>
+        <div className="projects__gridContainer">
+          <div className="projects__grid">
+            {projectsData.map((project) => (
+              <Project
+                isMobile={isMobile}
+                name={project.name}
+                picture={project.picture}
+                link={project.link}
+                gitLink={project.gitLink}
+                description={project.description}
+                usedTech={project.usedTech}
+              />
+            ))}
           </div>
         </div>
       </div>
