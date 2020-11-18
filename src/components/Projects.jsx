@@ -4,10 +4,8 @@ import Project from "./Project";
 import UserSettingsFormThumbnail from "./../imgs/thumbnails/user-settings-form-thumbnail2.png";
 import NetflixThumbnail from "./../imgs/thumbnails/netflix-thumbnail.png";
 import CovidTrackerThumbnail from "./../imgs/thumbnails/covid-tracker-thumbnail.png";
-import WeatherThumbnail from "./../imgs/thumbnails/weather-thumbnail.png";
-import WikipediaThumbnail from "./../imgs/thumbnails/wikipedia-thumbnail.png";
 import HackReactorThumbnail from "./../imgs/thumbnails/hackreactor-thumbnail.PNG";
-import ShoppingCartThumbnail from "./../imgs/thumbnails/shopping-cart-thumbnail.png";
+import ShoppingCartThumbnail from "./../imgs/thumbnails/shopping-cart-thumbnail.PNG";
 import "./../styles/Projects.css";
 import GoHome from "./GoHome";
 import Sidebar from "./Sidebar";
@@ -57,7 +55,7 @@ const projectsData = [
     picture: ShoppingCartThumbnail,
     description:
       "Fully functional shopping cart app built from scratch. State handling was done using redux and react-redux packages",
-    link: "https://redux-shopping-cart-fa4e7.web.app/",
+    link: "https://redux-shopping-cart-fa4e7.firebaseapp.com/",
     gitLink: "https://github.com/AGasco/full-shopping-cart",
     usedTech: "HTML, CSS, Javascript, React, Redux, Google Firebase, JSON",
   },
