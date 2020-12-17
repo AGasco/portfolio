@@ -8,7 +8,7 @@ import HackReactorThumbnail from "./../imgs/thumbnails/hackreactor-thumbnail.PNG
 import ShoppingCartThumbnail from "./../imgs/thumbnails/shopping-cart-thumbnail.PNG";
 import "./../styles/Projects.css";
 import GoHome from "./GoHome";
-import Sidebar from "./Sidebar";
+// import Sidebar from "./Sidebar";
 import Hamburger from "./Hamburger";
 
 const projectsData = [
@@ -109,14 +109,14 @@ const projectsData = [
 function Projects({ isMobile, elements }) {
   return (
     <div className="projects" id="Projects">
-      {!isMobile ? (
+      {/* {!isMobile ? (
         <div>
           <GoHome />
           <Sidebar elements={elements} />
         </div>
       ) : (
         <Hamburger elements={elements} color={"golden"} />
-      )}
+      )} */}
       <div className="projects__container">
         <h2 className="projects__title">Projects</h2>
         <div className="projects__gridContainer">

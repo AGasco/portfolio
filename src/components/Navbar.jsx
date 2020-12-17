@@ -1,57 +1,30 @@
 import React, { useState, useEffect } from "react";
-import { withRouter } from "react-router-dom";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import ExpandLessIcon from "@material-ui/icons/ExpandLess";
+import { Link as ScrollLink } from "react-scroll";
 import "./../styles/Navbar.css";
 
-const Navbar = withRouter(({ history, location, elements }) => {
-  const curScreen = elements.indexOf(location.pathname);
+const sections = ["About Me", "Skills", "Projects", "Contact"];
 
-  const [hidden, setHidden] = useState(true);
-
-  useEffect(() => {
-    const time =
-      window.sessionStorage.getItem("hasAnimated") === null ? 5000 : 1250;
-    setTimeout(() => {
-      setHidden(false);
-    }, time);
-  }, []);
-
-  const handleToggle = () => {
-    if (hidden) setHidden(false);
-    else setHidden(true);
-  };
-
+const Navbar = () => {
   return (
-    <div className={`navbar ${hidden ? "hidden" : ""}`}>
+    <div className="navbar">
+      <ScrollLink className="navbar__home" to="root">
+        antoniofgasco
+      </ScrollLink>
       <ul>
-        {elements.map((elem, i) => {
-          if (i >= 1) {
-            return (
-              <li key={elem} className={`${hidden ? "hidden" : ""}`}>
-                <div
-                  className="navbar__link"
-                  onClick={(e) =>
-                    history.push({
-                      pathname:
-                        elements[elements.indexOf("/" + e.target.textContent)],
-                      state: { prevScreen: curScreen },
-                    })
-                  }
-                >
-                  {elem.slice(1)}
-                </div>
-              </li>
-            );
-          }
-          return null;
-        })}
+        {sections.map((section, i) => (
+          <li key={section}>
+            <ScrollLink
+              className="navbar__link"
+              to={section.replace(/\s/g, "")}
+              // duration={(i + 1) * 400}
+            >
+              {section}
+            </ScrollLink>
+          </li>
+        ))}
       </ul>
-      <div className="navbar__expand" onClick={handleToggle}>
-        {hidden ? <ExpandMoreIcon /> : <ExpandLessIcon />}
-      </div>
     </div>
   );
-});
+};
 
 export default Navbar;

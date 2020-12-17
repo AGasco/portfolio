@@ -1,20 +1,20 @@
 import React from "react";
 import GoHome from "./GoHome";
-import Sidebar from "./Sidebar";
+// import Sidebar from "./Sidebar";
 import Hamburger from "./Hamburger";
 import "./../styles/AboutMe.css";
 
 function AboutMe({ elements, isMobile }) {
   return (
-    <div className="aboutMe" id="About Me">
-      {!isMobile ? (
+    <div className="aboutMe" id="AboutMe">
+      {/* {!isMobile ? (
         <div>
           <GoHome />
           <Sidebar elements={elements} />
         </div>
       ) : (
         <Hamburger elements={elements} color={"golden"} />
-      )}
+      )} */}
       <div className="aboutMe__container">
         <div className="aboutMe__content">
           <div className="aboutMe__left">

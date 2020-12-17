@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import MenuIcon from "@material-ui/icons/Menu";
-import Sidebar from "./Sidebar";
+// import Sidebar from "./Sidebar";
 import "./../styles/Hamburger.css";
 
 const Hamburger = ({ elements, color }) => {
@@ -27,7 +27,7 @@ const Hamburger = ({ elements, color }) => {
           isOpen ? "hamburger__active" : ""
         }`}
       >
-        <Sidebar elements={elements} isMobile={true} onClose={handleClose} />
+        {/* <Sidebar elements={elements} isMobile={true} onClose={handleClose} /> */}
       </div>
     </div>
   );

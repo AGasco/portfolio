@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import "./../styles/Contact.css";
 import GoHome from "./GoHome";
-import Sidebar from "./Sidebar";
+// import Sidebar from "./Sidebar";
 import Hamburger from "./Hamburger";
 
 function Contact({ isMobile, elements }) {
@@ -41,14 +41,14 @@ function Contact({ isMobile, elements }) {
 
   return (
     <div className="contact" id="Contact">
-      {!isMobile ? (
+      {/* {!isMobile ? (
         <div>
           <GoHome />
           <Sidebar elements={elements} />
         </div>
       ) : (
         <Hamburger elements={elements} color={"black"} />
-      )}
+      )} */}
       {!hasSubmitted ? (
         <div className="contact__container">
           <h2>Contact</h2>

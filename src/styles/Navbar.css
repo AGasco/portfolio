@@ -3,51 +3,33 @@
     height: 50px;
     position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
     transition: all 0.7s;
     opacity: 1;
     z-index: 100;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-left: 50px;
     /* border-bottom: 1px solid #666; */
 }
 
-.navbar__expand {
-    margin: -15px 50%;
-    padding: 0;
+.navbar__home {
     cursor: pointer;
-    z-index: 101;
-    height: max-content;
-    width: max-content;
-    text-shadow: 5px 5px 5px black;
-}
-
-.navbar__expand>.MuiSvgIcon-root {
-    font-size: 4rem;
-    color: #202020 !important;
-    transition: all 0.2s;
-}
-
-.navbar__expand>.MuiSvgIcon-root:hover {
-    color: goldenrod !important;
-}
-
-.navbar:hover {
-    opacity: 1;
-}
-
-.navbar.hidden {
-    transform: translateY(-50px);
-    cursor: default;
-}
-
-.navbar.hidden .navbar__expand>.MuiSvgIcon-root {
-    color: white;
+    color: #faf4f2;
+    font-size: 2rem;
+    font-family: "Dancing Script", cursive;
+    position: absolute;
+    left: 5vw;
 }
 
 .navbar ul {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     padding: 10px;
-    background-color: #202020;
+    padding-top: 0;
+    /* background-color: #202020; */
+    /* background-color: #f1f5f9; */
 }
 
 .navbar ul li {
@@ -64,13 +46,16 @@
 
 li>a, .navbar__link {
     text-decoration: none;
-    color: goldenrod;
+    /* color: goldenrod; */
+    color: #202020;
+    font-family: "Darker Grotesque", sans-serif;
+    font-size: 2rem;
     transition: all 0.3s;
 }
 
-.navbar__expand>.MuiSvgIcon-root {
+/* .navbar__expand>.MuiSvgIcon-root {
     color: white;
-}
+} */
 
 /* .navbar ul li>:hover {
     /* border-bottom: 1px solid rgba(255, 255, 255, 0.5); */
@@ -79,14 +64,14 @@ li>a, .navbar__link {
 } */
 
 .navbar ul li>a:hover, .navbar__link:hover {
-    color: white !important;
+    color: #faf4f2 !important;
 }
 
-.navbar ul li.hidden {
+/* .navbar ul li.hidden {
     cursor: default;
     pointer-events: none;
-    /* transform: translateY(-100px) */
-}
+    /* transform: translateY(-100px) 
+}*/
 
 @media (max-width: 1010px) {
     .navbar {
