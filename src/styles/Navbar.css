@@ -58,10 +58,23 @@ li>a, .navbar__link {
 @media (max-width: 1010px) {
     .navbar {
         width: 100% !important;
+        padding: 0;
     }
 }
 
 @media (max-width: 700px) {
+    .navbar {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 4vh;
+    }
+    .navbar__brand {
+        position: relative;
+    }
+    .navbar ul {
+        justify-content: center;
+    }
     .navbar ul li {
         font-size: 1.3rem;
     }
@@ -78,13 +91,10 @@ li>a, .navbar__link {
         margin: 0 5px;
         white-space: nowrap;
     }
-    .navbar__expand {
-        margin: -15px 40%;
-    }
 }
 
 @media (max-width: 320px) {
-    .navbar ul li {
-        font-size: 1rem;
+    .navbar__link {
+        font-size: 2rem !important;
     }
 }

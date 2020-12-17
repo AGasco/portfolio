@@ -36,6 +36,7 @@
 }
 
 .landing__bottom {
+    flex: 1;
     display: flex;
     align-items: center;
     margin-top: -3vh;
@@ -100,7 +101,7 @@
     color: goldenrod;
 }
 
-/** ICONS */
+/* media queries */
 
 @media (min-width: 1920px) {
     .landing__longName, .landing__shortName {
@@ -112,15 +113,15 @@
 }
 
 @media (max-width: 950px) {
-    .landing__longName, .landing__shortName {
-        font-size: 5rem;
-    }
     .landing {
         background-position: 75% center;
     }
+    .landing__longName, .landing__shortName {
+        font-size: 6rem;
+    }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 700px) {
     .landing {
         background-position: 75%;
     }
@@ -129,10 +130,10 @@
     }
     .landing__shortName {
         display: inline-block;
+        font-size: 7rem;
     }
     .landing__developer {
-        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
-        font-size: 1.3rem !important;
+        font-size: 2rem !important;
     }
     .landing__container {
         margin: 0 0 25rem 2rem;
@@ -141,20 +142,48 @@
 }
 
 @media (max-width: 480px) {
-    .landing__icons .MuiSvgIcon-root {
-        font-size: 1.5rem;
+    .landing__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 130px;
+    }
+    .landing__top {
+        flex: 1;
+    }
+    .landing__icons .svg-inline--fa {
+        font-size: 2rem;
     }
     .landing__longName, .landing__shortName {
-        font-size: 4rem;
+        font-size: 6rem;
+    }
+}
+
+@media (max-width: 420px) {
+    .landing {
+        display: block;
+    }
+    .landing__container {
+        position: relative;
+        margin-left: 10vw;
+    }
+    .landing__shortName {
+        font-size: 5rem;
+    }
+    .landing__icons .svg-inline--fa {
+        font-size: 1.5rem;
     }
 }
 
 @media (max-width: 320px) {
     .landing__shortName {
-        font-size: 3rem;
+        font-size: 4rem;
     }
     .landing__developer {
-        font-size: 2rem;
+        font-size: 1.5rem !important;
+    }
+    .landing__icons .svg-inline--fa {
+        font-size: 1.3rem;
     }
 }
 

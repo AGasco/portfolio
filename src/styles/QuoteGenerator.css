@@ -92,3 +92,9 @@
     font-family: "Darker Grotesque", sans-serif;
     font-size: 1rem;
 }
+
+@media (max-width: 1200px) {
+    .quoteGenerator {
+        display: none;
+    }
+}

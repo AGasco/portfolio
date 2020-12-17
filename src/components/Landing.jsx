@@ -27,7 +27,7 @@ const Landing = () => {
             ANTONIO F. GASCO
           </h1>
           <h1 className={`landing__shortName ${animate && "anim"}`}>
-            A.F. Gasco
+            A.F. GASCO
           </h1>
         </div>
         <div className="landing__bottom">
