@@ -29,7 +29,7 @@ function App() {
       <div className="app">
         <BrowserRouter>
           <AnimatedSwitch isMobile={isMobile} elements={elements} />
-          <Footer />
+          {/* <Footer /> */}
         </BrowserRouter>
       </div>
     </React.Fragment>

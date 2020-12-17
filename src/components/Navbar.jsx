@@ -1,34 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { withRouter } from "react-router-dom";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import ExpandLessIcon from "@material-ui/icons/ExpandLess";
 import "./../styles/Navbar.css";
 
 const Navbar = withRouter(({ history, location, elements }) => {
   const curScreen = elements.indexOf(location.pathname);
 
-  const [hidden, setHidden] = useState(true);
-
-  useEffect(() => {
-    const time =
-      window.sessionStorage.getItem("hasAnimated") === null ? 5000 : 1250;
-    setTimeout(() => {
-      setHidden(false);
-    }, time);
-  }, []);
-
-  const handleToggle = () => {
-    if (hidden) setHidden(false);
-    else setHidden(true);
-  };
-
   return (
-    <div className={`navbar ${hidden ? "hidden" : ""}`}>
+    <div className="navbar">
+      <p className="navbar__brand">antoniofgasco</p>
       <ul>
         {elements.map((elem, i) => {
           if (i >= 1) {
             return (
-              <li key={elem} className={`${hidden ? "hidden" : ""}`}>
+              <li key={elem}>
                 <div
                   className="navbar__link"
                   onClick={(e) =>
@@ -47,9 +31,6 @@ const Navbar = withRouter(({ history, location, elements }) => {
           return null;
         })}
       </ul>
-      <div className="navbar__expand" onClick={handleToggle}>
-        {hidden ? <ExpandMoreIcon /> : <ExpandLessIcon />}
-      </div>
     </div>
   );
 });
