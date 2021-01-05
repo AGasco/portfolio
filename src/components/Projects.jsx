@@ -5,7 +5,7 @@ import UserSettingsFormThumbnail from "./../imgs/thumbnails/user-settings-form-t
 import NetflixThumbnail from "./../imgs/thumbnails/netflix-thumbnail.png";
 import CovidTrackerThumbnail from "./../imgs/thumbnails/covid-tracker-thumbnail.png";
 import HackReactorThumbnail from "./../imgs/thumbnails/hackreactor-thumbnail.PNG";
-import ShoppingCartThumbnail from "./../imgs/thumbnails/shopping-cart-thumbnail.PNG";
+import ShoppingCartThumbnail from "./../imgs/thumbnails/shopping-cart-thumbnail.png";
 import "./../styles/Projects.css";
 import GoHome from "./GoHome";
 import Sidebar from "./Sidebar";
