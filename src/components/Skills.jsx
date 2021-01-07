@@ -55,7 +55,7 @@ function Skills({ elements, isMobile }) {
       <div className="skills__right">
         <Navbar elements={elements} />
         <div className="skills__top">
-          <h1 className="skills__title">SKILLS</h1>
+          {/* <h1 className="skills__title">skills</h1> */}
         </div>
         <div className="skills__bottom">
           <div className="skills__gridContainer">
