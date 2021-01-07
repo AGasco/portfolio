@@ -1,8 +1,24 @@
 import React from "react";
+import { withRouter } from "react-router-dom";
 import "./../styles/Brand.css";
 
-function Brand() {
-  return <p className="brand">antoniofgasco</p>;
-}
+const Brand = withRouter(({ elements, history, location }) => {
+  const curScreen = elements.indexOf(location.pathname);
+  return (
+    <p
+      className="brand"
+      onClick={() => {
+        console.log(curScreen);
+        if (curScreen !== 0)
+          return history.push({
+            pathname: "/",
+            state: { prevScreen: curScreen },
+          });
+      }}
+    >
+      antoniofgasco
+    </p>
+  );
+});
 
 export default Brand;

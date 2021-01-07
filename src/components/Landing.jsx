@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
+import Navbar from "./../components/Navbar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithubSquare } from "@fortawesome/free-brands-svg-icons";
 import "./../styles/Landing.css";
 import QuoteGenerator from "./QuoteGenerator";
 
-const Landing = () => {
+const Landing = ({ elements }) => {
   const [animate, setAnimate] = useState(true);
 
   useEffect(() => {
@@ -20,6 +21,7 @@ const Landing = () => {
 
   return (
     <div className="landing" id="Landing">
+      <Navbar elements={elements} />
       <QuoteGenerator />
       <div id="scene" className="landing__container">
         <div data-depth="0.2" className="landing__text landing__top">

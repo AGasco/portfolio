@@ -8,7 +8,7 @@ const Navbar = withRouter(({ history, location, elements }) => {
 
   return (
     <div className="navbar">
-      <Brand />
+      <Brand elements={elements} />
       <ul>
         {elements.map((elem, i) => {
           if (i >= 1) {

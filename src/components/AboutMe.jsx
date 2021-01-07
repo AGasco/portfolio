@@ -2,6 +2,7 @@ import React from "react";
 import GoHome from "./GoHome";
 import Sidebar from "./Sidebar";
 import Hamburger from "./Hamburger";
+import Navbar from "./../components/Navbar";
 import Brand from "./../components/Brand";
 import "./../styles/AboutMe.css";
 
@@ -9,7 +10,7 @@ function AboutMe({ elements, isMobile }) {
   return (
     <div className="aboutMe" id="About Me">
       <div className="aboutMe__left">
-        <Brand />
+        <Navbar elements={elements} />
         <div className="aboutMe__container">
           <div className="aboutMe__text">
             <h1 className="aboutMe__title">Hey, it's me</h1>

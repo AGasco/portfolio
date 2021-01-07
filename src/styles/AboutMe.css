@@ -11,7 +11,7 @@
 }
 
 .aboutMe__left {
-  padding-top: 10px;
+  /* padding-top: 10px; */
   flex: 2;
   background-color: #fda268;
 }
