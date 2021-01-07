@@ -2,8 +2,7 @@ import React from "react";
 import GoHome from "./GoHome";
 import Sidebar from "./Sidebar";
 import Hamburger from "./Hamburger";
-import Navbar from "./../components/Navbar";
-import Brand from "./../components/Brand";
+import Navbar from "./Navbar";
 import "./../styles/AboutMe.css";
 
 function AboutMe({ elements, isMobile }) {
