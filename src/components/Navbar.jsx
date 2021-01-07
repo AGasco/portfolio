@@ -1,4 +1,5 @@
 import React from "react";
+import Brand from "./../components/Brand";
 import { withRouter } from "react-router-dom";
 import "./../styles/Navbar.css";
 
@@ -7,7 +8,7 @@ const Navbar = withRouter(({ history, location, elements }) => {
 
   return (
     <div className="navbar">
-      <p className="navbar__brand">antoniofgasco</p>
+      <Brand />
       <ul>
         {elements.map((elem, i) => {
           if (i >= 1) {
