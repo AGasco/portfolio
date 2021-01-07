@@ -1,111 +1,111 @@
 .aboutMe {
-    width: 100%;
-    height: 100vh;
-    background-color: #202020;
+  width: 100%;
+  height: 100vh;
+  background-color: #202020;
 }
 
 .aboutMe__container {
-    width: 70%;
-    margin: 75px auto 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 30px;
+  width: 70%;
+  margin: 75px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
 }
 
 .aboutMe__title {
-    color: white;
-    font-size: 35px;
-    margin-left: -10px;
-    padding-bottom: 15px;
-    white-space: nowrap;
-    pointer-events: none;
+  color: white;
+  font-size: 35px;
+  margin-left: -10px;
+  padding-bottom: 15px;
+  white-space: nowrap;
+  pointer-events: none;
 }
 
 .aboutMe__content {
-    display: flex;
+  display: flex;
 }
 
 .aboutMe__left {
-    flex: 0.3;
-    height: 100% !important;
-    display: flex;
-    justify-content: flex-end;
-    padding-top: 30px;
-    padding-right: 50px;
+  flex: 0.3;
+  height: 100% !important;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 30px;
+  padding-right: 50px;
 }
 
 .aboutMe__right {
-    flex: 0.7;
-    border-left: 1px solid #888;
-    padding-left: 50px;
+  flex: 0.7;
+  border-left: 1px solid #888;
+  padding-left: 50px;
 }
 
 .aboutMe__right.aboutMe__noBorder {
-    border-left: none;
+  border-left: none;
 }
 
 .aboutMe__picture {
-    background-image: url("./../imgs/my-picture.jpg");
-    background-size: cover;
-    width: 200px;
-    height: 200px;
-    object-fit: contain;
-    border-radius: 100px;
+  background-image: url("./../imgs/my-picture.jpg");
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 100px;
 }
 
 .aboutMe__description {
-    color: #777;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    text-align: justify;
+  color: #777;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-align: justify;
 }
 
-.aboutMe__tags>ul {
-    list-style-type: none;
-    padding: 0;
+.aboutMe__tags > ul {
+  list-style-type: none;
+  padding: 0;
 }
 
-.aboutMe__tags>ul>li {
-    display: inline-block;
-    padding: 10px;
-    margin: 15px;
-    background-color: #888;
-    border-radius: 20px;
-    transition: all 0.3s;
-    cursor: default;
+.aboutMe__tags > ul > li {
+  display: inline-block;
+  padding: 10px;
+  margin: 15px;
+  background-color: #888;
+  border-radius: 20px;
+  transition: all 0.3s;
+  cursor: default;
 }
 
-.aboutMe__tags>ul>li:hover {
-    color: white;
-    background-color: goldenrod;
+.aboutMe__tags > ul > li:hover {
+  color: white;
+  background-color: goldenrod;
 }
 
 @media (max-width: 1000px) {
-    .aboutMe__container {
-        margin-left: 10%;
-    }
-    .aboutMe__left {
-        display: none;
-    }
-    .aboutMe__right {
-        flex: 1;
-    }
+  .aboutMe__container {
+    margin-left: 10%;
+  }
+  .aboutMe__left {
+    display: none;
+  }
+  .aboutMe__right {
+    flex: 1;
+  }
 }
 
 @media (max-width: 480px) {
-    .aboutMe__tags>ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .aboutMe__tags>ul>li {
-        margin: 5px;
-    }
-    .aboutMe__container {
-        margin: 0 0 0 50px;
-    }
-    .aboutMe__description {
-        width: 300px;
-    }
+  .aboutMe__tags > ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .aboutMe__tags > ul > li {
+    margin: 5px;
+  }
+  .aboutMe__container {
+    margin: 0 0 0 50px;
+  }
+  .aboutMe__description {
+    width: 300px;
+  }
 }
