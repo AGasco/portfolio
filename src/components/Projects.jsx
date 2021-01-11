@@ -100,12 +100,14 @@ const commercialProjects = [
 
 const personalProjects = [
   {
-    name: "Commissioned Website",
-    picture: KikeMindfulnessThumbnail,
+    name: "REDUX USER SETTINGS FORM WITH THEME PICKER",
+    picture: UserSettingsFormThumbnail,
     description:
-      "Website built for a mindfulness instructor using React. Design, development and communication with client has been fully managed by me. ",
-    link: "https://wikipedia-viewer-4cff5.web.app/",
-    gitLink: "https://github.com/AGasco/kike-mindfulness",
+      "A fully fledged user settings form, with different sectors. Each sector may have 2 tabs to differentiate between groups of settings. All state management is done using REDUX",
+    link: "https://innoloft-agasco-app.web.app/",
+    gitLink: "https://github.com/AGasco/user-settings-form",
+    usedTech:
+      "HTML, CSS, Javascript, React, Redux, Material-UI, JSON, Google Firebase",
   },
 ];
 
@@ -118,8 +120,11 @@ function Projects({ isMobile, elements }) {
   const handleClick = (e) => {
     const newCategory = e.target.textContent;
     setCategory(newCategory);
-    if (newCategory === "COMMERCIAL") setProjects(commercialProjects);
+    console.log(newCategory);
+    if (newCategory === "") setProjects([]);
+    else if (newCategory === "COMMERCIAL") setProjects(commercialProjects);
     else if (newCategory === "PERSONAL") setProjects(personalProjects);
+    else console.error("ERROR: Wrong Category inputted");
   };
 
   return (
@@ -137,30 +142,33 @@ function Projects({ isMobile, elements }) {
                 ? "selected"
                 : "unselected"
             }`}
-            onClick={handleClick}
+            //Forbid click when a category is alredy selected
+            onClick={(e) => {
+              if (category !== c) handleClick(e);
+            }}
           >
             <h2 className="projects__title">{c}</h2>
+            <div className="projects__container">
+              {projects.map((p) => (
+                <Project
+                  isMobile={isMobile}
+                  name={p.name}
+                  picture={p.picture}
+                  link={p.link}
+                  gitLink={p.gitLink}
+                  description={p.description}
+                  usedTech={p.usedTech}
+                />
+              ))}
+            </div>
           </div>
         ))}
       </div>
       <div
         className={`projects__back ${category && "active"}`}
-        onClick={() => setCategory("")}
+        onClick={handleClick}
       >
         <FontAwesomeIcon icon={faUndo} />
-      </div>
-      <div className="projects__container">
-        {projects.map((p) => (
-          <Project
-            isMobile={isMobile}
-            name={p.name}
-            picture={p.picture}
-            link={p.link}
-            gitLink={p.gitLink}
-            description={p.description}
-            usedTech={p.usedTech}
-          />
-        ))}
       </div>
 
       {/* {!isMobile ? (

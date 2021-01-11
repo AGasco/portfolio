@@ -1,3 +1,8 @@
+.project {
+  width: 600px;
+  background-size: cover;
+}
+
 /* .project {
   min-height: max-content;
   height: 600px;

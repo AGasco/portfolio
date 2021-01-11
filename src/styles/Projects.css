@@ -25,9 +25,12 @@
 }
 
 .projects__category {
+  position: relative;
   width: 50vw;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   /* align-items: center; */
   transition: width 0.5s, font 0.1s;
 }
@@ -37,6 +40,8 @@
 }
 
 .projects__title {
+  position: absolute;
+  top: 0;
   transition: all 0.7s;
   height: max-content;
   cursor: pointer;
@@ -71,6 +76,10 @@
   display: none;
 }
 
+.projects__category.unselected .projects__container {
+  display: none;
+}
+
 .projects__back {
   cursor: pointer;
   position: absolute;
@@ -90,9 +99,9 @@
 }
 
 .projects__container {
-  position: absolute;
-  top: 30vh;
-  left: 39vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @keyframes moveUp {

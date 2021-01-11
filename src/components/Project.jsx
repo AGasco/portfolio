@@ -10,15 +10,15 @@ function Project({
   gitLink,
   usedTech,
 }) {
-  console.log("isMobile inside Project.jsx", isMobile);
+  console.log("project " + name + " has picture " + picture);
   return (
-    <div className="project">
+    <div className="project" style={{ backgroundImage: `url(${picture})` }}>
       <h4>{name}</h4>
-      <img
+      {/* <img
         src={picture}
         alt={`A screenshot of project: ${name}`}
         draggable="false"
-      />
+      /> */}
       <p className="project__description">{description}</p>
       <div className="project__buttonsContainer">
         <div className="project__linkButton">
