@@ -95,6 +95,8 @@ const commercialProjects = [
       "Website built for a mindfulness instructor using React. Design, development and communication with client has been fully managed by me. ",
     link: "https://wikipedia-viewer-4cff5.web.app/",
     gitLink: "https://github.com/AGasco/kike-mindfulness",
+    usedTech:
+      "HTML, CSS, Javascript, React, Redux, Material-UI, JSON, Google Firebase",
   },
 ];
 
