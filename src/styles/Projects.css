@@ -1,4 +1,113 @@
 .projects {
+  width: 100vw;
+  height: max-content;
+  min-height: 100vh;
+  background-color: #ebbd61;
+  display: flex;
+  flex-direction: column;
+}
+
+.projects__top {
+  padding-bottom: 10px;
+}
+
+.projects__bottom {
+  flex: 1 1;
+  display: flex;
+}
+
+.projects__category:first-child {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.projects__category:last-child {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.projects__category {
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  transition: width 0.5s, font 0.1s;
+}
+
+.projects__category.default:hover > h2 {
+  font-size: 6rem;
+}
+
+.projects__title {
+  transition: all 0.7s;
+  height: max-content;
+  cursor: pointer;
+  font-size: 5rem;
+  font-family: "Anton", sans-serif;
+  color: #fff;
+  margin: 300px auto 50px auto;
+  /* text-align: center; */
+}
+
+.projects__category.selected {
+  width: 100vw;
+}
+
+.projects__category.selected > h2 {
+  cursor: default;
+}
+
+.projects__category.unselected {
+  width: 0vw;
+}
+
+.projects__category.selected > h2 {
+  /* margin: 20px auto 0 auto; */
+  animation-name: moveUp;
+  animation-duration: 0.5s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.projects__category.unselected > h2 {
+  display: none;
+}
+
+.projects__back {
+  cursor: pointer;
+  position: absolute;
+  font-size: 2rem;
+  top: 9vh;
+  left: 1vw;
+  color: white;
+  transition: all 0.3s;
+  opacity: 0;
+}
+
+.projects__back.active {
+  animation: showBack;
+  animation-fill-mode: forwards;
+  animation-duration: 1.5s;
+  animation-delay: 1s;
+}
+
+@keyframes moveUp {
+  from {
+    margin: 300px auto 50px auto;
+  }
+  to {
+    margin: 20px auto 0 auto;
+  }
+}
+
+@keyframes showBack {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* .projects {
   height: max-content;
   min-height: 100vh;
   display: flex;
@@ -8,7 +117,7 @@
   position: relative;
   background-color: #202020;
   /* transform: scale(0.9);  Cannot add this because it breaks z-index for GoTopBtn.jsx */
-}
+/*}
 
 .projects__container {
   margin-left: 200px;
@@ -36,7 +145,7 @@
 
 .projects__grid {
   /* display: flex; */
-}
+/*}
 
 @media (max-width: 575px) {
   .projects {
@@ -63,4 +172,4 @@
     flex-direction: column;
     align-items: center;
   }
-}
+} */

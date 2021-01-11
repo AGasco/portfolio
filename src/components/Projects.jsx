@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 // import Draggable from "react-draggable";
 import Project from "./Project";
 import UserSettingsFormThumbnail from "./../imgs/thumbnails/user-settings-form-thumbnail2.png";
@@ -7,9 +7,12 @@ import CovidTrackerThumbnail from "./../imgs/thumbnails/covid-tracker-thumbnail.
 import HackReactorThumbnail from "./../imgs/thumbnails/hackreactor-thumbnail.PNG";
 import ShoppingCartThumbnail from "./../imgs/thumbnails/shopping-cart-thumbnail.png";
 import "./../styles/Projects.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUndo } from "@fortawesome/free-solid-svg-icons";
 import GoHome from "./GoHome";
 import Sidebar from "./Sidebar";
 import Hamburger from "./Hamburger";
+import Navbar from "./Navbar";
 
 const projectsData = [
   //Steam Game
@@ -81,35 +84,46 @@ const projectsData = [
     gitLink: "https://github.com/AGasco/netflix-clone",
     usedTech: "HTML, CSS, Javascript, React, Google Firebase, JSON, APIs",
   },
-
-  // //Wikipedia Viewer
-  // {
-  //   name: "WIKIPEDIA VIEWER",
-  //   picture: WikipediaThumbnail,
-  //   description:
-  //     "App that uses Wikipedia API to display a list of clickable articles based on what's inputted in the search bar by the user. As in Wikipedia itself, there is a button to just search for a random article",
-  //   link: "https://wikipedia-viewer-4cff5.web.app/",
-  //   gitLink: "https://github.com/AGasco/wikipedia-viewer",
-  //   usedTech: "HTML, CSS, Javascript, React, Google Firebase, JSON, CORS, APIs",
-  // },
-
-  // //Weather App
-  // {
-  //   name: "WEATHER APP",
-  //   picture: WeatherThumbnail,
-  //   description:
-  //     "The Weather App shows the user the weather on their location, in text and icon formats, as well as the current local temperature (in Celsius or Farenheit). It first asks for permission to know the user's location using navigator.geolocation()",
-  //   link: "https://weather-app-d6d37.web.app/",
-  //   gitLink: "https://github.com/AGasco/weather-app",
-  //   usedTech:
-  //     "HTML, CSS, Javascript, React, Geolocation, Google Firebase, JSON, APIs",
-  // },
 ];
 
+const categories = ["COMMERCIAL", "PERSONAL"];
+
 function Projects({ isMobile, elements }) {
+  const [category, setCategory] = useState("");
+
+  const handleClick = (e) => {
+    setCategory(e.target.textContent);
+  };
+
   return (
     <div className="projects" id="Projects">
-      {!isMobile ? (
+      <div className="projects__top">
+        <Navbar elements={elements} />
+      </div>
+      <div className="projects__bottom">
+        {categories.map((c) => (
+          <div
+            className={`projects__category ${
+              category === ""
+                ? "default"
+                : category === c
+                ? "selected"
+                : "unselected"
+            }`}
+            onClick={handleClick}
+          >
+            <h2 className="projects__title">{c}</h2>
+          </div>
+        ))}
+      </div>
+      <div
+        className={`projects__back ${category && "active"}`}
+        onClick={() => setCategory("")}
+      >
+        <FontAwesomeIcon icon={faUndo} />
+      </div>
+
+      {/* {!isMobile ? (
         <div>
           <GoHome />
           <Sidebar elements={elements} />
@@ -134,7 +148,7 @@ function Projects({ isMobile, elements }) {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
