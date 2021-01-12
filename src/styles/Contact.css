@@ -45,7 +45,7 @@
   align-items: center;
 }
 
-contact__container {
+.contact__container {
   background-color: white;
   /* min-width: 60vw; */
   max-width: max-content;
@@ -206,7 +206,13 @@ textarea:focus {
 
 .contact__confirmation {
   text-align: center;
-  font-size: 2rem;
+  font-size: 5rem;
+  margin-top: 20vh;
+  color: white;
+}
+
+.contact__confirmation * {
+  font-family: "Dancing Script", cursive;
 }
 
 @media (max-width: 780px) {
