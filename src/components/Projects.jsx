@@ -149,6 +149,7 @@ function Projects({ isMobile, elements }) {
               if (category !== c) handleClick(e);
             }}
           >
+            <div className="projects__categoryBackground"></div>
             <h2 className="projects__title">{c}</h2>
             <div className="projects__container">
               {projects.map((p) => (

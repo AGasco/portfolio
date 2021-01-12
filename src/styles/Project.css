@@ -3,6 +3,18 @@
   height: 60vh;
   background-size: cover;
   background-position: center center;
+  animation: forbidEvents;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes forbidEvents {
+  from {
+    pointer-events: none;
+  }
+  to {
+    pointer-events: all;
+  }
 }
 
 .project:hover .project__container {
