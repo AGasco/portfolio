@@ -3,7 +3,6 @@ import * as data from "./../data/quotes.json";
 import "./../styles/QuoteGenerator.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSync } from "@fortawesome/free-solid-svg-icons/";
-import { ContactSupportOutlined } from "@material-ui/icons";
 
 const QuoteGenerator = () => {
   const [curQuote, setCurQuote] = useState("");

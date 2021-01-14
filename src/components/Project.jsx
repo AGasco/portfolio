@@ -10,7 +10,6 @@ function Project({
   gitLink,
   usedTech,
 }) {
-  console.log("project " + name + " has picture " + picture);
   return (
     <div className="project" style={{ backgroundImage: `url(${picture})` }}>
       <div className="project__container">
