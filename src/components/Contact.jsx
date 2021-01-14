@@ -55,12 +55,7 @@ function Contact({ isMobile, elements }) {
             <div className="contact__container">
               {/* <h2>Contact</h2> */}
               <div className="contact__formContainer">
-                <form
-                  action="mailto:antoniofgasco@gmail.com"
-                  method="POST"
-                  encType="multipart/form-data"
-                  onSubmit={(e) => onSubmit(e)}
-                >
+                <form onSubmit={onSubmit}>
                   <div className="contact__formName">
                     <label htmlFor="name">Name</label>
                     <div className="contact__formNameInputs">
