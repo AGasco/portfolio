@@ -1,131 +1,153 @@
 [
   {
+    "id": 0,
     "quote": "A man can succeed at almost anything for which he has unlimited enthusiasm",
     "author": "Charles Schwab",
     "date": "1862 - 1939",
     "wikipedia": "https://en.wikipedia.org/wiki/Charles_M._Schwab"
   },
   {
+    "id": 1,
     "quote": "The future depends on what you do today",
     "author": "Mahatma Gandhi",
     "date": "1869 - 1948",
     "wikipedia": "https://en.wikipedia.org/wiki/Mahatma_Gandhi"
   },
   {
+    "id": 3,
     "quote": "The most difficult thing is the decision to act, the rest is merely tenacity. The fears are paper tigers. You can do anything you decide to do. You can act to change and control your life; and the procedure, the process is its own reward",
     "author": "Amelia Earhart",
     "date": "1869 - 1948",
     "wikipedia": "https://en.wikipedia.org/wiki/Amelia_Earhart"
   },
   {
+    "id": 4,
     "quote": "Man cannot discover new oceans unless he has the courage to lose sight of the shore",
     "author": "André Gide",
     "date": "1869 - 1951",
     "wikipedia": "https://en.wikipedia.org/wiki/André_Gide"
   },
   {
+    "id": 5,
     "quote": "Whether you think you can or you think you can’t, you’re right",
     "author": "Henry Ford",
     "date": "1863 - 1947",
     "wikipedia": "https://en.wikipedia.org/wiki/Henry_Ford"
   },
   {
+    "id": 6,
     "quote": "The only way to do great work is to love what you do. If you haven’t found it yet, keep looking. Don’t settle",
     "author": "Steve Jobs",
     "date": "1955 - 2011",
     "wikipedia": "https://en.wikipedia.org/wiki/Steve_Jobs"
   },
   {
+    "id": 7,
     "quote": "There is no passion to be found playing small — in settling for a life that is less than the one you are capable of living",
     "author": "Nelson Mandela",
     "date": "1918 - 2013",
     "wikipedia": "https://en.wikipedia.org/wiki/Nelson_Mandela"
   },
   {
+    "id": 8,
     "quote": "If opportunity doesn't knock, build a door",
     "author": "Milton Berle",
     "date": "1908 - 2002",
     "wikipedia": "https://en.wikipedia.org/wiki/Milton_Berle"
   },
   {
+    "id": 9,
     "quote": "If you're offered a seat on a rocket ship, don't ask what seat! Just get on",
     "author": "Sheryl Sandberg",
     "date": "born 1969",
     "wikipedia": "https://en.wikipedia.org/wiki/Sheryl_Sandberg"
   },
   {
+    "id": 10,
     "quote": "If it scares you, it might be a good thing to try",
     "author": "Seth Godin",
     "date": "born 1960",
     "wikipedia": "https://en.wikipedia.org/wiki/Seth_Godin"
   },
   {
+    "id": 11,
     "quote": "The worst days of those who enjoy what they do, are better than the best days of those who don’t",
     "author": "Jim Rohn",
     "date": "1930 - 2009",
     "wikipedia": "https://en.wikipedia.org/wiki/Jim_Rohn"
   },
   {
+    "id": 12,
     "quote": "A mind that is stretched by new experiences can never go back to its old dimensions",
     "author": "Oliver Wendell Holmes Jr.",
     "date": "1841 - 1935",
     "wikipedia": "https://en.wikipedia.org/wiki/Oliver_Wendell_Holmes_Jr."
   },
   {
+    "id": 13,
     "quote": "There is only one way to avoid criticism: Do nothing, say nothing, and be nothing",
     "author": "Aristotle",
     "date": "384BC - 322BC",
     "wikipedia": "https://en.wikipedia.org/wiki/Aristotle"
   },
   {
+    "id": 14,
     "quote": "The best way to predict the future is to create it",
     "author": "Abraham Lincoln",
     "date": "1809 - 1865",
     "wikipedia": "https://en.wikipedia.org/wiki/Abraham_Lincoln"
   },
   {
+    "id": 15,
     "quote": "You miss 100 percent of the shots you never take",
     "author": "Wayne Gretzky",
     "date": "born 1961",
     "wikipedia": "https://en.wikipedia.org/wiki/Wayne_Gretzky"
   },
   {
+    "id": 16,
     "quote": "The best thing you can do is the right thing; the next best thing you can do is the wrong thing; the worst thing you can do is nothing",
     "author": "Theodore Roosevelt",
     "date": "1858 - 1919",
     "wikipedia": "https://en.wikipedia.org/wiki/Theodore_Roosevelt"
   },
   {
+    "id": 17,
     "quote": "Insist on yourself. Never imitate",
     "author": "Ralph Waldo Emerson",
     "date": "1803 - 1882",
     "wikipedia": "https://en.wikipedia.org/wiki/Ralph_Waldo_Emerson"
   },
   {
+    "id": 18,
     "quote": "The future belongs to those who believe in the beauty of their dreams",
     "author": "Eleanor Roosevelt",
     "date": "1884 - 1962",
     "wikipedia": "https://en.wikipedia.org/wiki/Eleanor_Roosevelt"
   },
   {
+    "id": 19,
     "quote": "Whatever you decide to do, make sure it makes you happy",
     "author": "Paulo Coelho",
     "date": "born 1947",
     "wikipedia": "https://en.wikipedia.org/wiki/Paulo_Coelho"
   },
   {
+    "id": 20,
     "quote": "Act as if what you do makes a difference. It does",
     "author": "William James",
     "date": "1842 - 1910",
     "wikipedia": "https://en.wikipedia.org/wiki/William_James"
   },
   {
+    "id": 21,
     "quote": "Take risks. If you win, you will be happy. If you lose, you will be wise",
     "author": "Anonymous",
     "date": "",
     "wikipedia": ""
   },
   {
+    "id": 22,
     "quote": "Nobody in life gets exactly what they thought they were going to get. But if you work really hard and you're kind, amazing things will happen",
     "author": "Conan O'Brien",
     "date": "born 1963",

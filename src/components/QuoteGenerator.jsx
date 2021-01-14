@@ -1,56 +1,76 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import * as data from "./../data/quotes.json";
 import "./../styles/QuoteGenerator.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSync } from "@fortawesome/free-solid-svg-icons/";
+import { ContactSupportOutlined } from "@material-ui/icons";
 
-class QuoteGenerator extends Component {
-  state = {
-    curQuote: "",
-  };
+const QuoteGenerator = () => {
+  const [curQuote, setCurQuote] = useState("");
+  const [remainingQuotes, setRemainingQuotes] = useState([]);
 
-  generateNewQuote = () => {
+  useEffect(() => {
     const { default: quotes } = data;
-    let rngQuote = quotes[Math.floor(Math.random() * quotes.length)];
-    while (rngQuote.quote === this.state.curQuote.quote) {
-      rngQuote = quotes[Math.floor(Math.random() * quotes.length)];
+    setRemainingQuotes([...quotes]);
+  }, []);
+
+  //Initalize with a first quote
+  useEffect(() => {
+    const { default: quotes } = data;
+    if (remainingQuotes) {
+      const firstQuote = remainingQuotes.splice(
+        Math.floor(Math.random() * quotes.length),
+        1
+      )[0];
+      setCurQuote(firstQuote);
     }
-    this.setState({ curQuote: rngQuote });
+  }, [remainingQuotes]);
+
+  const generateNewQuote = () => {
+    const newQuote = remainingQuotes.splice(
+      Math.floor(Math.random() * remainingQuotes.length),
+      1
+    )[0];
+    if (remainingQuotes.length === 0) resetQuotes();
+
+    setCurQuote(newQuote);
   };
 
-  componentDidMount() {
+  const resetQuotes = () => {
     const { default: quotes } = data;
-    const rngQuote = quotes[Math.floor(Math.random() * quotes.length)];
-    this.setState({ curQuote: rngQuote });
-  }
+    setRemainingQuotes([...quotes]);
+  };
 
-  render() {
-    const { curQuote } = this.state;
-    return (
-      <div className="quoteGenerator">
-        <span className="quoteGenerator__container">
-          <div className="quoteGenerator__top">
-            <h1>"</h1>
-            <p className="quoteGenerator__quote">{curQuote.quote}</p>
+  return (
+    <div className="quoteGenerator">
+      <span className="quoteGenerator__container">
+        <div className="quoteGenerator__top">
+          <h1>"</h1>
+          <p className="quoteGenerator__quote">{curQuote?.quote}</p>
+        </div>
+        <div className="quoteGenerator__bottom">
+          <button onClick={generateNewQuote} className="quoteGenerator__btn">
+            <FontAwesomeIcon icon={faSync} />
+          </button>
+          <div className="quoteGenerator__author">
+            -{" "}
+            {
+              <a
+                href={curQuote?.wikipedia}
+                target="_blank"
+                className={curQuote?.author === "Anonymous" && "disabled"}
+              >
+                {curQuote?.author}
+              </a>
+            }{" "}
+            <span className="quoteGenerator__date">
+              {curQuote?.date ? "(" + curQuote?.date + ")" : null}
+            </span>
           </div>
-          <div className="quoteGenerator__bottom">
-            <button
-              onClick={this.generateNewQuote}
-              className="quoteGenerator__btn"
-            >
-              <FontAwesomeIcon icon={faSync} />
-            </button>
-            <div className="quoteGenerator__author">
-              - {curQuote.author}{" "}
-              <span className="quoteGenerator__date">
-                {curQuote.date ? "(" + curQuote.date + ")" : null}
-              </span>
-            </div>
-          </div>
-        </span>
-      </div>
-    );
-  }
-}
+        </div>
+      </span>
+    </div>
+  );
+};
 
 export default QuoteGenerator;

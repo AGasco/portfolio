@@ -1,4 +1,160 @@
 .projects {
+  width: 100vw;
+  height: max-content;
+  min-height: 100vh;
+  background-color: #d4ab4c;
+  display: flex;
+  flex-direction: column;
+}
+
+.projects__top {
+  padding-bottom: 10px;
+}
+
+.projects__bottom {
+  flex: 1 1;
+  display: flex;
+}
+
+.projects__category:first-child {
+  background-image: url(https://images.unsplash.com/photo-1581315679433-59bc164ac09e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80);
+  background-size: cover;
+}
+
+.projects__category:last-child {
+  background-image: url(https://images.unsplash.com/photo-1571586200401-ed0bfe40a36e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1341&q=80);
+  background-position: center center;
+  background-size: cover;
+}
+
+.projects__category {
+  position: relative;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* align-items: center; */
+  transition: width 0.5s, font 0.1s;
+}
+
+.projects__category.default:hover > h2 {
+  font-size: 6rem;
+}
+
+.projects__title {
+  position: absolute;
+
+  transition: font 0.7s, opacity 0s;
+  height: max-content;
+  cursor: pointer;
+  font-size: 5rem;
+  font-family: "Anton", sans-serif;
+  color: #fff;
+  margin: 300px auto 50px auto;
+  /* text-align: center; */
+}
+
+.projects__category:first-of-type > .projects__title {
+  color: white;
+  top: 0;
+  margin: 75vh 20vw 0 0;
+}
+
+.projects__category:last-of-type > .projects__title {
+  /* margin: 60vh -40vw 0 0; */
+  right: -5vw;
+  bottom: 10vh;
+  transform: rotateZ(90deg);
+}
+
+.projects__category.selected {
+  width: 100vw;
+}
+
+.projects__category.selected > h2 {
+  cursor: default;
+}
+
+.projects__category.unselected {
+  width: 0vw;
+}
+
+.projects__category.selected > h2 {
+  /* margin: 20px auto 0 auto; */
+  animation-duration: 0.5s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.projects__category:first-of-type.selected > h2 {
+  opacity: 0;
+  animation-name: moveCommercialUp;
+}
+.projects__category:last-of-type.selected > h2 {
+  animation-name: movePersonalUp;
+}
+
+.projects__category.unselected > h2 {
+  display: none;
+}
+
+.projects__category.unselected .projects__container {
+  display: none;
+}
+
+.projects__back {
+  cursor: pointer;
+  position: absolute;
+  font-size: 2rem;
+  top: 9vh;
+  left: 1vw;
+  color: white;
+  transition: all 0.3s;
+  opacity: 0;
+}
+
+.projects__back.active {
+  animation: showBack;
+  animation-fill-mode: forwards;
+  animation-duration: 1.5s;
+  animation-delay: 1s;
+}
+
+.projects__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes moveCommercialUp {
+  from {
+    margin: 300px auto 50px auto;
+  }
+  to {
+    opacity: 1;
+    margin: 20px auto 0 auto;
+  }
+}
+
+@keyframes movePersonalUp {
+  from {
+  }
+  to {
+    margin-bottom: 55vh;
+  }
+}
+
+@keyframes showBack {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* .projects {
   height: max-content;
   min-height: 100vh;
   display: flex;
@@ -8,7 +164,7 @@
   position: relative;
   background-color: #202020;
   /* transform: scale(0.9);  Cannot add this because it breaks z-index for GoTopBtn.jsx */
-}
+/*}
 
 .projects__container {
   margin-left: 200px;
@@ -36,7 +192,7 @@
 
 .projects__grid {
   /* display: flex; */
-}
+/*}
 
 @media (max-width: 575px) {
   .projects {
@@ -63,4 +219,4 @@
     flex-direction: column;
     align-items: center;
   }
-}
+} */

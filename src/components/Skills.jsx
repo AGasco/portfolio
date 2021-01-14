@@ -1,4 +1,5 @@
 import React from "react";
+import Navbar from "./Navbar";
 import SkillCard from "./SkillCard";
 import "./../styles/Skills.css";
 import HTMLLogo from "./../imgs/logos/html-logo.png";
@@ -50,7 +51,46 @@ const links = {
 function Skills({ elements, isMobile }) {
   return (
     <div className="skills" id="Skills">
-      {!isMobile ? (
+      <div className="skills__left"></div>
+      <div className="skills__right">
+        <Navbar elements={elements} />
+        <div className="skills__top">
+          {/* <h1 className="skills__title">skills</h1> */}
+        </div>
+        <div className="skills__bottom">
+          <div className="skills__gridContainer">
+            <div className="skills__gridRow">
+              <SkillCard name="HTML 5" logo={logos.html} link={links.html} />
+              <SkillCard name="CSS 3" logo={logos.css} link={links.css} />
+              <SkillCard
+                name="Javascript"
+                logo={logos.javascript}
+                link={links.javascript}
+              />
+            </div>
+            <div className="skills__gridRow">
+              <SkillCard name="React" logo={logos.react} link={links.react} />
+              <SkillCard name="Redux" logo={logos.redux} link={links.redux} />
+              <SkillCard
+                name="TypeScript"
+                logo={logos.typescript}
+                link={links.typescript}
+              />
+            </div>
+            <div className="skills__gridRow">
+              <SkillCard name="npm" logo={logos.npm} link={links.npm} />
+              <SkillCard name="git" logo={logos.git} link={links.git} />
+              <SkillCard
+                name="Bootstrap 4"
+                logo={logos.bootstrap}
+                link={links.bootstrap}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* {!isMobile ? (
         <div>
           <GoHome />
           <Sidebar elements={elements} />
@@ -99,7 +139,7 @@ function Skills({ elements, isMobile }) {
             />
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
