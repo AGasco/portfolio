@@ -6,6 +6,8 @@ import "./../styles/Navbar.css";
 const Navbar = withRouter(({ history, location, elements }) => {
   const curScreen = elements.indexOf(location.pathname);
 
+  const isActive = (elem) => elem === location.pathname;
+
   return (
     <div className="navbar">
       <Brand elements={elements} />
@@ -15,14 +17,18 @@ const Navbar = withRouter(({ history, location, elements }) => {
             return (
               <li key={elem}>
                 <div
-                  className="navbar__link"
-                  onClick={(e) =>
-                    history.push({
-                      pathname:
-                        elements[elements.indexOf("/" + e.target.textContent)],
-                      state: { prevScreen: curScreen },
-                    })
-                  }
+                  className={`navbar__link ${isActive(elem) && "active"}`}
+                  onClick={(e) => {
+                    if (!isActive(elem)) {
+                      history.push({
+                        pathname:
+                          elements[
+                            elements.indexOf("/" + e.target.textContent)
+                          ],
+                        state: { prevScreen: curScreen },
+                      });
+                    }
+                  }}
                 >
                   {elem.slice(1)}
                 </div>

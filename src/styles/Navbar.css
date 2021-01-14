@@ -52,6 +52,11 @@ li > a,
   transform: scale(1.2);
 }
 
+.navbar__link.active {
+  color: #202020;
+  transform: scale(1.2);
+}
+
 .navbar ul li.hidden {
   cursor: default;
   pointer-events: none;
