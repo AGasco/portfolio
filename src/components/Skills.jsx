@@ -14,6 +14,7 @@ import GitLogo from "./../imgs/logos/git-logo.png";
 import PhotoshopLogo from "./../imgs/logos/photoshop-logo.png";
 import UnityLogo from "./../imgs/logos/unity-logo.png";
 import CSharpLogo from "./../imgs/logos/csharp-logo.svg";
+import Arrow from "./../imgs/arrow.png";
 import GoHome from "./GoHome";
 import Sidebar from "./Sidebar";
 import Hamburger from "./Hamburger";
@@ -58,6 +59,11 @@ function Skills({ elements, isMobile }) {
           {/* <h1 className="skills__title">skills</h1> */}
         </div>
         <div className="skills__bottom">
+          <div className="skills__titleContainer">
+            <h4 className="skills__title">I can help you with these </h4>
+            <img className="skills__arrow" src={Arrow} alt="Hand-drawn arrow" />
+          </div>
+
           <div className="skills__gridContainer">
             <div className="skills__gridRow">
               <SkillCard name="HTML 5" logo={logos.html} link={links.html} />

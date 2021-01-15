@@ -26,25 +26,39 @@
   padding-top: 50px;
 }
 
-.skills__title {
-  font-family: "Asap", sans-serif;
-  font-weight: 100;
-  font-size: 5rem;
-  color: white;
-}
-
 .skills__bottom {
   flex: 1;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-top: 10vh;
+}
+
+.skills__titleContainer {
+  display: flex;
+  padding-left: 5vw;
+}
+
+.skills__title {
+  font-family: "Dancing Script", cursive;
+  font-weight: 100;
+  font-size: 4rem;
+  color: white;
+}
+
+.skills__arrow {
+  width: 100px;
+  padding-top: 30px;
+  padding-left: 20px;
+  color: white;
+  filter: invert(1);
 }
 
 .skills__gridContainer {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   padding-bottom: 75px;
 }
