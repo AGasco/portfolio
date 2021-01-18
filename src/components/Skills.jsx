@@ -15,9 +15,6 @@ import PhotoshopLogo from "./../imgs/logos/photoshop-logo.png";
 import UnityLogo from "./../imgs/logos/unity-logo.png";
 import CSharpLogo from "./../imgs/logos/csharp-logo.svg";
 import Arrow from "./../imgs/arrow.png";
-import GoHome from "./GoHome";
-import Sidebar from "./Sidebar";
-import Hamburger from "./Hamburger";
 
 const logos = {
   html: HTMLLogo,
@@ -95,57 +92,6 @@ function Skills({ elements, isMobile }) {
           </div>
         </div>
       </div>
-
-      {/* {!isMobile ? (
-        <div>
-          <GoHome />
-          <Sidebar elements={elements} />
-        </div>
-      ) : (
-        <Hamburger elements={elements} color={"black"} />
-      )}
-      <div className="skills__container">
-        <h2>My Skills</h2>
-
-        <div className="skills__gridContainer">
-          <div className="skills__gridRow">
-            <SkillCard name="HTML 5" logo={logos.html} link={links.html} />
-            <SkillCard name="CSS 3" logo={logos.css} link={links.css} />
-            <SkillCard
-              name="Javascript"
-              logo={logos.javascript}
-              link={links.javascript}
-            />
-          </div>
-          <div className="skills__gridRow">
-            <SkillCard name="React" logo={logos.react} link={links.react} />
-            <SkillCard name="Redux" logo={logos.redux} link={links.redux} />
-            <SkillCard
-              name="TypeScript"
-              logo={logos.typescript}
-              link={links.typescript}
-            />
-          </div>
-          <div className="skills__gridRow">
-            <SkillCard name="npm" logo={logos.npm} link={links.npm} />
-            <SkillCard name="git" logo={logos.git} link={links.git} />
-            <SkillCard
-              name="Bootstrap 4"
-              logo={logos.bootstrap}
-              link={links.bootstrap}
-            />
-          </div>
-          <div className="skills__gridRow">
-            <SkillCard name="C#" logo={logos.csharp} link={links.csharp} />
-            <SkillCard name="Unity" logo={logos.unity} link={links.unity} />
-            <SkillCard
-              name="Adobe Photoshop"
-              logo={logos.photoshop}
-              link={links.photoshop}
-            />
-          </div>
-        </div>
-      </div> */}
     </div>
   );
 }
