@@ -6,3 +6,9 @@
   position: absolute;
   left: 2vw;
 }
+
+@media (max-width: 700px) {
+  .brand {
+    position: relative;
+  }
+}
