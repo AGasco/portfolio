@@ -207,7 +207,7 @@ textarea:focus {
   font-family: "Dancing Script", cursive;
 }
 
-/* Media Queries */
+/* Media Queries before submit form */
 @media (max-width: 1620px) {
   .contact__title {
     font-size: 6rem;
@@ -316,5 +316,54 @@ textarea:focus {
   .contact input[type="email"],
   .contact textarea {
     font-size: 0.8rem;
+  }
+}
+
+/* Media Queries AFTER submit form */
+@media (max-width: 1300px) {
+  .contact__confirmation {
+    font-size: 4.5rem;
+  }
+}
+
+@media (max-width: 1150px) {
+  .contact__confirmation {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 1050px) {
+  .contact__confirmation {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .contact__confirmation {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .contact__confirmation {
+    padding: 0 5vw;
+  }
+}
+
+@media (max-width: 450px) {
+  .contact__confirmation {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 358px) {
+  .contact__confirmation > h1 {
+    padding-bottom: 50px;
+  }
+}
+
+@media (max-width: 300px) {
+  .contact__confirmation {
+    font-size: 2rem;
   }
 }
