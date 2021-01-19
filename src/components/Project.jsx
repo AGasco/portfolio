@@ -2,7 +2,7 @@ import React from "react";
 import "./../styles/Project.css";
 
 function Project({
-  isMobile,
+  mini,
   name,
   picture,
   description,
@@ -11,29 +11,39 @@ function Project({
   usedTech,
 }) {
   return (
-    <div className="project" style={{ backgroundImage: `url(${picture})` }}>
-      <div className="project__container">
+    <div className={`project ${mini && "mini"}`}>
+      <img className="project__picture" src={picture} alt="Project thumbnail" />
+      <div className="project__info">
         <div className="project__info">
-          <h4 className="project__name">{name}</h4>
+          {/* <h4 className="project__name">{name}</h4> */}
           <p className="project__description">{description}</p>
           <div className="project__buttonsContainer">
-            <div className="project__linkButton project__button">
-              <a href={link} target="_blank" rel="noopener noreferrer">
+            <a
+              className="project__anchor"
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="project__linkButton project__button">
                 {name === "NARCOS PLEASE" ? "View Trailer" : "Demo"}
-              </a>
-            </div>
+              </div>
+            </a>
 
             {gitLink ? (
-              <div className="project__gitButton project__button">
-                <a href={gitLink} target="_blank" rel="noopener noreferrer">
+              <a
+                className="project__anchor"
+                href={gitLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="project__gitButton project__button">
                   {name === "NARCOS PLEASE" ? "Steam Page" : "GitHub"}
-                </a>
-              </div>
+                </div>
+              </a>
             ) : (
               ""
             )}
           </div>
-
           <div className="project__tech">
             <h5>Technologies Used in this Project:</h5>
             <p>{usedTech}</p>

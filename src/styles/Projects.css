@@ -2,6 +2,160 @@
   width: 100vw;
   height: max-content;
   min-height: 100vh;
+  background-color: #6ad4ad;
+  display: flex;
+  max-height: 100vh;
+}
+
+.projects > * {
+  overflow-x: hidden;
+}
+
+.projects .navbar {
+  padding-bottom: 10px;
+}
+
+.projects__bottom {
+  flex: 1;
+  display: flex;
+}
+
+/* To be able to click carousel arrows */
+.slick-list {
+  pointer-events: none;
+}
+
+.projects__left {
+  flex: 1;
+  background-image: url("https://images.unsplash.com/photo-1570393080660-de4e4a15a247?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80");
+  background-size: cover;
+  background-position: center;
+}
+
+.projects__right {
+  position: relative;
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  height: 100vh !important;
+}
+
+.projects__container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.projects__category {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 1;
+  position: relative;
+  max-height: 35vh;
+}
+
+.projects__category.unselected {
+  flex: 0;
+  height: 0 !important;
+  pointer-events: none;
+}
+
+.projects__category.selected > .projects__title {
+  cursor: default;
+}
+
+.projects__category.unselected > .projects__title {
+  display: none;
+}
+
+.projects__category.commissions.selected > .projects__title {
+  top: 0;
+}
+
+.projects__category.passion.selected > .projects__title {
+  top: 75vh;
+}
+
+.projects__title {
+  top: 40%;
+  position: absolute;
+  cursor: pointer;
+  transition: all 0.4s;
+  font-size: 5rem;
+  color: white;
+  font-family: "Dancing Script", cursive;
+  text-align: center;
+  z-index: 100;
+}
+
+.projects__category.default > .projects__title:hover {
+  font-size: 7rem;
+}
+
+.projects__reel {
+  width: 100%;
+  transition: all 1s;
+  transition-delay: 100ms;
+}
+
+.slick-prev {
+  left: 15% !important;
+  z-index: 1;
+}
+.slick-next {
+  right: 15% !important;
+  z-index: 1;
+}
+
+.projects__category.selected.commissions .projects__reel {
+  padding-top: 15vh;
+}
+
+.projects__category.selected.passion .projects__reel {
+  padding-top: 7.5vh;
+}
+
+.projects__category.default .projects__reel,
+.projects__category.unselected .projects__reel {
+  opacity: 0;
+  transition: all 0s;
+  pointer-events: none;
+}
+
+.projects__back {
+  cursor: pointer;
+  position: absolute;
+  font-size: 2rem;
+  top: 9vh;
+  left: 1vw;
+  color: white;
+  transition: all 0.3s;
+  opacity: 0;
+}
+
+.projects__back.active {
+  animation: showBack;
+  animation-fill-mode: forwards;
+  animation-duration: 1.5s;
+  animation-delay: 1s;
+}
+
+@keyframes showBack {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* .projects {
+  width: 100vw;
+  height: max-content;
+  min-height: 100vh;
   background-color: #d4ab4c;
   display: flex;
   flex-direction: column;
@@ -35,7 +189,7 @@
   justify-content: center;
   align-items: center;
   /* align-items: center; */
-  transition: width 0.5s, font 0.1s;
+/*transition: width 0.5s, font 0.1s;
 }
 
 .projects__category.default:hover > h2 {
@@ -44,7 +198,6 @@
 
 .projects__title {
   position: absolute;
-
   transition: font 0.7s, opacity 0s;
   height: max-content;
   cursor: pointer;
@@ -53,7 +206,7 @@
   color: #fff;
   margin: 300px auto 50px auto;
   /* text-align: center; */
-}
+/*}
 
 .projects__category:first-of-type > .projects__title {
   color: white;
@@ -63,7 +216,7 @@
 
 .projects__category:last-of-type > .projects__title {
   /* margin: 60vh -40vw 0 0; */
-  right: -5vw;
+/*right: -5vw;
   bottom: 10vh;
   transform: rotateZ(90deg);
 }
@@ -82,7 +235,7 @@
 
 .projects__category.selected > h2 {
   /* margin: 20px auto 0 auto; */
-  animation-duration: 0.5s;
+/*animation-duration: 0.5s;
   animation-delay: 0.5s;
   animation-fill-mode: forwards;
 }
@@ -127,7 +280,9 @@
   justify-content: center;
 }
 
-@keyframes moveCommercialUp {
+/* Animations */
+
+/*keyframes moveCommercialUp {
   from {
     margin: 300px auto 50px auto;
   }
@@ -154,69 +309,63 @@
   }
 }
 
-/* .projects {
-  height: max-content;
-  min-height: 100vh;
-  display: flex;
-  padding-top: 70px;
-  justify-content: center;
-  align-items: flex-start;
-  position: relative;
-  background-color: #202020;
-  /* transform: scale(0.9);  Cannot add this because it breaks z-index for GoTopBtn.jsx */
-/*}
-
-.projects__container {
-  margin-left: 200px;
-}
-
-.projects__title {
-  font-size: 3rem;
-  flex: 0.2;
-  padding: 20px;
-  padding-bottom: 100px;
-  text-align: center;
-  color: white
-}
-
-.projects__subtitle {
-  color: rgba(117, 19, 93, 0.4);
-  font-weight: 300;
-}
-
-.projects__gridContainer {
-  width: 80vw;
-  display: flex;
-  justify-content: flex-start;
-}
-
-.projects__grid {
-  /* display: flex; */
-/*}
-
-@media (max-width: 575px) {
-  .projects {
-    padding-top: 30px;
-    height: 100vh;
+/* Media queries */
+/*@media (max-width: 1400px) {
+  .projects__category:first-of-type > .projects__title {
+    margin: 70vh 14vw 0 0;
   }
+
+  .projects__category:last-of-type > .projects__title {
+    right: -5vw;
+  }
+
+  @keyframes movePersonalUp {
+    from {
+    }
+    to {
+      margin-bottom: 50vh;
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .projects__category:first-of-type > .projects__title {
+    margin: 70vh 10vw 0 0;
+  }
+
+  .projects__category:last-of-type > .projects__title {
+    right: -6vw;
+  }
+}
+
+@media (max-width: 1150px) {
+  .projects__category:first-of-type > .projects__title {
+    margin: 70vh 8vw 0 0;
+  }
+
+  .projects__category:last-of-type > .projects__title {
+    right: -7vw;
+  }
+}
+
+@media (max-width: 1100px) {
+  .projects__category:first-of-type > .projects__title {
+    margin: 70vh 6vw 0 0;
+  }
+}
+
+@media (max-width: 1050px) {
   .projects__title {
-    margin: 0;
-    padding: 0;
-    padding-bottom: 20px;
+    font-size: 4rem;
   }
-  .projects__container {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .projects__category.default:hover > h2 {
+    font-size: 5rem;
   }
-  .projects__grid {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+  .projects__category:first-of-type > .projects__title {
+    margin: 75vh 7vw 0 0;
   }
-  .projects__gridContainer {
-    flex-direction: column;
-    align-items: center;
+  .projects__category:last-of-type > .projects__title {
+    right: -6vw;
   }
 } */

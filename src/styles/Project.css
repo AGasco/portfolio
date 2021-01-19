@@ -1,235 +1,76 @@
 .project {
   width: 60vw;
-  height: 60vh;
+  /* height: 60vh; */
+  height: max-content !important;
   background-size: cover;
   background-position: center center;
   animation: forbidEvents;
   animation-duration: 3s;
   animation-fill-mode: forwards;
+  z-index: 500;
+  margin: auto auto;
 }
 
-@keyframes forbidEvents {
-  from {
-    pointer-events: none;
-  }
-  to {
-    pointer-events: all;
-  }
-}
+/* .project > * {
+  overflow-y: hidden;
+} */
 
-.project:hover .project__container {
-  opacity: 1;
-}
-
-.project__container {
-  opacity: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  transition: all 0.4s;
+.project.mini,
+.project__picture {
+  width: 40vw;
+  height: 40vh;
+  z-index: 500;
 }
 
 .project__info {
-  height: 100%;
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 70px 0 0 0;
   text-align: center;
 }
 
-.project__name {
-  font-family: "Wire One", sans-serif;
-  font-size: 5rem;
-  padding-bottom: 50px;
+.project__info * {
+  font-family: "Darker Grotesque", sans-serif;
+  font-size: 2rem;
 }
 
 .project__description {
-  font-family: "Wire One", sans-serif;
-  font-size: 2rem;
-  font-weight: 800;
-  padding: 20px;
-  width: 100%;
-  margin-bottom: 40px;
-  background-color: rgba(0, 0, 0, 0.9);
+  font-size: 1.5rem;
+}
+
+.project__tech > * {
+  font-size: 1.25rem;
 }
 
 .project__buttonsContainer {
   display: flex;
   justify-content: center;
   padding: 10px;
-  padding-bottom: 40px;
+  /* padding-bottom: 40px; */
 }
 
 .project__button {
+  pointer-events: all;
   background-color: white;
-  padding: 10px;
-  width: 10vw;
+  padding: 5px 75px !important;
   transition: all 0.5s;
-}
-
-.project__button > a {
-  transition: all 0.3s;
-  text-decoration: none;
   color: black;
   font-size: 2rem;
+  font-weight: 100;
   font-family: "Wire One", sans-serif;
-}
-
-.project__linkButton {
-  margin-right: 50px;
-  background-color: white;
-  padding: 10px;
 }
 
 .project__button:hover {
   background-color: goldenrod;
-}
-
-.project__button:hover > a {
   color: white;
 }
 
-/* .project {
-  min-height: max-content;
-  height: 600px;
-  display: block;
-  margin-left: -30px;
-  margin-bottom: -23px;
-  transform: scale(0.9);
-  transform-origin: top left;
-  -webkit-transform-origin: top center;
-  -moz-transform-origin: top center;
-  max-width: 400px;
-  border-radius: 20px;
-  background-color: goldenrod;
-  /* width: 50vw; */
-/* text-decoration: none;
-  color: #202020;
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  /* -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3), -1px -1px 10px rgba(117, 19, 93, 0.4);
-    -moz-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3), -1px -1px 10px rgba(117, 19, 93, 0.4);
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3), -1px -1px 10px rgba(117, 19, 93, 0.4); */
-/* transition: all 0.2s;
-  cursor: default;
-}
-
-.project:hover {
-  /* transform: scale(1.5); */
-/* z-index: 10000;
-  -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3),
-    -1px -1px 10px rgba(117, 19, 93, 0.4);
-  -moz-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3),
-    -1px -1px 10px rgba(117, 19, 93, 0.4);
-  box-shadow: 1px 1px 10px goldenrod, -1px -1px 10px goldenrod;
-  opacity: 1;
-}
-
-.project > h4 {
-  color: #eee;
-  font-size: 1.5rem;
-  padding: 10px 20px 20px 20px;
-  text-align: center;
-  height: 75px;
-}
-
-.project > img {
-  float: left;
-  max-width: 90%;
-  width: 300px;
-  height: 200px;
-  object-fit: cover;
-}
-
-.project > .project__description {
-  height: max-content;
-  padding: 30px 15px 0 15px;
-  text-align: center;
-  font-size: 1.1rem;
-}
-
-.project > .project__buttonsContainer {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  bottom: 100px;
-}
-
-.project__buttonsContainer > div {
-  flex: 0.5;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin: 20px 0 20px;
-}
-
-.project__gitButton > a,
-.project__linkButton > a {
-  width: 60%;
-  text-align: center;
+.project__anchor {
+  transition: all 0.5s;
   text-decoration: none;
-  padding: 5px 10px;
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: #eee;
-  border-radius: 20px;
-  transition: all 0.7s;
 }
 
-.project__gitButton > a:hover,
-.project__linkButton > a:hover {
-  color: white;
-  transform: scale(1.1);
+.project__linkButton {
+  margin-right: 50px;
 }
-
-.project > .project__tech {
-  /* background-color: rgba(117, 19, 93, 0.5); */
-/*background-color: #eee;
-  padding: 10px 0 0 5px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  height: auto;
-  width: 100%;
-  height: 100px;
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.4);
-  color: #202020;
-  position: absolute;
-  bottom: 0;
-}
-
-.project > .project__tech > h5 {
-  padding: 5px;
-  font-size: 1.05rem;
-}
-
-.project > .project__tech > p {
-  padding: 5px;
-  padding-bottom: 10px;
-  font-size: 1rem;
-}
-
-@media (max-width: 575px) {
-  .project {
-    width: 90vw;
-    margin-left: 5px;
-  }
-  .project > h4 {
-    padding: 20px 5px 0 5px;
-    font-size: 1.2rem;
-  }
-  .project > .project__description {
-    font-size: 1rem;
-  }
-  .project__gitButton > a,
-  .project__linkButton > a {
-    font-size: 1rem;
-  }
-} */

@@ -14,6 +14,7 @@ import GoHome from "./GoHome";
 import Sidebar from "./Sidebar";
 import Hamburger from "./Hamburger";
 import Navbar from "./Navbar";
+import Slider from "react-slick";
 
 // const projectsData = [
 //   //Steam Game
@@ -87,7 +88,17 @@ import Navbar from "./Navbar";
 //   },
 // ];
 
-const commercialProjects = [
+const commissionsProjects = [
+  {
+    name: "Commissioned Website",
+    picture: KikeMindfulnessThumbnail,
+    description:
+      "Website built for a mindfulness instructor using React. Design, development and communication with client has been fully managed by me. ",
+    link: "https://wikipedia-viewer-4cff5.web.app/",
+    gitLink: "https://github.com/AGasco/kike-mindfulness",
+    usedTech:
+      "HTML, CSS, Javascript, React, Redux, Material-UI, JSON, Google Firebase",
+  },
   {
     name: "Commissioned Website",
     picture: KikeMindfulnessThumbnail,
@@ -100,7 +111,17 @@ const commercialProjects = [
   },
 ];
 
-const personalProjects = [
+const passionProjects = [
+  {
+    name: "REDUX USER SETTINGS FORM WITH THEME PICKER",
+    picture: UserSettingsFormThumbnail,
+    description:
+      "A fully fledged user settings form, with different sectors. Each sector may have 2 tabs to differentiate between groups of settings. All state management is done using REDUX",
+    link: "https://innoloft-agasco-app.web.app/",
+    gitLink: "https://github.com/AGasco/user-settings-form",
+    usedTech:
+      "HTML, CSS, Javascript, React, Redux, Material-UI, JSON, Google Firebase",
+  },
   {
     name: "REDUX USER SETTINGS FORM WITH THEME PICKER",
     picture: UserSettingsFormThumbnail,
@@ -113,28 +134,84 @@ const personalProjects = [
   },
 ];
 
-const categories = ["COMMERCIAL", "PERSONAL"];
+const categories = ["COMMISSIONS", "PASSION"];
 
-function Projects({ isMobile, elements }) {
+function Projects({ elements }) {
   const [category, setCategory] = useState("");
   const [projects, setProjects] = useState([]);
 
   const handleClick = (e) => {
     const newCategory = e.target.textContent;
     setCategory(newCategory);
-    console.log(newCategory);
     if (newCategory === "") setProjects([]);
-    else if (newCategory === "COMMERCIAL") setProjects(commercialProjects);
-    else if (newCategory === "PERSONAL") setProjects(personalProjects);
+    else if (newCategory === "COMMISSIONS") setProjects(commissionsProjects);
+    else if (newCategory === "PASSION") setProjects(passionProjects);
     else console.error("ERROR: Wrong Category inputted");
   };
 
+  const selectCategory = (category) => setCategory(category);
+
+  const selectProjects = (category) =>
+    category === "COMMISSIONS"
+      ? commissionsProjects
+      : category === "PASSION"
+      ? passionProjects
+      : console.error("WRONG CATEGORY INPUTTED");
+
   return (
     <div className="projects" id="Projects">
-      <div className="projects__top">
+      <div className="projects__left"></div>
+      <div className="projects__right">
         <Navbar elements={elements} />
+        <div className="projects__container">
+          {categories.map((c) => (
+            <div
+              className={`projects__category ${c.toLowerCase()} ${
+                category === ""
+                  ? "default"
+                  : category === c
+                  ? "selected"
+                  : "unselected"
+              }`}
+            >
+              <h3 className="projects__title" onClick={() => selectCategory(c)}>
+                {c[0] + c.slice(1).toLowerCase()}
+              </h3>
+              <div className="projects__reel">
+                <Slider
+                  accessibility={true}
+                  arrows={true}
+                  dots={true}
+                  infinite={false}
+                  speed={500}
+                  slidesToShow={1}
+                  slidesToScroll={1}
+                >
+                  {selectProjects(c).map((p) => (
+                    <Project
+                      mini={true}
+                      name={p.name}
+                      picture={p.picture}
+                      link={p.link}
+                      gitLink={p.gitLink}
+                      description={p.description}
+                      usedTech={p.usedTech}
+                    />
+                  ))}
+                </Slider>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div
+          className={`projects__back ${category && "active"}`}
+          onClick={handleClick}
+        >
+          <FontAwesomeIcon icon={faUndo} />
+        </div>
       </div>
-      <div className="projects__bottom">
+
+      {/* <div className="projects__bottom">
         {categories.map((c) => (
           <div
             className={`projects__category ${
@@ -154,7 +231,6 @@ function Projects({ isMobile, elements }) {
             <div className="projects__container">
               {projects.map((p) => (
                 <Project
-                  isMobile={isMobile}
                   name={p.name}
                   picture={p.picture}
                   link={p.link}
@@ -172,33 +248,6 @@ function Projects({ isMobile, elements }) {
         onClick={handleClick}
       >
         <FontAwesomeIcon icon={faUndo} />
-      </div>
-
-      {/* {!isMobile ? (
-        <div>
-          <GoHome />
-          <Sidebar elements={elements} />
-        </div>
-      ) : (
-        <Hamburger elements={elements} color={"golden"} />
-      )}
-      <div className="projects__container">
-        <h2 className="projects__title">Projects</h2>
-        <div className="projects__gridContainer">
-          <div className="projects__grid">
-            {projectsData.map((project) => (
-              <Project
-                isMobile={isMobile}
-                name={project.name}
-                picture={project.picture}
-                link={project.link}
-                gitLink={project.gitLink}
-                description={project.description}
-                usedTech={project.usedTech}
-              />
-            ))}
-          </div>
-        </div>
       </div> */}
     </div>
   );
