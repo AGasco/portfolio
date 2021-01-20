@@ -106,23 +106,23 @@ const commissionsProjects = [
       "Google Firebase",
     ],
   },
-  {
-    name: "Commissioned Website",
-    picture: KikeMindfulnessThumbnail,
-    description:
-      "Website built for a mindfulness instructor using React. Design, development and communication with client has been fully managed by me. ",
-    link: "https://wikipedia-viewer-4cff5.web.app/",
-    gitLink: "https://github.com/AGasco/kike-mindfulness",
-    usedTech: [
-      "HTML",
-      "CSS",
-      "Javascript",
-      "React",
-      "Redux",
-      "Material-UI",
-      "Google Firebase",
-    ],
-  },
+  // {
+  //   name: "Commissioned Website",
+  //   picture: KikeMindfulnessThumbnail,
+  //   description:
+  //     "Website built for a mindfulness instructor using React. Design, development and communication with client has been fully managed by me. ",
+  //   link: "https://wikipedia-viewer-4cff5.web.app/",
+  //   gitLink: "https://github.com/AGasco/kike-mindfulness",
+  //   usedTech: [
+  //     "HTML",
+  //     "CSS",
+  //     "Javascript",
+  //     "React",
+  //     "Redux",
+  //     "Material-UI",
+  //     "Google Firebase",
+  //   ],
+  // },
 ];
 
 const passionProjects = [
@@ -143,23 +143,23 @@ const passionProjects = [
       "Google Firebase",
     ],
   },
-  {
-    name: "REDUX USER SETTINGS FORM WITH THEME PICKER",
-    picture: UserSettingsFormThumbnail,
-    description:
-      "A fully fledged user settings form, with different sectors. Each sector may have 2 tabs to differentiate between groups of settings. All state management is done using REDUX",
-    link: "https://innoloft-agasco-app.web.app/",
-    gitLink: "https://github.com/AGasco/user-settings-form",
-    usedTech: [
-      "HTML",
-      "CSS",
-      "Javascript",
-      "React",
-      "Redux",
-      "Material-UI",
-      "Google Firebase",
-    ],
-  },
+  // {
+  //   name: "REDUX USER SETTINGS FORM WITH THEME PICKER",
+  //   picture: UserSettingsFormThumbnail,
+  //   description:
+  //     "A fully fledged user settings form, with different sectors. Each sector may have 2 tabs to differentiate between groups of settings. All state management is done using REDUX",
+  //   link: "https://innoloft-agasco-app.web.app/",
+  //   gitLink: "https://github.com/AGasco/user-settings-form",
+  //   usedTech: [
+  //     "HTML",
+  //     "CSS",
+  //     "Javascript",
+  //     "React",
+  //     "Redux",
+  //     "Material-UI",
+  //     "Google Firebase",
+  //   ],
+  // },
 ];
 
 const categories = ["COMMISSIONS", "PASSION"];
@@ -206,7 +206,7 @@ function Projects({ elements }) {
                 {c[0] + c.slice(1).toLowerCase()}
               </h3>
               <div className="projects__reel">
-                <Slider
+                {/* <Slider
                   accessibility={true}
                   infinite={true}
                   arrows={true}
@@ -215,19 +215,19 @@ function Projects({ elements }) {
                   speed={500}
                   slidesToShow={1}
                   slidesToScroll={1}
-                >
-                  {selectProjects(c).map((p) => (
-                    <Project
-                      mini={true}
-                      name={p.name}
-                      picture={p.picture}
-                      link={p.link}
-                      gitLink={p.gitLink}
-                      description={p.description}
-                      usedTech={p.usedTech}
-                    />
-                  ))}
-                </Slider>
+                > */}
+                {selectProjects(c).map((p) => (
+                  <Project
+                    mini={true}
+                    name={p.name}
+                    picture={p.picture}
+                    link={p.link}
+                    gitLink={p.gitLink}
+                    description={p.description}
+                    usedTech={p.usedTech}
+                  />
+                ))}
+                {/* </Slider> */}
               </div>
             </div>
           ))}
