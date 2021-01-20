@@ -90,7 +90,7 @@ import Slider from "react-slick";
 
 const commissionsProjects = [
   {
-    name: "Commissioned Website",
+    name: "KIKE MINDFULNESS",
     picture: KikeMindfulnessThumbnail,
     description:
       "Website built for a mindfulness instructor using React. Design, development and communication with client has been fully managed by me. ",
@@ -106,23 +106,6 @@ const commissionsProjects = [
       "Google Firebase",
     ],
   },
-  // {
-  //   name: "Commissioned Website",
-  //   picture: KikeMindfulnessThumbnail,
-  //   description:
-  //     "Website built for a mindfulness instructor using React. Design, development and communication with client has been fully managed by me. ",
-  //   link: "https://wikipedia-viewer-4cff5.web.app/",
-  //   gitLink: "https://github.com/AGasco/kike-mindfulness",
-  //   usedTech: [
-  //     "HTML",
-  //     "CSS",
-  //     "Javascript",
-  //     "React",
-  //     "Redux",
-  //     "Material-UI",
-  //     "Google Firebase",
-  //   ],
-  // },
 ];
 
 const passionProjects = [
@@ -143,23 +126,66 @@ const passionProjects = [
       "Google Firebase",
     ],
   },
-  // {
-  //   name: "REDUX USER SETTINGS FORM WITH THEME PICKER",
-  //   picture: UserSettingsFormThumbnail,
-  //   description:
-  //     "A fully fledged user settings form, with different sectors. Each sector may have 2 tabs to differentiate between groups of settings. All state management is done using REDUX",
-  //   link: "https://innoloft-agasco-app.web.app/",
-  //   gitLink: "https://github.com/AGasco/user-settings-form",
-  //   usedTech: [
-  //     "HTML",
-  //     "CSS",
-  //     "Javascript",
-  //     "React",
-  //     "Redux",
-  //     "Material-UI",
-  //     "Google Firebase",
-  //   ],
-  // },
+
+  //COVID-19 Tracker
+  {
+    name: "REDUX COVID-19 TRACKER",
+    picture: CovidTrackerThumbnail,
+    description:
+      "Keep daily track of COVID-19 incidence all over the world. The data displayed in this app can be sorted worldwide or by country. Furthermore, data can be filtered by Cases, Recovered or Deaths",
+    link: "https://covid-19-tracker-1b15c.web.app/",
+    gitLink: "https://github.com/AGasco/covid-19-tracker",
+    usedTech: [
+      "HTML",
+      "CSS",
+      "Javascript",
+      "React",
+      "Redux",
+      "Google Firebase",
+      "APIs",
+      "Leaflet Maps",
+    ],
+  },
+
+  //REDUX SHOPPING CART
+  {
+    name: "REDUX SHOPPING CART",
+    picture: ShoppingCartThumbnail,
+    description:
+      "Fully functional shopping cart app built from scratch. State handling was done using redux and react-redux packages",
+    link: "https://redux-shopping-cart-fa4e7.firebaseapp.com/",
+    gitLink: "https://github.com/AGasco/full-shopping-cart",
+    usedTech: [
+      "HTML",
+      "CSS",
+      "Javascript",
+      "React",
+      "Redux",
+      "Google Firebase",
+    ],
+  },
+
+  //HACKREACTOR Clone
+  {
+    name: "HACKREACTOR CLONE",
+    picture: HackReactorThumbnail,
+    description:
+      "Clone of the HackReactor website. I built this project to train my front-end skills. I wanted to see if I could build a professional looking website. Just 1 html file and 1 css file",
+    link: "https://hackreactor-clone.netlify.app/",
+    gitLink: "https://github.com/AGasco/hackreactor-clone",
+    usedTech: ["HTML", "CSS", "Netlify"],
+  },
+
+  //Netflix Clone
+  {
+    name: "NETFLIX CLONE",
+    picture: NetflixThumbnail,
+    description:
+      "Clone of the popular streaming platform, Netflix. It uses Netflix API to obtain movies' data sorted by genres, or to show which movies are trending right now. Each movie can be clicked to watch a Youtube embed showing the trailer of that movie",
+    link: "https://netflix-clone-adb5c.web.app/",
+    gitLink: "https://github.com/AGasco/netflix-clone",
+    usedTech: ["HTML", "CSS", "Javascript", "React", "Google Firebase", "APIs"],
+  },
 ];
 
 const categories = ["COMMISSIONS", "PASSION"];
@@ -206,7 +232,7 @@ function Projects({ elements }) {
                 {c[0] + c.slice(1).toLowerCase()}
               </h3>
               <div className="projects__reel">
-                {/* <Slider
+                <Slider
                   accessibility={true}
                   infinite={true}
                   arrows={true}
@@ -215,19 +241,19 @@ function Projects({ elements }) {
                   speed={500}
                   slidesToShow={1}
                   slidesToScroll={1}
-                > */}
-                {selectProjects(c).map((p) => (
-                  <Project
-                    mini={true}
-                    name={p.name}
-                    picture={p.picture}
-                    link={p.link}
-                    gitLink={p.gitLink}
-                    description={p.description}
-                    usedTech={p.usedTech}
-                  />
-                ))}
-                {/* </Slider> */}
+                >
+                  {selectProjects(c).map((p) => (
+                    <Project
+                      mini={true}
+                      name={p.name}
+                      picture={p.picture}
+                      link={p.link}
+                      gitLink={p.gitLink}
+                      description={p.description}
+                      usedTech={p.usedTech}
+                    />
+                  ))}
+                </Slider>
               </div>
             </div>
           ))}

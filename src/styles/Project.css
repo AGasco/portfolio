@@ -9,6 +9,9 @@
   animation-fill-mode: forwards;
   z-index: 500;
   margin: auto auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* .project > * {
@@ -21,6 +24,10 @@
   height: 40vh;
   object-fit: cover;
   z-index: 500;
+}
+
+.project__picture {
+  width: 38vw !important;
 }
 
 .project__info {
