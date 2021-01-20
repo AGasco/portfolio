@@ -54,7 +54,7 @@
   justify-content: flex-start;
   flex-shrink: 1;
   position: relative;
-  max-height: 35vh;
+  max-height: 45vh;
 }
 
 .projects__category.unselected {

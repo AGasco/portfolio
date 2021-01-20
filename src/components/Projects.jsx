@@ -96,8 +96,15 @@ const commissionsProjects = [
       "Website built for a mindfulness instructor using React. Design, development and communication with client has been fully managed by me. ",
     link: "https://wikipedia-viewer-4cff5.web.app/",
     gitLink: "https://github.com/AGasco/kike-mindfulness",
-    usedTech:
-      "HTML, CSS, Javascript, React, Redux, Material-UI, JSON, Google Firebase",
+    usedTech: [
+      "HTML",
+      "CSS",
+      "Javascript",
+      "React",
+      "Redux",
+      "Material-UI",
+      "Google Firebase",
+    ],
   },
   {
     name: "Commissioned Website",
@@ -106,8 +113,15 @@ const commissionsProjects = [
       "Website built for a mindfulness instructor using React. Design, development and communication with client has been fully managed by me. ",
     link: "https://wikipedia-viewer-4cff5.web.app/",
     gitLink: "https://github.com/AGasco/kike-mindfulness",
-    usedTech:
-      "HTML, CSS, Javascript, React, Redux, Material-UI, JSON, Google Firebase",
+    usedTech: [
+      "HTML",
+      "CSS",
+      "Javascript",
+      "React",
+      "Redux",
+      "Material-UI",
+      "Google Firebase",
+    ],
   },
 ];
 
@@ -119,8 +133,15 @@ const passionProjects = [
       "A fully fledged user settings form, with different sectors. Each sector may have 2 tabs to differentiate between groups of settings. All state management is done using REDUX",
     link: "https://innoloft-agasco-app.web.app/",
     gitLink: "https://github.com/AGasco/user-settings-form",
-    usedTech:
-      "HTML, CSS, Javascript, React, Redux, Material-UI, JSON, Google Firebase",
+    usedTech: [
+      "HTML",
+      "CSS",
+      "Javascript",
+      "React",
+      "Redux",
+      "Material-UI",
+      "Google Firebase",
+    ],
   },
   {
     name: "REDUX USER SETTINGS FORM WITH THEME PICKER",
@@ -129,8 +150,15 @@ const passionProjects = [
       "A fully fledged user settings form, with different sectors. Each sector may have 2 tabs to differentiate between groups of settings. All state management is done using REDUX",
     link: "https://innoloft-agasco-app.web.app/",
     gitLink: "https://github.com/AGasco/user-settings-form",
-    usedTech:
-      "HTML, CSS, Javascript, React, Redux, Material-UI, JSON, Google Firebase",
+    usedTech: [
+      "HTML",
+      "CSS",
+      "Javascript",
+      "React",
+      "Redux",
+      "Material-UI",
+      "Google Firebase",
+    ],
   },
 ];
 
@@ -180,6 +208,7 @@ function Projects({ elements }) {
               <div className="projects__reel">
                 <Slider
                   accessibility={true}
+                  infinite={true}
                   arrows={true}
                   dots={true}
                   infinite={false}

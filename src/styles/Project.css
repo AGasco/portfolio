@@ -74,3 +74,30 @@
 .project__linkButton {
   margin-right: 50px;
 }
+
+.project__icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  border-radius: 5px;
+  width: max-content;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.project__tech {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project__tech:hover {
+  transform: (scale(1.2));
+}
+
+.project__techIcon {
+  object-fit: contain;
+  width: 25px;
+  height: 25px;
+  margin: 2px;
+}
