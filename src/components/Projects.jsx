@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 // import Draggable from "react-draggable";
 import Project from "./Project";
+import UltimateGamesDisplayThumbnail from "./../imgs/thumbnails/ultimate-games-display-thumbnail.JPG";
 import UserSettingsFormThumbnail from "./../imgs/thumbnails/user-settings-form-thumbnail2.png";
 import NetflixThumbnail from "./../imgs/thumbnails/netflix-thumbnail.png";
 import CovidTrackerThumbnail from "./../imgs/thumbnails/covid-tracker-thumbnail.png";
@@ -109,6 +110,23 @@ const commissionsProjects = [
 ];
 
 const passionProjects = [
+  {
+    name: "FULLSTACK - THE ULTIMATE GAMES DISPLAY (WIP)",
+    picture: UltimateGamesDisplayThumbnail,
+    description:
+      "FullStack app where I grab games data from RAWG api, and display this data in a beautiful and functional way. Data can be filtered, ordered and searched.",
+    link: "https://ultimate-games-display.web.app/",
+    gitLink: "https://github.com/AGasco/ultimate-react-proyect",
+    usedTech: [
+      "HTML",
+      "CSS",
+      "Javascript",
+      "React",
+      "Material-UI",
+      "Google Firebase",
+      "APIs",
+    ],
+  },
   {
     name: "REDUX USER SETTINGS FORM WITH THEME PICKER",
     picture: UserSettingsFormThumbnail,
