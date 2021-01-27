@@ -71,8 +71,9 @@ function Project({
   return (
     <div className={`project ${mini && "mini"}`}>
       <img className="project__picture" src={picture} alt="Project thumbnail" />
+
       <div className="project__info">
-        {/* <h4 className="project__name">{name}</h4> */}
+        <h4 className="project__name">{name}</h4>
         <p className="project__description">{description}</p>
         <div className="project__buttonsContainer">
           <a

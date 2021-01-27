@@ -7,7 +7,7 @@
   animation: forbidEvents;
   animation-duration: 3s;
   animation-fill-mode: forwards;
-  z-index: 500;
+  z-index: 100;
   margin: auto auto;
   display: flex;
   flex-direction: column;
@@ -23,14 +23,22 @@
   width: 40vw;
   height: 40vh;
   object-fit: cover;
-  z-index: 500;
+  /* z-index: 500; */
 }
 
 .project__picture {
   width: 38vw !important;
 }
 
+.project__name {
+  z-index: 600;
+  font-size: 3rem !important;
+  font-family: "Wire One", sans-serif !important;
+  color: white;
+}
+
 .project__info {
+  position: relative;
   color: white;
   display: flex;
   flex-direction: column;
