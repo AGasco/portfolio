@@ -53,7 +53,6 @@ function Contact({ isMobile, elements }) {
           <div className="contact__bottom">
             <h1 className="contact__title">Don't forget to say Hi :)</h1>
             <div className="contact__container">
-              {/* <h2>Contact</h2> */}
               <div className="contact__formContainer">
                 <form onSubmit={onSubmit}>
                   <div className="contact__formName">
@@ -114,25 +113,14 @@ function Contact({ isMobile, elements }) {
                       <input type="submit" value="Contact Me!" />
                     </div>
                   </div>
-                  {!isMobile ? (
-                    <div className="contact__footer">
-                      <em>
-                        If you'd rather speak to me on the phone, you may
-                        contact me on
-                      </em>
-                      <span className="contact__phone">0034 686043621</span>
-                    </div>
-                  ) : (
-                    <div className="contact__footer">
-                      <p>
-                        <em className="contact__footerText">
-                          If you'd rather speak to me on the phone, you may
-                          contact me on
-                        </em>
-                        <span className="contact__phone"> 0034 686043621</span>
-                      </p>
-                    </div>
-                  )}
+
+                  <div className="contact__footer">
+                    <em>
+                      If you'd rather speak to me on the phone, you may contact
+                      me on
+                    </em>
+                    <span className="contact__phone">0034 686043621</span>
+                  </div>
                 </form>
               </div>{" "}
             </div>
@@ -146,111 +134,6 @@ function Contact({ isMobile, elements }) {
       </div>
 
       <div className="contact__right"></div>
-      {/* {!isMobile ? (
-        <div>
-          <GoHome />
-          <Sidebar elements={elements} />
-        </div>
-      ) : (
-        <Hamburger elements={elements} color={"black"} />
-      )}
-      {!hasSubmitted ? (
-        <div className="contact__container">
-          <h2>Contact</h2>
-          <div className="contact__formContainer">
-            <form
-              action="mailto:antoniofgasco@gmail.com"
-              method="POST"
-              encType="multipart/form-data"
-              onSubmit={(e) => onSubmit(e)}
-            >
-              <div className="contact__formName">
-                <label htmlFor="name">Name</label>
-                <div className="contact__formNameInputs">
-                  <input
-                    type="text"
-                    id="firstName"
-                    name="name"
-                    value={formInfo.firstName ? formInfo.firstName : ""}
-                    onChange={(e) => onChange(e, "firstName")}
-                    placeholder="First Name"
-                    required
-                  />
-                  <input
-                    type="text"
-                    id="lastName"
-                    name="name"
-                    value={formInfo.lastName ? formInfo.lastName : ""}
-                    onChange={(e) => onChange(e, "lastName")}
-                    placeholder="Last Name"
-                    required
-                  />
-                </div>
-              </div>
-
-              <div className="contact__formEmail">
-                <label htmlFor="email">e-mail</label>
-                <div className="contact__formEmailInput">
-                  <input
-                    type="email"
-                    name="email"
-                    value={formInfo.email ? formInfo.email : ""}
-                    onChange={(e) => onChange(e, "email")}
-                    placeholder="yourawesomename@gmail.com"
-                    required
-                  />
-                </div>
-              </div>
-
-              <div className="contact__formMessage">
-                <label htmlFor="message">Your Message</label>
-                <div className="contact__formMessageInput">
-                  <textarea
-                    name="message"
-                    value={formInfo.message ? formInfo.message : ""}
-                    onChange={(e) => onChange(e, "message")}
-                    placeholder="Your enquiries go here..."
-                    cols="30"
-                    rows="10"
-                    required
-                  ></textarea>
-                </div>
-              </div>
-
-              <div className="contact__formSubmit">
-                <div className="contact__formSubmitInput">
-                  <input type="submit" value="Contact Me!" />
-                </div>
-              </div>
-              {!isMobile ? (
-                <div className="contact__footer">
-                  <em>
-                    If you'd rather speak to me on the phone, you may contact me
-                    on
-                  </em>
-                  <span className="contact__phone">0034 686043621</span>
-                </div>
-              ) : (
-                <div className="contact__footer">
-                  <p>
-                    <em className="contact__footerText">
-                      If you'd rather speak to me on the phone, you may contact
-                      me on
-                    </em>
-                    <span className="contact__phone"> 0034 686043621</span>
-                  </p>
-                </div>
-              )}
-            </form>
-          </div>{" "}
-        </div>
-      ) : (
-        <div className="contact__confirmation">
-          {" "}
-          <h1>Thank you!</h1>
-          <h4>I will come back to you as soon as possible</h4>
-        </div>
-      )} */}
     </div>
   );
 }

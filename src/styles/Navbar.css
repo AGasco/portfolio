@@ -75,7 +75,7 @@ li > a,
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 4vh;
+    /* padding-top: 4vh; */
   }
   .navbar__brand {
     position: relative;
