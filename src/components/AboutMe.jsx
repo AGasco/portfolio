@@ -18,7 +18,7 @@ function AboutMe({ elements }) {
             <div className="aboutMe__picture"></div>
             <p className="aboutMe__quote">
               "I've always been passioned about technology. Computers and games
-              are my world. But until 2015, I always lied to myself saying that
+              are my world. But until 2017, I always lied to myself saying that
               I didn't have the capabilities to become a software developer.
               That year though, I began studying programming in my spare time
               and I fell in love with it. In 2020, I finally decided to drop my
