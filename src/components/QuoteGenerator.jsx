@@ -57,7 +57,7 @@ const QuoteGenerator = () => {
               <a
                 href={curQuote?.wikipedia}
                 target="_blank"
-                className={curQuote?.author === "Anonymous" && "disabled"}
+                className={curQuote?.author === "Anonymous" ? "disabled" : ""}
               >
                 {curQuote?.author}
               </a>
