@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import Navbar from "./Navbar";
+import Input from "./../common/Input";
 import emailjs from "emailjs-com";
 import "./../styles/Contact.css";
-import GoHome from "./GoHome";
-import Sidebar from "./Sidebar";
-import Hamburger from "./Hamburger";
 
-function Contact({ isMobile, elements }) {
+function Contact({ elements }) {
   const [hasSubmitted, setHasSubmitted] = useState(false);
 
   //JSON object containing all the info taken from the form
@@ -25,8 +23,6 @@ function Contact({ isMobile, elements }) {
   const onSubmit = (e) => {
     e.preventDefault();
 
-    console.log("submitting");
-
     emailjs.send(
       "service_7j2njg7",
       "template_paenfno",
@@ -40,6 +36,20 @@ function Contact({ isMobile, elements }) {
     );
     setHasSubmitted(true);
     setFormInfo({});
+  };
+
+  const renderInput = (type, id, name, placeholder) => {
+    return (
+      <Input
+        type={type}
+        id={id}
+        name={name}
+        value={formInfo[id] ? formInfo[id] : ""}
+        onChange={(e) => onChange(e, id)}
+        placeholder={placeholder}
+        required
+      />
+    );
   };
 
   return (
@@ -58,38 +68,21 @@ function Contact({ isMobile, elements }) {
                   <div className="contact__formName">
                     <label htmlFor="name">Name</label>
                     <div className="contact__formNameInputs">
-                      <input
-                        type="text"
-                        id="firstName"
-                        name="name"
-                        value={formInfo.firstName ? formInfo.firstName : ""}
-                        onChange={(e) => onChange(e, "firstName")}
-                        placeholder="First Name"
-                        required
-                      />
-                      <input
-                        type="text"
-                        id="lastName"
-                        name="name"
-                        value={formInfo.lastName ? formInfo.lastName : ""}
-                        onChange={(e) => onChange(e, "lastName")}
-                        placeholder="Last Name"
-                        required
-                      />
+                      {renderInput("text", "firstName", "name", "First Name")}
+                      {renderInput("text", "lastName", "name", "Last Name")}
                     </div>
                   </div>
 
                   <div className="contact__formEmail">
                     <label htmlFor="email">e-mail</label>
                     <div className="contact__formEmailInput">
-                      <input
-                        type="email"
-                        name="email"
-                        value={formInfo.email ? formInfo.email : ""}
-                        onChange={(e) => onChange(e, "email")}
-                        placeholder="yourawesomename@gmail.com"
-                        required
-                      />
+                      {renderInput(
+                        "email",
+                        "email",
+                        "email",
+                        "e-mail",
+                        "yourawesomename@gmail.com"
+                      )}
                     </div>
                   </div>
 

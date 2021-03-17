@@ -40,18 +40,15 @@ const AnimatedSwitch = withRouter(({ location, isMobile, elements }) => {
           </Route>
           <Route path="/projects">
             <Projects isMobile={isMobile} elements={elements} />
-            {/* <Projects isMobile={isMobile} /> */}
           </Route>
           <Route path="/contact">
-            <Contact isMobile={isMobile} elements={elements} />
-            {/* <Contact isMobile={isMobile} /> */}
+            <Contact elements={elements} />
           </Route>
           <Route path="/test">
             <Test />
           </Route>
           <Route path="/">
             <div className="app__landing">
-              {/* <Navbar elements={elements} /> */}
               <Landing elements={elements} />
             </div>
           </Route>
