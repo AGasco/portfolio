@@ -4,101 +4,103 @@
   left: 5vh;
   width: 35vw;
   font-size: 1.5rem;
-}
 
-.quoteGenerator__container {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
+  &__container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
 
-.quoteGenerator__top {
-  display: flex;
-  position: relative;
-  padding: 20px;
-}
+    * {
+      font-family: "Courgette", cursive;
+    }
+  }
 
-.quoteGenerator__container * {
-  font-family: "Courgette", cursive;
-}
+  &__top {
+    display: flex;
+    position: relative;
+    padding: 20px;
 
-.quoteGenerator__top > h1 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  font-size: 5rem !important;
-}
+    & > h1 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 5rem !important;
+    }
 
-.quoteGenerator__top > h3 {
-  position: absolute;
-  font-size: 5rem !important;
-}
+    & > h3 {
+      position: absolute;
+      font-size: 5rem !important;
+    }
+  }
 
-.quoteGenerator__quote {
-  text-align: left;
-  padding-left: 5%;
-}
+  &__quote {
+    text-align: left;
+    padding-left: 5%;
 
-.quoteGenerator__quote::after {
-  content: '"';
-  font-size: 3rem;
-  bottom: -5px;
-  position: absolute;
-}
+    &::after {
+      content: '"';
+      font-size: 3rem;
+      bottom: -5px;
+      position: absolute;
+    }
 
-.quoteGenerator__quote > span {
-  font-size: 2rem;
-  line-height: 1.5rem;
-}
+    & > span {
+      font-size: 2rem;
+      line-height: 1.5rem;
+    }
+  }
 
-.quoteGenerator__bottom {
-  width: 60%;
-  align-self: flex-end;
-  text-align: right;
-  margin-top: -20px;
-  padding-right: 30px;
-  display: flex;
-  align-items: center;
-}
+  &__bottom {
+    width: 60%;
+    align-self: flex-end;
+    text-align: right;
+    margin-top: -20px;
+    padding-right: 30px;
+    display: flex;
+    align-items: center;
+  }
 
-.quoteGenerator__btn {
-  position: absolute;
-  left: 15%;
-  bottom: -0.5vh;
-  background-color: transparent;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  margin-top: -20px;
-  color: #eee;
-  padding: 0;
-  transition: all 0.3s;
-}
+  &__btn {
+    position: absolute;
+    left: 15%;
+    bottom: -0.5vh;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-top: -20px;
+    color: #eee;
+    padding: 0;
+    transition: all 0.3s;
 
-.quoteGenerator__btn:first-child {
-  font-size: 1.5rem;
-}
+    &:first-child {
+      font-size: 1.5rem;
 
-.quoteGenerator__btn:first-child:hover {
-  color: white;
-}
+      &:hover {
+        color: white;
+      }
+    }
+  }
 
-.quoteGenerator__author a {
-  color: white;
-  text-decoration: none;
-  white-space: nowrap;
-  z-index: 100;
-  cursor: pointer;
-  font-family: "Darker Grotesque", sans-serif;
-}
+  &__author {
+    a {
+      color: white;
+      text-decoration: none;
+      white-space: nowrap;
+      z-index: 100;
+      cursor: pointer;
+      font-family: "Darker Grotesque", sans-serif;
 
-.quoteGenerator__author a.disabled {
-  pointer-events: none;
-}
+      &.disabled {
+        pointer-events: none;
+      }
+    }
+  }
 
-.quoteGenerator__date {
-  font-family: "Darker Grotesque", sans-serif;
-  font-size: 1rem;
+  &__date {
+    font-family: "Darker Grotesque", sans-serif;
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 1200px) {
