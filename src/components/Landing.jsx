@@ -36,7 +36,7 @@ const Landing = ({ elements }) => {
           <div className="landing__icons">
             <a
               className={`landing__linkedin ${animate && "anim"}`}
-              href="https://www.linkedin.com/in/antonio-f-gasco-ojeda-b06b2173"
+              href="https://www.linkedin.com/in/antoniofgasco/"
               target="_blank"
               rel="noopener noreferrer"
             >
