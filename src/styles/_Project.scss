@@ -1,6 +1,5 @@
 .project {
   width: 60vw;
-  /* height: 60vh; */
   height: max-content !important;
   background-size: cover;
   background-position: center center;
@@ -12,110 +11,104 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-}
 
-/* .project > * {
-  overflow-y: hidden;
-} */
+  &.mini,
+  &__picture {
+    width: 40vw;
+    height: 40vh;
+    object-fit: cover;
+  }
 
-.project.mini,
-.project__picture {
-  width: 40vw;
-  height: 40vh;
-  object-fit: cover;
-  /* z-index: 500; */
-}
+  &__picture {
+    width: 38vw !important;
+  }
 
-.project__picture {
-  width: 38vw !important;
-}
+  &__name {
+    z-index: 600;
+    font-size: 3rem !important;
+    font-family: "Wire One", sans-serif !important;
+    color: white;
+  }
 
-.project__name {
-  z-index: 600;
-  font-size: 3rem !important;
-  font-family: "Wire One", sans-serif !important;
-  color: white;
-}
+  &__info {
+    position: relative;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 
-.project__info {
-  position: relative;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
+    * {
+      font-family: "Darker Grotesque", sans-serif;
+      font-size: 2rem;
+    }
+  }
 
-.project__info * {
-  font-family: "Darker Grotesque", sans-serif;
-  font-size: 2rem;
-}
+  &__description {
+    font-size: 1.5rem;
+  }
 
-.project__description {
-  font-size: 1.5rem;
-}
+  &__buttonsContainer {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+  }
 
-.project__tech > * {
-  font-size: 1.25rem;
-}
+  &__button {
+    pointer-events: all;
+    background-color: white;
+    padding: 5px 75px !important;
+    transition: all 0.5s;
+    color: black;
+    font-size: 2rem;
+    font-weight: 100;
+    font-family: "Wire One", sans-serif;
+  }
 
-.project__buttonsContainer {
-  display: flex;
-  justify-content: center;
-  padding: 10px;
-  /* padding-bottom: 40px; */
-}
+  &__button:hover {
+    background-color: goldenrod;
+    color: white;
+  }
 
-.project__button {
-  pointer-events: all;
-  background-color: white;
-  padding: 5px 75px !important;
-  transition: all 0.5s;
-  color: black;
-  font-size: 2rem;
-  font-weight: 100;
-  font-family: "Wire One", sans-serif;
-}
+  &__anchor {
+    transition: all 0.5s;
+    text-decoration: none;
+  }
 
-.project__button:hover {
-  background-color: goldenrod;
-  color: white;
-}
+  &__linkButton {
+    margin-right: 50px;
+  }
 
-.project__anchor {
-  transition: all 0.5s;
-  text-decoration: none;
-}
+  &__icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+    width: max-content;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
 
-.project__linkButton {
-  margin-right: 50px;
-}
+  &__tech {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-.project__icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 5px;
-  border-radius: 5px;
-  width: max-content;
-  background-color: rgba(255, 255, 255, 0.8);
-}
+    & > * {
+      font-size: 1.25rem;
+    }
+  }
 
-.project__tech {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+  &__tech:hover {
+    transform: (scale(1.2));
+  }
 
-.project__tech:hover {
-  transform: (scale(1.2));
-}
-
-.project__techIcon {
-  object-fit: contain;
-  width: 25px;
-  height: 25px;
-  margin: 2px;
+  &__techIcon {
+    object-fit: contain;
+    width: 25px;
+    height: 25px;
+    margin: 2px;
+  }
 }
 
 /* Media Queries */
@@ -126,11 +119,13 @@
 }
 
 @media (max-width: 1300px) {
-  .project__description {
-    font-size: 1.18rem;
-  }
-  .project__buttonsContainer {
-    padding-bottom: 0;
+  .project {
+    &__description {
+      font-size: 1.18rem;
+    }
+    &__buttonsContainer {
+      padding-bottom: 0;
+    }
   }
 }
 
@@ -156,12 +151,14 @@
 }
 
 @media (max-width: 600px) {
-  .project__picture {
-    height: 30vh;
-  }
+  .project {
+    &__picture {
+      height: 30vh;
+    }
 
-  .project__description {
-    font-size: 1.1rem;
+    &__description {
+      font-size: 1.1rem;
+    }
   }
 }
 
@@ -172,17 +169,19 @@
 }
 
 @media (max-width: 400px) {
-  .project__picture {
-    height: 25vh;
-  }
-  .project__linkButton {
-    margin-right: 5px;
-  }
-  .project__button {
-    padding: 5px 65px !important;
-  }
-  .project__tech > p {
-    font-size: 1rem;
+  .project {
+    &__picture {
+      height: 25vh;
+    }
+    &__linkButton {
+      margin-right: 5px;
+    }
+    &__button {
+      padding: 5px 65px !important;
+    }
+    &__tech > p {
+      font-size: 1rem;
+    }
   }
 }
 
@@ -193,14 +192,16 @@
 }
 
 @media (max-width: 320px) {
-  .project__picture {
-    height: 25vh;
-  }
-  .project__description {
-    font-size: 1rem;
-  }
-  .project__button {
-    padding: 2px 50px !important;
-    font-size: 1.5rem;
+  .project {
+    &__picture {
+      height: 25vh;
+    }
+    &__description {
+      font-size: 1rem;
+    }
+    &__button {
+      padding: 2px 50px !important;
+      font-size: 1.5rem;
+    }
   }
 }
