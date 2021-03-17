@@ -1,6 +1,5 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
-import "./../styles/Brand.css";
 
 const Brand = withRouter(({ elements, history, location }) => {
   const curScreen = elements.indexOf(location.pathname);

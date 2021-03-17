@@ -1,7 +1,6 @@
 import React from "react";
 import Brand from "./../components/Brand";
 import { withRouter } from "react-router-dom";
-import "./../styles/Navbar.css";
 
 const Navbar = withRouter(({ history, location, elements }) => {
   const curScreen = elements.indexOf(location.pathname);

@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter } from "react-router-dom";
-import Footer from "./components/Footer";
-import "./App.scss";
 import AnimatedSwitch from "./anims/AnimatedSwitch";
 
 const elements = ["/", "/About Me", "/Skills", "/Projects", "/Contact"];
@@ -29,7 +27,6 @@ function App() {
       <div className="app">
         <BrowserRouter>
           <AnimatedSwitch isMobile={isMobile} elements={elements} />
-          {/* <Footer /> */}
         </BrowserRouter>
       </div>
     </React.Fragment>

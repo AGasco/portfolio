@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import * as data from "./../data/quotes.json";
-import "./../styles/QuoteGenerator.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSync } from "@fortawesome/free-solid-svg-icons/";
 
@@ -57,7 +56,7 @@ const QuoteGenerator = () => {
               <a
                 href={curQuote?.wikipedia}
                 target="_blank"
-                className={curQuote?.author === "Anonymous" && "disabled"}
+                className={curQuote?.author === "Anonymous" ? "disabled" : ""}
               >
                 {curQuote?.author}
               </a>

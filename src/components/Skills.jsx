@@ -1,7 +1,6 @@
 import React from "react";
 import Navbar from "./Navbar";
 import SkillCard from "./SkillCard";
-import "./../styles/Skills.css";
 import HTMLLogo from "./../imgs/logos/html-logo.png";
 import CSSLogo from "./../imgs/logos/css-logo.png";
 import JSLogo from "./../imgs/logos/javascript-logo.png";

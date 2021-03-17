@@ -1,0 +1,113 @@
+.navbar {
+  width: 100%;
+  height: max-content;
+  /* position: fixed;
+  top: 1vh;
+  left: 0; */
+  transition: all 0.7s;
+  opacity: 1;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-top: 10px;
+  position: relative;
+
+  &__brand {
+    cursor: pointer;
+    font-family: "Dancing Script", cursive;
+    color: white;
+    font-size: 2.5rem;
+    position: absolute;
+    left: 2vw;
+  }
+
+  ul {
+    display: flex;
+    justify-content: flex-end;
+
+    li {
+      display: inline-block;
+      cursor: pointer;
+      transition: all 0.3s;
+      margin: 0 30px;
+      /* border-bottom: 1px solid rgba(255, 255, 255, 0.0); */
+    }
+  }
+
+  ul li > a,
+  &__link {
+    font-family: "Wire One", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 100;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s;
+  }
+
+  ul li > a:hover,
+  &__link:hover {
+    color: #202020 !important;
+    transform: scale(1.2);
+  }
+
+  &__link.active {
+    color: #202020;
+    transform: scale(1.2);
+  }
+
+  ul li.hidden {
+    cursor: default;
+    pointer-events: none;
+    /* transform: translateY(-100px) */
+  }
+}
+
+@media (max-width: 1010px) {
+  .navbar {
+    width: 100% !important;
+    padding: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* padding-top: 4vh; */
+
+    &__brand {
+      position: relative;
+    }
+
+    ul {
+      justify-content: center;
+
+      li {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 565px) {
+  .navbar {
+    ul {
+      padding-left: 0;
+      width: 100vw;
+
+      li {
+        font-size: 1.2rem;
+        margin: 0 5px;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .navbar__link {
+    font-size: 2rem !important;
+  }
+}

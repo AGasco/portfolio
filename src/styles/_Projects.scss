@@ -1,0 +1,248 @@
+.projects {
+  width: 100vw;
+  height: max-content;
+  max-height: 100vh;
+  background-color: #6ad4ad;
+  display: flex;
+
+  & > * {
+    overflow: hidden;
+  }
+
+  &__bottom {
+    flex: 1;
+    display: flex;
+  }
+
+  &__left {
+    flex: 1;
+    background-image: url("https://images.unsplash.com/photo-1570393080660-de4e4a15a247?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80");
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__right {
+    position: relative;
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    height: 100vh !important;
+  }
+
+  &__container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    top: 40%;
+    position: absolute;
+    cursor: pointer;
+    transition: all 0.4s;
+    font-size: 5rem;
+    color: white;
+    font-family: "Dancing Script", cursive;
+    text-align: center;
+    z-index: 100;
+  }
+
+  &__reel {
+    width: 100%;
+    transition: all 1s;
+    transition-delay: 100ms;
+  }
+
+  &__back {
+    cursor: pointer;
+    position: absolute;
+    font-size: 2rem;
+    top: 9vh;
+    left: 1vw;
+    color: white;
+    transition: all 0.3s;
+    opacity: 0;
+
+    &.active {
+      animation: showBack;
+      animation-fill-mode: forwards;
+      animation-duration: 1.5s;
+      animation-delay: 1s;
+    }
+  }
+
+  &__category {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 1;
+    position: relative;
+    max-height: 45vh;
+
+    &.unselected {
+      flex: 0 1;
+      height: 0 !important;
+      pointer-events: none;
+      display: none;
+    }
+
+    &.selected > .projects__title {
+      cursor: default;
+      pointer-events: none;
+    }
+
+    &.unselected > .projects__title {
+      display: none;
+    }
+
+    &.commissions.selected > .projects__title {
+      top: 0;
+    }
+
+    &.passion.selected > .projects__title {
+      top: 80vh;
+    }
+
+    &.default > .projects__title:hover {
+      font-size: 7rem;
+    }
+
+    &.selected.commissions .projects__reel {
+      padding-top: 15vh;
+    }
+
+    &.selected.passion .projects__reel {
+      padding-top: 7.5vh;
+    }
+
+    &.default .projects__reel,
+    &.unselected .projects__reel {
+      opacity: 0;
+      transition: all 0s;
+      pointer-events: none;
+    }
+  }
+
+  .navbar {
+    padding-bottom: 10px;
+  }
+}
+
+/* To be able to click carousel arrows */
+.slick-list {
+  pointer-events: none;
+}
+
+.slick-prev {
+  left: 15% !important;
+  z-index: 1;
+}
+.slick-next {
+  right: 15% !important;
+  z-index: 1;
+}
+
+@keyframes showBack {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Media Queries */
+
+@media (max-width: 1050px) {
+  .projects {
+    .navbar {
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: center !important;
+      align-items: center !important;
+
+      ul {
+        justify-content: center;
+      }
+    }
+
+    .brand {
+      position: relative !important;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .projects__back {
+    top: 13vh;
+    left: 1vw;
+  }
+}
+
+@media (max-width: 830px) {
+  .projects {
+    &__back {
+      top: 11vh;
+      left: 3vw;
+    }
+
+    .navbar {
+      ul {
+        li {
+          white-space: nowrap;
+          font-size: 1.2rem;
+          margin: 0 5px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .projects__left {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .projects {
+    &__back {
+      top: 15vh;
+      left: 3vw;
+    }
+
+    &__category.passion.selected > &__title {
+      top: 70vh;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .projects {
+    &__title {
+      font-size: 4rem;
+    }
+
+    &__category.default > &__title:hover {
+      font-size: 5rem;
+    }
+
+    &__category.commissions.selected > &__title {
+      top: 3vh;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .projects {
+    &__title {
+      font-size: 3rem;
+    }
+
+    &__category.default > &__title:hover {
+      font-size: 4rem;
+    }
+  }
+}

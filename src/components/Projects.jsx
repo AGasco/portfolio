@@ -2,18 +2,13 @@ import React, { useState } from "react";
 // import Draggable from "react-draggable";
 import Project from "./Project";
 import UltimateGamesDisplayThumbnail from "./../imgs/thumbnails/ultimate-games-display-thumbnail.JPG";
-import UserSettingsFormThumbnail from "./../imgs/thumbnails/user-settings-form-thumbnail2.png";
 import NetflixThumbnail from "./../imgs/thumbnails/netflix-thumbnail.png";
 import CovidTrackerThumbnail from "./../imgs/thumbnails/covid-tracker-thumbnail.png";
 import HackReactorThumbnail from "./../imgs/thumbnails/hackreactor-thumbnail.PNG";
 import ShoppingCartThumbnail from "./../imgs/thumbnails/shopping-cart-thumbnail.png";
 import KikeMindfulnessThumbnail from "./../imgs/thumbnails/kikemindfulness.JPG";
-import "./../styles/Projects.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUndo } from "@fortawesome/free-solid-svg-icons";
-import GoHome from "./GoHome";
-import Sidebar from "./Sidebar";
-import Hamburger from "./Hamburger";
 import Navbar from "./Navbar";
 import Slider from "react-slick";
 

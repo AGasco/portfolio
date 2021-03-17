@@ -1,20 +1,17 @@
+@import "./App", "./styles/Landing", "./styles/AboutMe", "./styles/Brand",
+  "./styles/Contact", "./styles/Navbar", "./styles/Project.scss",
+  "./styles/Projects", "./styles/QuoteGenerator", "./styles/SkillCard",
+  "./styles/Skills", "./anims/animations";
+
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Asap&family=Darker+Grotesque:wght@300;400&family=Wire+One&family=Courgette&family=Dancing+Script:wght@500&family=Kalam:wght@300&display=swap");
 
-/* font-family: "Anton", sans-serif;
-font-family: "Asap", sans-serif;
-font-family: "Darker Grotesque", sans-serif;
-font-family: "Wire One", sans-serif;
-font-family: "Courgette", cursive;
-font-family: 'Kalam', cursive;
-font-family: "Dancing Script", cursive; */
-
-:root {
-  --white-color: #f4f6ff;
-  --yellow-color: #ffcb74;
-  --red-color: #ea907a;
-  --green-color: #4f8a8b;
-  --cyan-color: #7fa8ac;
-}
+$font-anton: "Anton", sans-serif;
+$font-asap: "Asap", sans-serif;
+$font-darkerGrotesque: "Darker Grotesque", sans-serif;
+$font-wireOne: "Wire One", sans-serif;
+$font-courgette: "Courgette", cursive;
+$font-kalam: "Kalam", cursive;
+$font-dancingScript: "Dancing Script", cursive;
 
 *,
 *::before,
@@ -31,7 +28,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* user-select: none; */
 }
 
 #text {
