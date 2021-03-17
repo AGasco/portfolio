@@ -1,8 +1,8 @@
 @import "./App", "./styles/Landing", "./styles/AboutMe", "./styles/Brand",
-  "./styles/Contact", "./styles/Footer", "./styles/GoHome", "./styles/Hamburger",
-  "./styles/Navbar", "./styles/Project.scss", "./styles/Projects",
-  "./styles/QuoteGenerator", "./styles/Sidebar", "./styles/SkillCard",
-  "./styles/Skills";
+  "./styles/Contact", "./styles/GoHome", "./styles/Hamburger", "./styles/Navbar",
+  "./styles/Project.scss", "./styles/Projects", "./styles/QuoteGenerator",
+  "./styles/Sidebar", "./styles/SkillCard", "./styles/Skills",
+  "./anims/animations";
 
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Asap&family=Darker+Grotesque:wght@300;400&family=Wire+One&family=Courgette&family=Dancing+Script:wght@500&family=Kalam:wght@300&display=swap");
 
@@ -13,14 +13,6 @@ $font-wireOne: "Wire One", sans-serif;
 $font-courgette: "Courgette", cursive;
 $font-kalam: "Kalam", cursive;
 $font-dancingScript: "Dancing Script", cursive;
-
-// :root {
-//   --white-color: #f4f6ff;
-//   --yellow-color: #ffcb74;
-//   --red-color: #ea907a;
-//   --green-color: #4f8a8b;
-//   --cyan-color: #7fa8ac;
-// }
 
 *,
 *::before,
@@ -37,7 +29,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* user-select: none; */
 }
 
 #text {

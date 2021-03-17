@@ -1,14 +1,9 @@
 import React from "react";
 import Landing from "./../components/Landing";
-import Navbar from "./../components/Navbar";
 import AboutMe from "./../components/AboutMe";
 import Skills from "./../components/Skills";
 import Projects from "./../components/Projects";
 import Contact from "./../components/Contact";
-import Sidebar from "./../components/Sidebar";
-import Footer from "./../components/Footer";
-import GoHome from "./../components/GoHome";
-import "./animations.css";
 import { withRouter, Switch, Route } from "react-router-dom";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
