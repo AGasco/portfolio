@@ -8,7 +8,6 @@ const Brand = withRouter(({ elements, history, location }) => {
     <p
       className="brand"
       onClick={() => {
-        console.log(curScreen);
         if (curScreen !== 0)
           return history.push({
             pathname: "/",

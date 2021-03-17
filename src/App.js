@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter } from "react-router-dom";
 import Footer from "./components/Footer";
-import "./App.css";
+import "./App.scss";
 import AnimatedSwitch from "./anims/AnimatedSwitch";
 
 const elements = ["/", "/About Me", "/Skills", "/Projects", "/Contact"];
