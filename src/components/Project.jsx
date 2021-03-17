@@ -16,7 +16,6 @@ import APILogo from "./../imgs/logos/api-logo3.png";
 import LeafletLogo from "./../imgs/logos/leaflet-logo.png";
 import UnityLogo from "./../imgs/logos/unity-logo.png";
 import CSharpLogo from "./../imgs/logos/csharp-logo.svg";
-import "./../styles/Project.css";
 
 function Project({
   mini,

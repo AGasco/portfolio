@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import MenuIcon from "@material-ui/icons/Menu";
 import Sidebar from "./Sidebar";
-import "./../styles/Hamburger.css";
 
 const Hamburger = ({ elements, color }) => {
   const [isOpen, setIsOpen] = useState(false);

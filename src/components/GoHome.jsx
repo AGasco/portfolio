@@ -1,7 +1,6 @@
 import React from "react";
-import { Link, withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import HomeIcon from "@material-ui/icons/Home";
-import "./../styles/GoHome.css";
 
 //I rather have a duplicated elements array (the other copy is in App.js)
 //than having to prop-drill every single component for GoHome to have access to the elements array

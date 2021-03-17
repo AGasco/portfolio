@@ -2,7 +2,6 @@ import React from "react";
 import GoHome from "./GoHome";
 import CloseIcon from "@material-ui/icons/Close";
 import { withRouter } from "react-router-dom";
-import "./../styles/Sidebar.css";
 
 const Sidebar = withRouter(
   ({ history, location, elements, isMobile, onClose }) => {

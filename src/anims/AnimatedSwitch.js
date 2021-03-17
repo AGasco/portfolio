@@ -5,7 +5,6 @@ import AboutMe from "./../components/AboutMe";
 import Skills from "./../components/Skills";
 import Projects from "./../components/Projects";
 import Contact from "./../components/Contact";
-import Test from "./../components/Test";
 import Sidebar from "./../components/Sidebar";
 import Footer from "./../components/Footer";
 import GoHome from "./../components/GoHome";
@@ -43,9 +42,6 @@ const AnimatedSwitch = withRouter(({ location, isMobile, elements }) => {
           </Route>
           <Route path="/contact">
             <Contact elements={elements} />
-          </Route>
-          <Route path="/test">
-            <Test />
           </Route>
           <Route path="/">
             <div className="app__landing">

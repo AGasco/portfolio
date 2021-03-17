@@ -1,5 +1,4 @@
 import React from "react";
-import "./../styles/SkillCard.css";
 
 function SkillCard({ logo, name, link }) {
   return (

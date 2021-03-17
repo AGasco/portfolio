@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Navbar from "./Navbar";
 import Input from "./../common/Input";
 import emailjs from "emailjs-com";
-import "./../styles/Contact.css";
 
 function Contact({ elements }) {
   const [hasSubmitted, setHasSubmitted] = useState(false);
@@ -85,7 +84,6 @@ function Contact({ elements }) {
                       )}
                     </div>
                   </div>
-
                   <div className="contact__formMessage">
                     <label htmlFor="message">Your Message</label>
                     <div className="contact__formMessageInput">

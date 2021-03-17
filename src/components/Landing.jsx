@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Navbar from "./../components/Navbar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithubSquare } from "@fortawesome/free-brands-svg-icons";
-import "./../styles/Landing.css";
 import QuoteGenerator from "./QuoteGenerator";
 
 const Landing = ({ elements }) => {
