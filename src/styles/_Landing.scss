@@ -47,7 +47,7 @@
     margin-right: 100px;
   }
 
-  .landing__icons {
+  &__icons {
     padding-right: 10vw;
     flex: 0.5;
     width: 100%;
@@ -62,7 +62,7 @@
       width: auto;
     }
 
-    & .svg-inline--fa {
+    .svg-inline--fa {
       margin-left: 1vw;
       font-size: 2rem;
       color: white;
@@ -70,7 +70,7 @@
       transition: all 0.4s;
     }
 
-    & .svg-inline--fa:hover {
+    .svg-inline--fa:hover {
       transform: scale(1.5);
     }
   }

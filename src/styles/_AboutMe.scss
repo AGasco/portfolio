@@ -159,18 +159,18 @@
       font-size: 0.8rem;
     }
 
-    & .navbar {
+    .navbar {
       display: flex !important;
       flex-direction: column !important;
       justify-content: center !important;
       align-items: center !important;
 
-      & ul {
+      ul {
         justify-content: center;
       }
     }
 
-    & .brand {
+    .brand {
       position: relative !important;
     }
   }
@@ -195,7 +195,7 @@
       font-size: 0.7rem;
     }
 
-    & .navbar > ul > li {
+    .navbar > ul > li {
       white-space: nowrap;
     }
   }
