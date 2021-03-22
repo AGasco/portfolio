@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import Draggable from "react-draggable";
 import Project from "./Project";
 import UltimateGamesDisplayThumbnail from "./../imgs/thumbnails/ultimate-games-display-thumbnail.JPG";
 import NetflixThumbnail from "./../imgs/thumbnails/netflix-thumbnail.png";
@@ -117,15 +116,10 @@ const categories = ["COMMISSIONS", "PASSION"];
 
 function Projects({ elements }) {
   const [category, setCategory] = useState("");
-  const [projects, setProjects] = useState([]);
 
   const handleClick = (e) => {
     const newCategory = e.target.textContent;
     setCategory(newCategory);
-    if (newCategory === "") setProjects([]);
-    else if (newCategory === "COMMISSIONS") setProjects(commissionsProjects);
-    else if (newCategory === "PASSION") setProjects(passionProjects);
-    else console.error("ERROR: Wrong Category inputted");
   };
 
   const selectCategory = (category) => setCategory(category);
