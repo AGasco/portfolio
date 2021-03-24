@@ -16,7 +16,7 @@ const commissionsProjects = [
     name: "KIKE MINDFULNESS",
     picture: KikeMindfulnessThumbnail,
     description:
-      "Website built for a mindfulness instructor using React. Design, development and communication with client has been fully managed by me. ",
+      "Website built for a mindfulness instructor using React. Design, development and communication with client has been fully managed by me.",
     link: "https://kikemindfulness.com/",
     gitLink: "https://github.com/AGasco/kike-mindfulness",
     usedTech: [
