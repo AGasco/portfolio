@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Project from "./Project";
 import UltimateGamesDisplayThumbnail from "./../imgs/thumbnails/ultimate-games-display-thumbnail.JPG";
+import ResponsiveCarouselThumbnail from "../imgs/thumbnails/responsive-carousel-thumbnail.PNG";
 import NetflixThumbnail from "./../imgs/thumbnails/netflix-thumbnail.png";
-import CovidTrackerThumbnail from "./../imgs/thumbnails/covid-tracker-thumbnail.png";
 import HackReactorThumbnail from "./../imgs/thumbnails/hackreactor-thumbnail.PNG";
 import ShoppingCartThumbnail from "./../imgs/thumbnails/shopping-cart-thumbnail.png";
 import KikeMindfulnessThumbnail from "./../imgs/thumbnails/kikemindfulness.JPG";
@@ -36,7 +36,7 @@ const passionProjects = [
     name: "REDUX - THE ULTIMATE GAMES DISPLAY (WIP)",
     picture: UltimateGamesDisplayThumbnail,
     description:
-      "App where I grab games data from RAWG api, and display this data in a beautiful and functional way. Data can be filtered, ordered and searched.",
+      "App where I grab games data from RAWG api, and display this data in a beautiful and functional way. Data can be filtered, ordered and searched. Currently working on auth",
     link: "https://ultimate-games-display.web.app/",
     gitLink: "https://github.com/AGasco/ultimate-react-proyect",
     usedTech: [
@@ -51,24 +51,14 @@ const passionProjects = [
     ],
   },
 
-  //COVID-19 Tracker
   {
-    name: "REDUX COVID-19 TRACKER",
-    picture: CovidTrackerThumbnail,
+    name: "RESPONSIVE CAROUSEL",
+    picture: ResponsiveCarouselThumbnail,
     description:
-      "Keep daily track of COVID-19 incidence all over the world. The data displayed in this app can be sorted worldwide or by country. Furthermore, data can be filtered by Cases, Recovered or Deaths",
-    link: "https://covid-19-tracker-1b15c.web.app/",
-    gitLink: "https://github.com/AGasco/covid-19-tracker",
-    usedTech: [
-      "HTML",
-      "CSS",
-      "Javascript",
-      "React",
-      "Redux",
-      "Google Firebase",
-      "APIs",
-      "Leaflet Maps",
-    ],
+      "Fully responsive carousel. Supports all HTML elements, finger-following swipes (mobile and desktop), infinite.",
+    link: "https://responsive-carousel.web.app/",
+    gitLink: "https://github.com/AGasco/react-responsive-carousel",
+    usedTech: ["HTML", "CSS", "Javascript", "React", "Google Firebase"],
   },
 
   //REDUX SHOPPING CART
