@@ -84,7 +84,7 @@ const passionProjects = [
     name: "HACKREACTOR CLONE",
     picture: HackReactorThumbnail,
     description:
-      "Clone of the HackReactor website. I built this project to train my front-end skills. I wanted to see if I could build a professional looking website. Just 1 html file and 1 css file",
+      "Clone of the HackReactor website. I built this project to train my front-end skills. I wanted to see if I could build a website based on a given design. Just 1 html file and 1 css file",
     link: "https://hackreactor-clone.netlify.app/",
     gitLink: "https://github.com/AGasco/hackreactor-clone",
     usedTech: ["HTML", "CSS", "Netlify"],
