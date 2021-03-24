@@ -25,6 +25,7 @@ const commissionsProjects = [
       "Javascript",
       "React",
       "Redux",
+      "Sass",
       "Material-UI",
       "Google Firebase",
     ],
@@ -45,6 +46,7 @@ const passionProjects = [
       "Javascript",
       "React",
       "Redux",
+      "Sass",
       "Material-UI",
       "Google Firebase",
       "APIs",
@@ -58,7 +60,7 @@ const passionProjects = [
       "Fully responsive carousel. Supports all HTML elements, finger-following swipes (mobile and desktop), infinite.",
     link: "https://responsive-carousel.web.app/",
     gitLink: "https://github.com/AGasco/react-responsive-carousel",
-    usedTech: ["HTML", "CSS", "Javascript", "React", "Google Firebase"],
+    usedTech: ["HTML", "CSS", "Javascript", "React", "Sass", "Google Firebase"],
   },
 
   //REDUX SHOPPING CART

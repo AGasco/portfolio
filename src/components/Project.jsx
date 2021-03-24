@@ -9,11 +9,11 @@ import MaterialUILogo from "./../imgs/logos/materialUI-icon.png";
 import FirebaseLogo from "./../imgs/logos/firebase-logo.png";
 import NetlifyLogo from "./../imgs/logos/netlify-logo.svg";
 import BootstrapLogo from "./../imgs/logos/bootstrap-logo.png";
+import SassLogo from "../imgs/logos/sass-logo.png";
 import NPMLogo from "./../imgs/logos/npm-logo.svg";
 import GitLogo from "./../imgs/logos/git-logo.png";
 import PhotoshopLogo from "./../imgs/logos/photoshop-logo.png";
 import APILogo from "./../imgs/logos/api-logo3.png";
-import LeafletLogo from "./../imgs/logos/leaflet-logo.png";
 import UnityLogo from "./../imgs/logos/unity-logo.png";
 import CSharpLogo from "./../imgs/logos/csharp-logo.svg";
 
@@ -50,8 +50,8 @@ function Project({
         return NetlifyLogo;
       case "APIs":
         return APILogo;
-      case "Leaflet Maps":
-        return LeafletLogo;
+      case "Sass":
+        return SassLogo;
       case "npm":
         return NPMLogo;
       case "Git":
