@@ -36,7 +36,7 @@ const passionProjects = [
     name: "REDUX - THE ULTIMATE GAMES DISPLAY (WIP)",
     picture: UltimateGamesDisplayThumbnail,
     description:
-      "App where I grab games data from RAWG api, and display this data in a beautiful and functional way. Data can be filtered, ordered and searched. Currently working on authentication",
+      "App where I grab games data from RAWG api, and display this data in a beautiful and functional way. Data can be filtered, ordered and searched. Currently working on authentication.",
     link: "https://ultimate-games-display.web.app/",
     gitLink: "https://github.com/AGasco/ultimate-react-proyect",
     usedTech: [
