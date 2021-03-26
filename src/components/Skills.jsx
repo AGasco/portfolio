@@ -6,7 +6,7 @@ import CSSLogo from "./../imgs/logos/css-logo.png";
 import JSLogo from "./../imgs/logos/javascript-logo.png";
 import ReactLogo from "./../imgs/logos/react-logo.png";
 import ReduxLogo from "./../imgs/logos/redux-logo.png";
-import TypescriptLogo from "./../imgs/logos/typescript-logo.png";
+import SassLogo from "../imgs/logos/sass-logo.png";
 import BootstrapLogo from "./../imgs/logos/bootstrap-logo.png";
 import NPMLogo from "./../imgs/logos/npm-logo.svg";
 import GitLogo from "./../imgs/logos/git-logo.png";
@@ -21,7 +21,7 @@ const logos = {
   javascript: JSLogo,
   react: ReactLogo,
   redux: ReduxLogo,
-  typescript: TypescriptLogo,
+  sass: SassLogo,
   bootstrap: BootstrapLogo,
   npm: NPMLogo,
   git: GitLogo,
@@ -36,7 +36,7 @@ const links = {
   javascript: "https://developer.mozilla.org/es/docs/Web/JavaScript",
   react: "https://reactjs.org/",
   redux: "https://redux.js.org/",
-  typescript: "https://www.typescriptlang.org/",
+  sass: "https://sass-lang.com/",
   bootstrap: "https://getbootstrap.com/",
   npm: "https://www.npmjs.com/",
   git: "https://git-scm.com/",
@@ -45,15 +45,13 @@ const links = {
   csharp: "https://docs.microsoft.com/en-us/dotnet/csharp/",
 };
 
-function Skills({ elements, isMobile }) {
+function Skills({ elements }) {
   return (
     <div className="skills" id="Skills">
       <div className="skills__left"></div>
       <div className="skills__right">
         <Navbar elements={elements} />
-        <div className="skills__top">
-          {/* <h1 className="skills__title">skills</h1> */}
-        </div>
+        <div className="skills__top"></div>
         <div className="skills__bottom">
           <div className="skills__titleContainer">
             <h4 className="skills__title">I can help you with these </h4>
@@ -73,11 +71,7 @@ function Skills({ elements, isMobile }) {
             <div className="skills__gridRow">
               <SkillCard name="React" logo={logos.react} link={links.react} />
               <SkillCard name="Redux" logo={logos.redux} link={links.redux} />
-              <SkillCard
-                name="TypeScript"
-                logo={logos.typescript}
-                link={links.typescript}
-              />
+              <SkillCard name="Sass" logo={logos.sass} link={links.sass} />
             </div>
             <div className="skills__gridRow">
               <SkillCard name="npm" logo={logos.npm} link={links.npm} />

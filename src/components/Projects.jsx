@@ -24,7 +24,6 @@ const commissionsProjects = [
       "CSS",
       "Javascript",
       "React",
-      "Redux",
       "Sass",
       "Material-UI",
       "Google Firebase",

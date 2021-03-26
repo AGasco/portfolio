@@ -4,7 +4,6 @@ import CSSLogo from "./../imgs/logos/css-logo.png";
 import JSLogo from "./../imgs/logos/javascript-logo.png";
 import ReactLogo from "./../imgs/logos/react-logo.png";
 import ReduxLogo from "./../imgs/logos/redux-logo.png";
-import TypescriptLogo from "./../imgs/logos/typescript-logo.png";
 import MaterialUILogo from "./../imgs/logos/materialUI-icon.png";
 import FirebaseLogo from "./../imgs/logos/firebase-logo.png";
 import NetlifyLogo from "./../imgs/logos/netlify-logo.svg";
@@ -38,8 +37,6 @@ function Project({
         return ReactLogo;
       case "Redux":
         return ReduxLogo;
-      case "Typescript":
-        return TypescriptLogo;
       case "Bootstrap":
         return BootstrapLogo;
       case "Material-UI":
