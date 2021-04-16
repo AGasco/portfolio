@@ -56,7 +56,7 @@ const passionProjects = [
     name: "RESPONSIVE CAROUSEL",
     picture: ResponsiveCarouselThumbnail,
     description:
-      "Fully responsive carousel. Supports all HTML elements, finger-following swipes (mobile and desktop), infinite.",
+      "Fully responsive carousel. Vanilla React, zero packages used. Supports all HTML elements, finger-following swipes (mobile and desktop), infinite.",
     link: "https://responsive-carousel.web.app/",
     gitLink: "https://github.com/AGasco/react-responsive-carousel",
     usedTech: ["HTML", "CSS", "Javascript", "React", "Sass", "Google Firebase"],
