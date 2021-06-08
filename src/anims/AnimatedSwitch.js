@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import Landing from '../components/Landing/Landing.component';
 import AboutMe from '../components/AboutMe/AboutMe.component';
-import Skills from './../components/Skills';
+import Skills from '../components/Skills/Skills.component';
 import Projects from './../components/Projects';
 import Contact from './../components/Contact';
 import { withRouter, Switch, Route } from 'react-router-dom';
