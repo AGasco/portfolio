@@ -1,6 +1,7 @@
 import React from 'react';
+import Navbar from '../components/Navbar';
 import Landing from '../components/Landing/Landing.component';
-import AboutMe from './../components/AboutMe';
+import AboutMe from '../components/AboutMe/AboutMe.component';
 import Skills from './../components/Skills';
 import Projects from './../components/Projects';
 import Contact from './../components/Contact';
@@ -26,6 +27,7 @@ const AnimatedSwitch = withRouter(({ location, isMobile, elements }) => {
         timeout={1000}
       >
         <Switch location={location}>
+          {/* <Navbar elements={elements} /> */}
           <Route path="/About Me">
             <AboutMe elements={elements} isMobile={isMobile} />
           </Route>

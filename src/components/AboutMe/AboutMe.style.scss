@@ -5,13 +5,12 @@
 
   &__right {
     flex: 1;
-    background-image: url("https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=80");
+    background-image: url('https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=80');
     background-position: center center;
     background-size: cover;
   }
 
   &__left {
-    /* padding-top: 10px; */
     flex: 2;
     background-color: #fda268;
   }
@@ -30,12 +29,12 @@
   }
 
   &__title {
-    font-family: "Darker Grotesque", sans-serif;
+    font-family: 'Darker Grotesque', sans-serif;
     font-size: 10rem;
   }
 
   &__subtitle {
-    font-family: "Dancing Script", cursive;
+    font-family: 'Dancing Script', cursive;
     font-weight: 100;
     font-size: 4rem;
     line-height: 2rem;
@@ -50,7 +49,7 @@
   }
 
   &__picture {
-    background-image: url("./../imgs/my-picture.jpg");
+    background-image: url('../../imgs/my-picture.jpg');
     background-size: cover;
     width: 200px;
     height: 200px;
@@ -62,7 +61,7 @@
     flex: 1;
     padding-left: 10px;
     color: white;
-    font-family: "Kalam", cursive;
+    font-family: 'Kalam', cursive;
     font-size: 1.3rem;
   }
 
