@@ -23,8 +23,9 @@ class QuoteGenerator extends PureComponent {
               -{' '}
               {
                 <a
-                  href={curQuote?.wikipedia}
+                  href={curQuote?.wikipedia || '#'}
                   target="_blank"
+                  rel="noopener noreferrer"
                   className={curQuote?.author === 'Anonymous' ? 'disabled' : ''}
                 >
                   {curQuote?.author}

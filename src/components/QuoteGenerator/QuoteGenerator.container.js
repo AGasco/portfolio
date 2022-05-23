@@ -18,21 +18,12 @@ class QuoteGeneratorContainer extends PureComponent {
 
   componentDidMount() {
     const { default: quotes } = data;
-    this.setState({ remainingQuotes: [...quotes] });
-  }
+    const firstQuote = quotes.splice(
+      Math.floor(Math.random() * quotes.length),
+      1
+    )[0];
 
-  componentDidUpdate() {
-    const { default: quotes } = data;
-    const { remainingQuotes } = this.state;
-
-    if (remainingQuotes) {
-      const firstQuote = remainingQuotes.splice(
-        Math.floor(Math.random() * quotes.length),
-        1
-      )[0];
-
-      this.setState({ curQuote: firstQuote });
-    }
+    this.setState({ remainingQuotes: [...quotes], curQuote: firstQuote });
   }
 
   generateNewQuote = () => {
