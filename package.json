@@ -15,7 +15,6 @@
     "emailjs-com": "^2.6.3",
     "fade-props": "^2.1.1",
     "firebase": "^7.24.0",
-    "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-css-transition-replace": "^4.0.2",
     "react-dom": "^16.13.1",
@@ -50,5 +49,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "sass": "^1.52.1"
   }
 }
