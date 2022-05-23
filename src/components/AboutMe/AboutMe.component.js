@@ -3,7 +3,7 @@ import Navbar from '../Navbar';
 
 import './AboutMe.style.scss';
 
-export class AboutMe extends PureComponent {
+class AboutMe extends PureComponent {
   renderNavbar() {
     const { elements } = this.props;
 

@@ -2,11 +2,11 @@ import React, { PureComponent } from 'react';
 import Navbar from '../Navbar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithubSquare } from '@fortawesome/free-brands-svg-icons';
-import QuoteGenerator from '../QuoteGenerator';
+import QuoteGenerator from '../QuoteGenerator/QuoteGenerator.container';
 
 import './Landing.style.scss';
 
-export class Landing extends PureComponent {
+class Landing extends PureComponent {
   renderNavbar() {
     const { elements } = this.props;
 
