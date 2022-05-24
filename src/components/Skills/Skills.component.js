@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import Navbar from '../Navbar';
-import SkillCard from '../SkillCard';
+import SkillCard from '../SkillCard/SkillCard.component';
 import Arrow from '../../imgs/arrow.png';
 
 import { logos, links } from './Skills.config';

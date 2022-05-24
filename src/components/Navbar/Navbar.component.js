@@ -2,6 +2,8 @@ import React from 'react';
 import Brand from '../components/Brand/Brand.component';
 import { withRouter } from 'react-router-dom';
 
+import './Navbar.style.scss';
+
 const Navbar = withRouter(({ history, location, elements }) => {
   const curScreen = elements.indexOf(location.pathname);
 

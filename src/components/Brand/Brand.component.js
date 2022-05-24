@@ -1,5 +1,7 @@
-import React from "react";
-import { withRouter } from "react-router-dom";
+import React from 'react';
+import { withRouter } from 'react-router-dom';
+
+import './Brand.style.scss';
 
 const Brand = withRouter(({ elements, history, location }) => {
   const curScreen = elements.indexOf(location.pathname);
@@ -9,8 +11,8 @@ const Brand = withRouter(({ elements, history, location }) => {
       onClick={() => {
         if (curScreen !== 0)
           return history.push({
-            pathname: "/",
-            state: { prevScreen: curScreen },
+            pathname: '/',
+            state: { prevScreen: curScreen }
           });
       }}
     >

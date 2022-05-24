@@ -2,8 +2,8 @@ import React from 'react';
 import Landing from '../components/Landing/Landing.component';
 import AboutMe from '../components/AboutMe/AboutMe.component';
 import Skills from '../components/Skills/Skills.component';
-import Projects from './../components/Projects';
-import Contact from './../components/Contact';
+import Projects from '../components/Projects/Projects.container';
+import Contact from '../components/Contact/Contact.container';
 import { withRouter, Switch, Route } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
