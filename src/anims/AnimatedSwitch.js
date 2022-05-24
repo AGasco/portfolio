@@ -1,22 +1,22 @@
-import React from "react";
-import Landing from "./../components/Landing";
-import AboutMe from "./../components/AboutMe";
-import Skills from "./../components/Skills";
-import Projects from "./../components/Projects";
-import Contact from "./../components/Contact";
-import { withRouter, Switch, Route } from "react-router-dom";
-import { TransitionGroup, CSSTransition } from "react-transition-group";
+import React from 'react';
+import Landing from '../components/Landing/Landing.component';
+import AboutMe from '../components/AboutMe/AboutMe.component';
+import Skills from '../components/Skills/Skills.component';
+import Projects from '../components/Projects/Projects.container';
+import Contact from '../components/Contact/Contact.container';
+import { withRouter, Switch, Route } from 'react-router-dom';
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 const AnimatedSwitch = withRouter(({ location, isMobile, elements }) => {
   const curScreen = elements.indexOf(location.pathname);
   const { state } = location;
   const prevScreen = state ? state.prevScreen : 0;
-  const animClassNames = curScreen > prevScreen ? "forward" : "backward";
+  const animClassNames = curScreen > prevScreen ? 'forward' : 'backward';
   return (
     <TransitionGroup
       childFactory={(child) =>
         React.cloneElement(child, {
-          classNames: animClassNames,
+          classNames: animClassNames
         })
       }
     >

@@ -11,7 +11,7 @@
     position: relative;
 
     * {
-      font-family: "Courgette", cursive;
+      font-family: 'Courgette', cursive;
     }
   }
 
@@ -89,7 +89,7 @@
       white-space: nowrap;
       z-index: 100;
       cursor: pointer;
-      font-family: "Darker Grotesque", sans-serif;
+      font-family: 'Darker Grotesque', sans-serif;
 
       &.disabled {
         pointer-events: none;
@@ -98,7 +98,7 @@
   }
 
   &__date {
-    font-family: "Darker Grotesque", sans-serif;
+    font-family: 'Darker Grotesque', sans-serif;
     font-size: 1rem;
   }
 }

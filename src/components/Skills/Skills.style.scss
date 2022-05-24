@@ -6,7 +6,7 @@
 
   &__left {
     flex: 1;
-    background-image: url("https://images.unsplash.com/photo-1519289508651-d3a420c42939?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80");
+    background-image: url('https://images.unsplash.com/photo-1519289508651-d3a420c42939?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80');
     background-position: center center;
     background-size: cover;
   }
@@ -19,19 +19,13 @@
     background-color: #6373db;
   }
 
-  &__top {
-    display: flex;
-    justify-content: center;
-    padding-top: 50px;
-  }
-
-  &__bottom {
+  &__content {
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 10vh;
+    padding-top: 13vh;
   }
 
   &__titleContainer {
@@ -40,7 +34,7 @@
   }
 
   &__title {
-    font-family: "Dancing Script", cursive;
+    font-family: 'Dancing Script', cursive;
     font-weight: 100;
     font-size: 4rem;
     color: white;

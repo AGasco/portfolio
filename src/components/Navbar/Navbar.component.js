@@ -1,6 +1,8 @@
-import React from "react";
-import Brand from "./../components/Brand";
-import { withRouter } from "react-router-dom";
+import React from 'react';
+import Brand from '../Brand/Brand.component';
+import { withRouter } from 'react-router-dom';
+
+import './Navbar.style.scss';
 
 const Navbar = withRouter(({ history, location, elements }) => {
   const curScreen = elements.indexOf(location.pathname);
@@ -16,15 +18,15 @@ const Navbar = withRouter(({ history, location, elements }) => {
             return (
               <li key={elem}>
                 <div
-                  className={`navbar__link ${isActive(elem) && "active"}`}
+                  className={`navbar__link ${isActive(elem) && 'active'}`}
                   onClick={(e) => {
                     if (!isActive(elem)) {
                       history.push({
                         pathname:
                           elements[
-                            elements.indexOf("/" + e.target.textContent)
+                            elements.indexOf('/' + e.target.textContent)
                           ],
-                        state: { prevScreen: curScreen },
+                        state: { prevScreen: curScreen }
                       });
                     }
                   }}

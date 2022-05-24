@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { BrowserRouter } from "react-router-dom";
-import AnimatedSwitch from "./anims/AnimatedSwitch";
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import AnimatedSwitch from './anims/AnimatedSwitch';
 
-const elements = ["/", "/About Me", "/Skills", "/Projects", "/Contact"];
+const elements = ['/', '/About Me', '/Skills', '/Projects', '/Contact'];
 
 function App() {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -14,8 +14,8 @@ function App() {
   }, [screenWidth]);
 
   useEffect(() => {
-    window.addEventListener("resize", updateScreenWidth);
-    return () => window.removeEventListener("resize", updateScreenWidth);
+    window.addEventListener('resize', updateScreenWidth);
+    return () => window.removeEventListener('resize', updateScreenWidth);
   }, []);
 
   const updateScreenWidth = () => {

@@ -1,9 +1,6 @@
 .navbar {
   width: 100%;
   height: max-content;
-  /* position: fixed;
-  top: 1vh;
-  left: 0; */
   transition: all 0.7s;
   opacity: 1;
   z-index: 100;
@@ -15,7 +12,7 @@
 
   &__brand {
     cursor: pointer;
-    font-family: "Dancing Script", cursive;
+    font-family: 'Dancing Script', cursive;
     color: white;
     font-size: 2.5rem;
     position: absolute;
@@ -31,13 +28,12 @@
       cursor: pointer;
       transition: all 0.3s;
       margin: 0 30px;
-      /* border-bottom: 1px solid rgba(255, 255, 255, 0.0); */
     }
   }
 
   ul li > a,
   &__link {
-    font-family: "Wire One", sans-serif;
+    font-family: 'Wire One', sans-serif;
     font-size: 2.5rem;
     font-weight: 100;
     text-decoration: none;
@@ -59,7 +55,6 @@
   ul li.hidden {
     cursor: default;
     pointer-events: none;
-    /* transform: translateY(-100px) */
   }
 }
 
@@ -75,7 +70,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* padding-top: 4vh; */
 
     &__brand {
       position: relative;
