@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
-import Navbar from '../Navbar';
-import Input from '../../common/Input';
+import Navbar from '../Navbar/Navbar.component';
+import Input from '../../common/Input/Input.component';
 
 import './Contact.style.scss';
 

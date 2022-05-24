@@ -3,7 +3,7 @@ import Project from '../Project/Project.component';
 import { categories } from './Projects.config';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUndo } from '@fortawesome/free-solid-svg-icons';
-import Navbar from '../Navbar';
+import Navbar from '../Navbar/Navbar.component';
 import Slider from 'react-slick';
 
 import './Projects.style.scss';

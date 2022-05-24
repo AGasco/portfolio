@@ -1,5 +1,5 @@
 import React from 'react';
-import Brand from '../components/Brand/Brand.component';
+import Brand from '../Brand/Brand.component';
 import { withRouter } from 'react-router-dom';
 
 import './Navbar.style.scss';

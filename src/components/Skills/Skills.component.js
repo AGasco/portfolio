@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import Navbar from '../Navbar';
+import Navbar from '../Navbar/Navbar.component';
 import SkillCard from '../SkillCard/SkillCard.component';
 import Arrow from '../../imgs/arrow.png';
 

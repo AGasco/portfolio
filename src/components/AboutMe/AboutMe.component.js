@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import Navbar from '../Navbar';
+import Navbar from '../Navbar/Navbar.component';
 
 import './AboutMe.style.scss';
 

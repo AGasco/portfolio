@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import Navbar from '../Navbar';
+import Navbar from '../Navbar/Navbar.component';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithubSquare } from '@fortawesome/free-brands-svg-icons';
 import QuoteGenerator from '../QuoteGenerator/QuoteGenerator.container';
